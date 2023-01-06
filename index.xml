@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5YC10P5 | 53CTF</title>
+    <link>https://53ctf.github.io/</link>
+    <description>Recent content on 5YC10P5 | 53CTF</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://53ctf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HackTheBox Precious</title>
+      <link>https://53ctf.github.io/precious/</link>
+      <pubDate>Fri, 06 Jan 2023 19:37:17 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/precious/</guid>
+      <description>Precious </description>
+    </item>
+    
+  </channel>
+</rss>
