@@ -1,0 +1,31 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on 53CTF</title>
+        <link>https://53ctf.github.io/posts/</link>
+        <description>Recent content in Posts on 53CTF</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Sat, 07 Jan 2023 09:33:57 +0530</lastBuildDate>
+        <atom:link href="https://53ctf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Linux Notes</title>
+            <link>https://53ctf.github.io/posts/2023/01/linux-notes/</link>
+            <pubDate>Sat, 07 Jan 2023 09:33:57 +0530</pubDate>
+            
+            <guid>https://53ctf.github.io/posts/2023/01/linux-notes/</guid>
+            <description>View Cron Jobs crontab -l List Scheduled Processes/Tasks/Scripts systemctl list-timers View NFS (Network File Share) showmount REMOTE_IP -e Mount NFS mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT </description>
+            <content type="html"><![CDATA[<h3 id="view-cron-jobs">View Cron Jobs</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crontab -l
+</span></span></code></pre></div><h3 id="list-scheduled-processestasksscripts">List Scheduled Processes/Tasks/Scripts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl list-timers
+</span></span></code></pre></div><h3 id="view-nfs-network-file-share">View NFS (Network File Share)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>showmount REMOTE_IP -e
+</span></span></code></pre></div><h3 id="mount-nfs">Mount NFS</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT
+</span></span></code></pre></div>]]></content>
+        </item>
+        
+    </channel>
+</rss>

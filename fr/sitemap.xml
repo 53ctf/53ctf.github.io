@@ -26,18 +26,6 @@
                 href="https://53ctf.github.io/fr/categories/"
                 />
   </url><url>
-    <loc>https://53ctf.github.io/fr/series/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://53ctf.github.io/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://53ctf.github.io/fr/series/"
-                />
-  </url><url>
     <loc>https://53ctf.github.io/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
