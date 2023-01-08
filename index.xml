@@ -5,7 +5,16 @@
     <link>https://53ctf.github.io/</link>
     <description>Recent content on 53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 Jan 2023 09:59:08 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jan 2023 13:15:17 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HackTheBox MetaTwo</title>
+      <link>https://53ctf.github.io/posts/htb/metatwo/metatwo/</link>
+      <pubDate>Sun, 08 Jan 2023 13:15:17 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/posts/htb/metatwo/metatwo/</guid>
+      <description>Name: MetaTwo IP: 10.10.11.186 Defficulty: Easy OS: Linux Author: Nauten Nmap PORT STATE SERVICE VERSION 21/tcp open ftp? | fingerprint-strings: | GenericLines: | 220 ProFTPD Server (Debian) [::ffff:10.10.11.186] | Invalid command: try being more creative |_ Invalid command: try being more creative 22/tcp open ssh OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 c4b44617d2102d8fec1dc927fecd79ee (RSA) | 256 2aea2fcb23e8c529409cab866dcd4411 (ECDSA) |_ 256 fd78c0b0e22016fa050debd83f12a4ab (ED25519) 80/tcp open http nginx 1.</description>
+    </item>
+    
     <item>
       <title>About</title>
       <link>https://53ctf.github.io/about/</link>
