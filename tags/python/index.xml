@@ -8,10 +8,10 @@
     <lastBuildDate>Sat, 07 Jan 2023 18:04:11 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python</title>
-      <link>https://53ctf.github.io/posts/notes/python/</link>
+      <link>https://53ctf.github.io/posts/notes/python/python/</link>
       <pubDate>Sat, 07 Jan 2023 18:04:11 +0530</pubDate>
       
-      <guid>https://53ctf.github.io/posts/notes/python/</guid>
+      <guid>https://53ctf.github.io/posts/notes/python/python/</guid>
       <description>Take Advantage Of input() Function And Run System Commands Within It
 __import__(&amp;#39;os&amp;#39;).system(&amp;#39;cat /etc/passwd&amp;#39;) Easy SSTI Payloads Generator
 GitHub Source

@@ -8,10 +8,10 @@
     <lastBuildDate>Sun, 08 Jan 2023 09:59:08 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/config/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dotfiles &amp; Bash Scripts</title>
-      <link>https://53ctf.github.io/posts/notes/dotfiles/</link>
+      <link>https://53ctf.github.io/posts/notes/dotfiles/dotfiles/</link>
       <pubDate>Sun, 08 Jan 2023 09:59:08 +0530</pubDate>
       
-      <guid>https://53ctf.github.io/posts/notes/dotfiles/</guid>
+      <guid>https://53ctf.github.io/posts/notes/dotfiles/dotfiles/</guid>
       <description>alacritty.yml env: TERM: alacritty window: padding: x: 5 y: 5 opacity: 0.60 title: Alacritty dynamic_title: true class: instance: Alacritty general: Alacritty scrolling: history: 10000 multiplier: 3 font: normal: family: Ubuntu Mono style: Regular bold: family: Ubuntu Mono style: Bold italic: family: Ubuntu Mono style: Italic bold_italic: family: Ubuntu Mono style: Bold Italic size: 11.0 colors: primary: background: &amp;#39;#2d333b&amp;#39; foreground: &amp;#39;#adbac7&amp;#39; normal: black: &amp;#39;#2d333b&amp;#39; red: &amp;#39;#f47067&amp;#39; green: &amp;#39;#8ddb8c&amp;#39; yellow: &amp;#39;#f69d50&amp;#39; blue: &amp;#39;#6cb6ff&amp;#39; magenta: &amp;#39;#dcbdfb&amp;#39; cyan: &amp;#39;#96d0ff&amp;#39; white: &amp;#39;#adbac7&amp;#39; bright: black: &amp;#39;#768390&amp;#39; red: &amp;#39;#f47067&amp;#39; green: &amp;#39;#8ddb8c&amp;#39; yellow: &amp;#39;#f69d50&amp;#39; blue: &amp;#39;#6cb6ff&amp;#39; magenta: &amp;#39;#dcbdfb&amp;#39; cyan: &amp;#39;#96d0ff&amp;#39; white: &amp;#39;#adbac7&amp;#39; draw_bold_text_with_bright_colors: false selection: semantic_escape_chars: &amp;#34;,│`|:\&amp;#34;&amp;#39; ()[]{}&amp;lt;&amp;gt;\t&amp;#34; cursor: style: shape: Block blinking: Off vi_mode_style: None live_config_reload: true shell: program: /bin/bash args: - --login working_directory: None Portscan.</description>
     </item>
     
