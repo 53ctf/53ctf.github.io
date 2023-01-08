@@ -3,37 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://53ctf.github.io/</loc>
-    <lastmod>2023-01-07T18:04:11+05:30</lastmod>
+    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
   </url><url>
-    <loc>https://53ctf.github.io/tags/cheetsheet/</loc>
-    <lastmod>2023-01-07T18:04:11+05:30</lastmod>
+    <loc>https://53ctf.github.io/tags/config/</loc>
+    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
+  </url><url>
+    <loc>https://53ctf.github.io/tags/dotfile/</loc>
+    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
+  </url><url>
+    <loc>https://53ctf.github.io/posts/notes/dotfiles/</loc>
+    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
   </url><url>
     <loc>https://53ctf.github.io/tags/linux/</loc>
-    <lastmod>2023-01-07T18:04:11+05:30</lastmod>
+    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
+  </url><url>
+    <loc>https://53ctf.github.io/tags/notes/</loc>
+    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
   </url><url>
     <loc>https://53ctf.github.io/posts/</loc>
-    <lastmod>2023-01-07T18:04:11+05:30</lastmod>
+    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
+  </url><url>
+    <loc>https://53ctf.github.io/tags/</loc>
+    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
   </url><url>
     <loc>https://53ctf.github.io/tags/python/</loc>
     <lastmod>2023-01-07T18:04:11+05:30</lastmod>
   </url><url>
-    <loc>https://53ctf.github.io/posts/python/</loc>
+    <loc>https://53ctf.github.io/posts/notes/python/</loc>
     <lastmod>2023-01-07T18:04:11+05:30</lastmod>
   </url><url>
-    <loc>https://53ctf.github.io/tags/python3/</loc>
-    <lastmod>2023-01-07T18:04:11+05:30</lastmod>
-  </url><url>
-    <loc>https://53ctf.github.io/tags/</loc>
-    <lastmod>2023-01-07T18:04:11+05:30</lastmod>
-  </url><url>
-    <loc>https://53ctf.github.io/tags/bash/</loc>
+    <loc>https://53ctf.github.io/posts/notes/linux-notes/</loc>
     <lastmod>2023-01-07T09:33:57+05:30</lastmod>
   </url><url>
-    <loc>https://53ctf.github.io/tags/cheatsheet/</loc>
-    <lastmod>2023-01-07T09:33:57+05:30</lastmod>
-  </url><url>
-    <loc>https://53ctf.github.io/posts/linux/</loc>
-    <lastmod>2023-01-07T09:33:57+05:30</lastmod>
+    <loc>https://53ctf.github.io/about/</loc>
   </url><url>
     <loc>https://53ctf.github.io/categories/</loc>
   </url>

