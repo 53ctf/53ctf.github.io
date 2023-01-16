@@ -5,34 +5,7 @@
     <link>https://53ctf.github.io/tags/hackthebox/</link>
     <description>Recent content in HackTheBox on 53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 16 Jan 2023 11:30:41 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>HackTheBox Precious</title>
-      <link>https://53ctf.github.io/posts/htb/precious/</link>
-      <pubDate>Mon, 16 Jan 2023 11:30:41 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/posts/htb/precious/</guid>
-      <description>Name: Precious IP: 10.10.11.189 Defficulty: Easy OS: Linux Author: Nauten Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 845e13a8e31e20661d235550f63047d2 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEAPxqUubE88njHItE+mjeWJXOLu5reIBmQHCYh2ETYO5zatgel+LjcYdgaa4KLFyw8CfDbRL9swlmGTaf4iUbao4jD73HV9/Vrnby7zP04OH3U/wVbAKbPJrjnva/czuuV6uNz4SVA3qk0bp6wOrxQFzCn5OvY3FTcceH1jrjrJmUKpGZJBZZO6cp0HkZWs/eQi8F7anVoMDKiiuP0VX28q/yR1AFB4vR5ej8iV/X73z3GOs3ZckQMhOiBmu1FF77c7VW1zqln480/AbvHJDULtRdZ5xrYH1nFynnPi6+VU/PIfVMpHbYu7t0mEFeI5HxMPNUvtYRRDC14jEtH6RpZxd7PhwYiBctiybZbonM5UP0lP85OuMMPcSMll65+8hzMMY2aejjHTYqgzd7M6HxcEMrJW7n7s5eCJqMoUXkL8RSBEQSmMUV8iWzHW0XkVUfYT5Ko6Xsnb+DiiLvFNUlFwO6hWz2WG8rlZ3voQ/gv8BLVCU1ziaVGerd61PODck= | 256 a2ef7b9665ce4161c467ee4e96c7c892 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFScv6lLa14Uczimjt1W7qyH6OvXIyJGrznL1JXzgVFdABwi/oWWxUzEvwP5OMki1SW9QKX7kKVznWgFNOp815Y= | 256 33053dcd7ab798458239e7ae3c91a658 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH+JGiTFGOgn/iJUoLhZeybUvKeADIlm0fHnP/oZ66Qb 80/tcp open http syn-ack nginx 1.18.0 |_http-server-header: nginx/1.18.0 |_http-title: Did not follow redirect to http://precious.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel Two ports are open.</description>
-    </item>
-    
-    <item>
-      <title>HackTheBox Photobomb</title>
-      <link>https://53ctf.github.io/posts/htb/photobomb/</link>
-      <pubDate>Sun, 15 Jan 2023 14:06:58 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/posts/htb/photobomb/</guid>
-      <description>Name: Photobomb IP: 10.10.11.182 Defficulty: Easy OS: Linux Author: slartibartfast Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 e22473bbfbdf5cb520b66876748ab58d (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCwlzrcH3g6+RJ9JSdH4fFJPibAIpAZXAl7vCJA+98jmlaLCsANWQXth3UsQ+TCEf9YydmNXO2QAIocVR8y1NUEYBlN2xG4/7txjoXr9QShFwd10HNbULQyrGzPaFEN2O/7R90uP6lxQIDsoKJu2Ihs/4YFit79oSsCPMDPn8XS1fX/BRRhz1BDqKlLPdRIzvbkauo6QEhOiaOG1pxqOj50JVWO3XNpnzPxB01fo1GiaE4q5laGbktQagtqhz87SX7vWBwJXXKA/IennJIBPcyD1G6YUK0k6lDow+OUdXlmoxw+n370Knl6PYxyDwuDnvkPabPhkCnSvlgGKkjxvqks9axnQYxkieDqIgOmIrMheEqF6GXO5zz6WtN62UAIKAgxRPgIW0SjRw2sWBnT9GnLag74cmhpGaIoWunklT2c94J7t+kpLAcsES6+yFp9Wzbk1vsqThAss0BkVsyxzvL0U9HvcyyDKLGFlFPbsiFH7br/PuxGbqdO9Jbrrs9nx60= | 256 04e3ac6e184e1b7effac4fe39dd21bae (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBrVE9flXamwUY+wiBc9IhaQJRE40YpDsbOGPxLWCKKjNAnSBYA9CPsdgZhoV8rtORq/4n+SO0T80x1wW3g19Ew= | 256 20e05d8cba71f08c3a1819f24011d29e (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEp8nHKD5peyVy3X3MsJCmH/HIUvJT+MONekDg5xYZ6D 80/tcp open http syn-ack nginx 1.18.0 (Ubuntu) |_http-server-header: nginx/1.18.0 (Ubuntu) |_http-title: Did not follow redirect to http://photobomb.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel Two ports are open.</description>
-    </item>
-    
-    <item>
-      <title>HackTheBox Stocker</title>
-      <link>https://53ctf.github.io/posts/htb/stocker/</link>
-      <pubDate>Sun, 15 Jan 2023 09:16:32 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/posts/htb/stocker/</guid>
-      <description>Name: Stocker IP: 10.10.11.196 Defficulty: Easy OS: Linux Author: JoshSH Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 3d12971d86bc161683608f4f06e6d54e (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/Jyuj3D7FuZQdudxWlH081Q6WkdTVz6G05mFSFpBpycfOrwuJpQ6oJV1I4J6UeXg+o5xHSm+ANLhYEI6T/JMnYSyEmVq/QVactDs9ixhi+j0R0rUrYYgteX7XuOT2g4ivyp1zKQP1uKYF2lGVnrcvX4a6ds4FS8mkM2o74qeZj6XfUiCYdPSVJmFjX/TgTzXYHt7kHj0vLtMG63sxXQDVLC5NwLs3VE61qD4KmhCfu+9viOBvA1ZID4Bmw8vgi0b5FfQASbtkylpRxdOEyUxGZ1dbcJzT+wGEhalvlQl9CirZLPMBn4YMC86okK/Kc0Wv+X/lC+4UehL//U3MkD9XF3yTmq+UVF/qJTrs9Y15lUOu3bJ9kpP9VDbA6NNGi1HdLyO4CbtifsWblmmoRWIr+U8B2wP/D9whWGwRJPBBwTJWZvxvZz3llRQhq/8Np0374iHWIEG+k9U9Am6rFKBgGlPUcf6Mg7w4AFLiFEQaQFRpEbf+xtS1YMLLqpg3qB0= | 256 7c4d1a7868ce1200df491037f9ad174f (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNgPXCNqX65/kNxcEEVPqpV7du+KsPJokAydK/wx1GqHpuUm3lLjMuLOnGFInSYGKlCK1MLtoCX6DjVwx6nWZ5w= | 256 dd978050a5bacd7d55e827ed28fdaa3b (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIDyp1s8jG+rEbfeqAQbCqJw5+Y+T17PRzOcYd+W32hF 80/tcp open http syn-ack nginx 1.18.0 (Ubuntu) |_http-server-header: nginx/1.18.0 (Ubuntu) |_http-title: Did not follow redirect to http://stocker.htb | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel Two ports are open.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 11 Jan 2023 08:36:15 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HackTheBox Shoppy</title>
       <link>https://53ctf.github.io/posts/htb/shoppy/</link>
@@ -40,15 +13,6 @@
       
       <guid>https://53ctf.github.io/posts/htb/shoppy/</guid>
       <description>Name: Shoppy IP: 10.10.11.180 Defficulty: Easy OS: Linux Author: lockscan Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 9e5e8351d99f89ea471a12eb81f922c0 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDApZi3Kltv1yDHTatw6pKZfuIcoHfTnVe0W1yc9Uw7NMUinxjjQaQ731J+eCTwd8hBcZT6HQwcchDNR50Lwyp2a/KpXuH2my+2/tDvISTRTgwfMy1sDrG3+KPEzBag07m7ycshp8KhrRq0faHPrEgcagkb5T8mnT6zr3YonzoMyIpT+Q1O0JAre6GPgJc9im/tjaqhwUxCH5MxJCKQxaUf2SlGjRCH5/xEkNO20BEUYokjoAWwHUWjK2mlIrBQfd4/lcUzMnc5WT9pVBqQBw+/7LbFRyH4TLmGT9PPEr8D8iygWYpuG7WFOZlU8oOhO0+uBqZFgJFFOevq+42q42BvYYR/z+mFox+Q2lz7viSCV7nBMdcWto6USWLrx1AkVXNGeuRjr3l0r/698sQjDy5v0GnU9cMHeYkMc+TuiIaJJ5oRrSg/x53Xin1UogTnTaKLNdGkgynMqyVFklvdnUngRSLsXnwYNgcDrUhXxsfpDu8HVnzerT3q27679+n5ZFM= | 256 5857eeeb0650037c8463d7a3415b1ad5 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHiKrH/B/4murRCo5ju2KuPgkMjQN3Foh7EifMHEOwmoDNjLYBfoAFKgBnrMA9GzA+NGhHVa6L8CAxN3eaGXXMo= | 256 3e9d0a4290443860b3b62ce9bd9a6754 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBRsWhJQCRHjDkHy3HkFLMZoGqCmM3/VfMHMm56u0Ivk 80/tcp open http syn-ack nginx 1.23.1 |_http-server-header: nginx/1.23.1 |_http-title: Did not follow redirect to http://shoppy.htb | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS 9093/tcp open copycat?</description>
-    </item>
-    
-    <item>
-      <title>HackTheBox MetaTwo</title>
-      <link>https://53ctf.github.io/posts/htb/metatwo/</link>
-      <pubDate>Sun, 08 Jan 2023 13:15:17 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/posts/htb/metatwo/</guid>
-      <description>Name: MetaTwo IP: 10.10.11.186 Defficulty: Easy OS: Linux Author: Nauten Nmap PORT STATE SERVICE VERSION 21/tcp open ftp? | fingerprint-strings: | GenericLines: | 220 ProFTPD Server (Debian) [::ffff:10.10.11.186] | Invalid command: try being more creative |_ Invalid command: try being more creative 22/tcp open ssh OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 c4b44617d2102d8fec1dc927fecd79ee (RSA) | 256 2aea2fcb23e8c529409cab866dcd4411 (ECDSA) |_ 256 fd78c0b0e22016fa050debd83f12a4ab (ED25519) 80/tcp open http nginx 1.</description>
     </item>
     
   </channel>
