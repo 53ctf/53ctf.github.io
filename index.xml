@@ -5,7 +5,16 @@
     <link>https://53ctf.github.io/</link>
     <description>Recent content on 53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 11 Jan 2023 08:36:15 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Jan 2023 16:15:16 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HackTheBox Ambassador</title>
+      <link>https://53ctf.github.io/posts/htb/ambassador/</link>
+      <pubDate>Mon, 16 Jan 2023 16:15:16 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/posts/htb/ambassador/</guid>
+      <description>Name: Ambassador IP: 10.10.11.183 Defficulty: Medium OS: Linux Author: DirectRoot Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 29dd8ed7171e8e3090873cc651007c75 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDLYy5+VCwR+2NKWpIRhSVGI1nJQ5YeihevJqIYbfopEW03vZ9SgacRzs4coGfDbcYa+KPePbz2n+2zXytEPfzBzFysLXgTaUlDFcDqEsWP9pJ5UYFNfXqHCOyDRklsetFOBcxkgC8/IcHDJdJQTEr51KLF75ZXaEIcjZ+XuQWsOrU5DJPrAlCmG12OMjsnP4OfI4RpIjELuLCyVSItoin255/99SSM3koBheX0im9/V8IOpEye9Fc2LigyGA+97wwNSZG2G/duS6lE8pYz1unL+Vg2ogGDN85TkkrS3XdfDLI87AyFBGYniG8+SMtLQOd6tCZeymGK2BQe1k9oWoB7/J6NJ0dylAPAVZ1sDAU7KCUPNAex8q6bh0KrO/5zVbpwMB+qEq6SY6crjtfpYnd7+2DLwiYgcSiQxZMnY3ZkJiIf6s5FkJYmcf/oX1xm/TlP9qoxRKYqLtEJvAHEk/mK+na1Esc8yuPItSRaQzpCgyIwiZCdQlTwWBCVFJZqrXc= | 256 80a4c52e9ab1ecda276439a408973bef (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFgGRouCNEVCXufz6UDFKYkcd3Lmm6WoGKl840u6TuJ8+SKv77LDiJzsXlqcjdeHXA5O87Us7Npwydhw9NYXXYs= | 256 f590ba7ded55cb7007f2bbc891931bf6 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINujB7zPDP2GyNBT4Dt4hGiheNd9HOUMN/5Spa21Kg0W 80/tcp open http syn-ack Apache httpd 2.4.41 ((Ubuntu)) |_http-generator: Hugo 0.94.2 |_http-server-header: Apache/2.4.41 (Ubuntu) |_http-title: Ambassador Development Server | http-methods: |_ Supported Methods: OPTIONS HEAD GET POST 3000/tcp open ppp?</description>
+    </item>
+    
     <item>
       <title>HackTheBox Shoppy</title>
       <link>https://53ctf.github.io/posts/htb/shoppy/</link>
