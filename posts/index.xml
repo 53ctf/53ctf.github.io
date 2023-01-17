@@ -5,7 +5,16 @@
     <link>https://53ctf.github.io/posts/</link>
     <description>Recent content in Posts on 53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 11 Jan 2023 08:36:15 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Jan 2023 08:00:10 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HackTheBox UpDown</title>
+      <link>https://53ctf.github.io/posts/htb/updown/</link>
+      <pubDate>Tue, 17 Jan 2023 08:00:10 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/posts/htb/updown/</guid>
+      <description>Name: UpDown IP: 10.10.11.177 Defficulty: Medium OS: Linux Author: AB2 Nmap 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 9e1f98d7c8ba61dbf149669d701702e7 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDl7j17X/EWcm1MwzD7sKOFZyTUggWH1RRgwFbAK+B6R28x47OJjQW8VO4tCjTyvqKBzpgg7r98xNEykmvnMr0V9eUhg6zf04GfS/gudDF3Fbr3XnZOsrMmryChQdkMyZQK1HULbqRij1tdHaxbIGbG5CmIxbh69mMwBOlinQINCStytTvZq4btP5xSMd8pyzuZdqw3Z58ORSnJAorhBXAmVa9126OoLx7AzL0aO3lqgWjo/wwd3FmcYxAdOjKFbIRiZK/f7RJHty9P2WhhmZ6mZBSTAvIJ36Kb4Z0NuZ+ztfZCCDEw3z3bVXSVR/cp0Z0186gkZv8w8cp/ZHbtJB/nofzEBEeIK8gZqeFc/hwrySA6yBbSg0FYmXSvUuKgtjTgbZvgog66h+98XUgXheX1YPDcnUU66zcZbGsSM1aw1sMqB1vHhd2LGeY8UeQ1pr+lppDwMgce8DO141tj+ozjJouy19Tkc9BB46FNJ43Jl58CbLPdHUcWeMbjwauMrw0= | 256 c21cfe1152e3d7e5f759186b68453f62 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKMJ3/md06ho+1RKACqh2T8urLkt1ST6yJ9EXEkuJh0UI/zFcIffzUOeiD2ZHphWyvRDIqm7ikVvNFmigSBUpXI= | 256 5f6e12670a66e8e2b761bec4143ad38e (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VZrZbtNuK2LKeBBzfz0gywG4oYxgPl+s5QENjani1 80/tcp open http syn-ack Apache httpd 2.4.41 ((Ubuntu)) | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.41 (Ubuntu) |_http-title: Is my Website up ?</description>
+    </item>
+    
     <item>
       <title>HackTheBox Shoppy</title>
       <link>https://53ctf.github.io/posts/htb/shoppy/</link>
