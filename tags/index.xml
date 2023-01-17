@@ -5,34 +5,7 @@
     <link>https://53ctf.github.io/tags/</link>
     <description>Recent content in Tags on 0x53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 17 Jan 2023 14:51:19 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>HackTheBox</title>
-      <link>https://53ctf.github.io/tags/hackthebox/</link>
-      <pubDate>Tue, 17 Jan 2023 14:51:19 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/tags/hackthebox/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SQLInjection</title>
-      <link>https://53ctf.github.io/tags/sqlinjection/</link>
-      <pubDate>Tue, 17 Jan 2023 14:51:19 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/tags/sqlinjection/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>WebSockets</title>
-      <link>https://53ctf.github.io/tags/websockets/</link>
-      <pubDate>Tue, 17 Jan 2023 14:51:19 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/tags/websockets/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 11 Jan 2023 08:36:15 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
       <link>https://53ctf.github.io/tags/docker/</link>
@@ -48,6 +21,15 @@
       <pubDate>Wed, 11 Jan 2023 08:36:15 +0530</pubDate>
       
       <guid>https://53ctf.github.io/tags/ghidra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HackTheBox</title>
+      <link>https://53ctf.github.io/tags/hackthebox/</link>
+      <pubDate>Wed, 11 Jan 2023 08:36:15 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/tags/hackthebox/</guid>
       <description></description>
     </item>
     
