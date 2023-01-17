@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 53CTF</title>
+    <title>Posts on 0x53CTF</title>
     <link>https://53ctf.github.io/posts/</link>
-    <description>Recent content in Posts on 53CTF</description>
+    <description>Recent content in Posts on 0x53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 11 Jan 2023 08:36:15 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Jan 2023 14:51:19 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HackTheBox Soccer</title>
+      <link>https://53ctf.github.io/posts/htb/soccer/</link>
+      <pubDate>Tue, 17 Jan 2023 14:51:19 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/posts/htb/soccer/</guid>
+      <description>Name: Soccer IP: 10.10.11.194 Defficulty: Easy OS: Linux Author: sau123 Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 ad0d84a3fdcc98a478fef94915dae16d (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQChXu/2AxokRA9pcTIQx6HKyiO0odku5KmUpklDRNG+9sa6olMd4dSBq1d0rGtsO2rNJRLQUczml6+N5DcCasAZUShDrMnitsRvG54x8GrJyW4nIx4HOfXRTsNqImBadIJtvIww1L7H1DPzMZYJZj/oOwQHXvp85a2hMqMmoqsljtS/jO3tk7NUKA/8D5KuekSmw8m1pPEGybAZxlAYGu3KbasN66jmhf0ReHg3Vjx9e8FbHr3ksc/MimSMfRq0lIo5fJ7QAnbttM5ktuQqzvVjJmZ0+aL7ZeVewTXLmtkOxX9E5ldihtUFj8C6cQroX69LaaN/AXoEZWl/v1LWE5Qo1DEPrv7A6mIVZvWIM8/AqLpP8JWgAQevOtby5mpmhSxYXUgyii5xRAnvDWwkbwxhKcBIzVy4x5TXinVR7FrrwvKmNAG2t4lpDgmryBZ0YSgxgSAcHIBOglugehGZRHJC9C273hs44EToGCrHBY8n2flJe7OgbjEL8Il3SpfUEF0= | 256 dfd6a39f68269dfc7c6a0c29e961f00c (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIy3gWUPD+EqFcmc0ngWeRLfCr68+uiuM59j9zrtLNRcLJSTJmlHUdcq25/esgeZkyQ0mr2RZ5gozpBd5yzpdzk= | 256 5797565def793c2fcbdb35fff17c615c (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ2Pj1mZ0q8u/E8K49Gezm3jguM3d8VyAYsX0QyaN6H/ 80/tcp open http syn-ack nginx 1.18.0 (Ubuntu) |_http-title: Did not follow redirect to http://soccer.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: nginx/1.</description>
+    </item>
+    
     <item>
       <title>HackTheBox Shoppy</title>
       <link>https://53ctf.github.io/posts/htb/shoppy/</link>

