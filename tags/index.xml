@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 18 Jan 2023 12:36:43 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Windows</title>
-      <link>https://53ctf.github.io/tags/windows/</link>
+      <title>Notes</title>
+      <link>https://53ctf.github.io/tags/notes/</link>
       <pubDate>Wed, 18 Jan 2023 12:36:43 +0530</pubDate>
       
-      <guid>https://53ctf.github.io/tags/windows/</guid>
+      <guid>https://53ctf.github.io/tags/notes/</guid>
       <description></description>
     </item>
     
@@ -52,47 +52,20 @@
     </item>
     
     <item>
-      <title>Config</title>
-      <link>https://53ctf.github.io/tags/config/</link>
-      <pubDate>Sun, 08 Jan 2023 09:59:08 +0530</pubDate>
+      <title>Python</title>
+      <link>https://53ctf.github.io/tags/python/</link>
+      <pubDate>Sat, 07 Jan 2023 18:04:11 +0530</pubDate>
       
-      <guid>https://53ctf.github.io/tags/config/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dotfile</title>
-      <link>https://53ctf.github.io/tags/dotfile/</link>
-      <pubDate>Sun, 08 Jan 2023 09:59:08 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/tags/dotfile/</guid>
+      <guid>https://53ctf.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
       <link>https://53ctf.github.io/tags/linux/</link>
-      <pubDate>Sun, 08 Jan 2023 09:59:08 +0530</pubDate>
+      <pubDate>Sat, 07 Jan 2023 09:33:57 +0530</pubDate>
       
       <guid>https://53ctf.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Notes</title>
-      <link>https://53ctf.github.io/tags/notes/</link>
-      <pubDate>Sun, 08 Jan 2023 09:59:08 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/tags/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://53ctf.github.io/tags/python/</link>
-      <pubDate>Sat, 07 Jan 2023 18:04:11 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/tags/python/</guid>
       <description></description>
     </item>
     

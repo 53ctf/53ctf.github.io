@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Windows // 0x53CTF</title>
+    <title>Active Directory // 0x53CTF</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.108.0">
@@ -12,10 +12,10 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Windows"/>
+<meta name="twitter:title" content="Active Directory"/>
 <meta name="twitter:description" content="enum4linux &gt; enum4linux [options] ip Usage: /usr/bin/enum4linux [options] ip Options are (like &#34;enum&#34;): -U get userlist -M get machine list* -S get sharelist -P get password policy information -G get group and member list -d be detailed, applies to -U and -S -u user specify username to use (default &#34;&#34;) -p pass specify password to use (default &#34;&#34;) The following options from enum.exe aren&#39;t implemented: -L, -N, -D, -f Additional options: -a Do all simple enumeration (-U -S -G -P -r -o -n -i)."/>
 
-    <meta property="og:title" content="Windows" />
+    <meta property="og:title" content="Active Directory" />
 <meta property="og:description" content="enum4linux &gt; enum4linux [options] ip Usage: /usr/bin/enum4linux [options] ip Options are (like &#34;enum&#34;): -U get userlist -M get machine list* -S get sharelist -P get password policy information -G get group and member list -d be detailed, applies to -U and -S -u user specify username to use (default &#34;&#34;) -p pass specify password to use (default &#34;&#34;) The following options from enum.exe aren&#39;t implemented: -L, -N, -D, -f Additional options: -a Do all simple enumeration (-U -S -G -P -r -o -n -i)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://53ctf.github.io/posts/notes/windows/" /><meta property="article:section" content="posts" />
@@ -70,7 +70,7 @@
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">Windows</h1>
+      <h1 class ="post-title">Active Directory</h1>
       <div class="post-meta">
         <div>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
@@ -91,7 +91,7 @@
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
 </svg>
-              <a class="tag" href="https://53ctf.github.io/tags/windows/">Windows</a>
+              <a class="tag" href="https://53ctf.github.io/tags/notes/">Notes</a>
         </div>
       </div>
     </header>
@@ -331,6 +331,8 @@ connection:
 </span></span><span style="display:flex;"><span>Info: Establishing connection to remote endpoint
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\A</span>dministrator<span style="color:#ae81ff">\D</span>ocuments&gt;
+</span></span></code></pre></div><h3 id="sharphound">Sharphound</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ps" data-lang="ps"><span style="display:flex;"><span><span style="color:#a6e22e">.\Sharphound.exe</span> <span style="color:#a6e22e">-c</span> <span style="color:#a6e22e">all,gpolocalgroup</span>
 </span></span></code></pre></div>
     </div>
     <div class="post-footer">

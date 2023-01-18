@@ -5,16 +5,16 @@
     <loc>https://53ctf.github.io/</loc>
     <lastmod>2023-01-18T12:36:43+05:30</lastmod>
   </url><url>
+    <loc>https://53ctf.github.io/posts/notes/windows/</loc>
+    <lastmod>2023-01-18T12:36:43+05:30</lastmod>
+  </url><url>
+    <loc>https://53ctf.github.io/tags/notes/</loc>
+    <lastmod>2023-01-18T12:36:43+05:30</lastmod>
+  </url><url>
     <loc>https://53ctf.github.io/posts/</loc>
     <lastmod>2023-01-18T12:36:43+05:30</lastmod>
   </url><url>
     <loc>https://53ctf.github.io/tags/</loc>
-    <lastmod>2023-01-18T12:36:43+05:30</lastmod>
-  </url><url>
-    <loc>https://53ctf.github.io/tags/windows/</loc>
-    <lastmod>2023-01-18T12:36:43+05:30</lastmod>
-  </url><url>
-    <loc>https://53ctf.github.io/posts/notes/windows/</loc>
     <lastmod>2023-01-18T12:36:43+05:30</lastmod>
   </url><url>
     <loc>https://53ctf.github.io/tags/docker/</loc>
@@ -35,26 +35,14 @@
     <loc>https://53ctf.github.io/about/</loc>
     <lastmod>2023-01-08T12:33:10+05:30</lastmod>
   </url><url>
-    <loc>https://53ctf.github.io/tags/config/</loc>
-    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
-  </url><url>
-    <loc>https://53ctf.github.io/tags/dotfile/</loc>
-    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
-  </url><url>
-    <loc>https://53ctf.github.io/posts/notes/dotfiles/dotfiles/</loc>
-    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
-  </url><url>
-    <loc>https://53ctf.github.io/tags/linux/</loc>
-    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
-  </url><url>
-    <loc>https://53ctf.github.io/tags/notes/</loc>
-    <lastmod>2023-01-08T09:59:08+05:30</lastmod>
-  </url><url>
     <loc>https://53ctf.github.io/tags/python/</loc>
     <lastmod>2023-01-07T18:04:11+05:30</lastmod>
   </url><url>
     <loc>https://53ctf.github.io/posts/notes/python/python/</loc>
     <lastmod>2023-01-07T18:04:11+05:30</lastmod>
+  </url><url>
+    <loc>https://53ctf.github.io/tags/linux/</loc>
+    <lastmod>2023-01-07T09:33:57+05:30</lastmod>
   </url><url>
     <loc>https://53ctf.github.io/posts/notes/linux/linux-notes/</loc>
     <lastmod>2023-01-07T09:33:57+05:30</lastmod>
