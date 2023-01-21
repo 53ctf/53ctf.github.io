@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>HackTheBox UpDown // 53CTF</title>
+    <title>HackTheBox UpDown // 0x53CTF</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.108.0">
@@ -27,7 +27,7 @@
   <body>
     <header class="app-header">
       <a href="https://53ctf.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="5YC10P5" /></a>
-      <span class="app-header-title">53CTF</span>
+      <span class="app-header-title">0x53CTF</span>
       <nav class="app-header-menu">
           <a class="app-header-menu-item" href="/">Home</a>
              - 
@@ -107,21 +107,21 @@
 <li>Author: <a href="https://www.hackthebox.com/home/users/profile/1303">AB2</a></li>
 </ul>
 <h2 id="nmap">Nmap</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 <span style="color:#f92672">(</span>Ubuntu Linux; protocol 2.0<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>| ssh-hostkey:
-</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">3072</span> 9e1f98d7c8ba61dbf149669d701702e7 <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDl7j17X/EWcm1MwzD7sKOFZyTUggWH1RRgwFbAK+B6R28x47OJjQW8VO4tCjTyvqKBzpgg7r98xNEykmvnMr0V9eUhg6zf04GfS/gudDF3Fbr3XnZOsrMmryChQdkMyZQK1HULbqRij1tdHaxbIGbG5CmIxbh69mMwBOlinQINCStytTvZq4btP5xSMd8pyzuZdqw3Z58ORSnJAorhBXAmVa9126OoLx7AzL0aO3lqgWjo/wwd3FmcYxAdOjKFbIRiZK/f7RJHty9P2WhhmZ6mZBSTAvIJ36Kb4Z0NuZ+ztfZCCDEw3z3bVXSVR/cp0Z0186gkZv8w8cp/ZHbtJB/nofzEBEeIK8gZqeFc/hwrySA6yBbSg0FYmXSvUuKgtjTgbZvgog66h+98XUgXheX1YPDcnUU66zcZbGsSM1aw1sMqB1vHhd2LGeY8UeQ1pr+lppDwMgce8DO141tj+ozjJouy19Tkc9BB46FNJ43Jl58CbLPdHUcWeMbjwauMrw0<span style="color:#f92672">=</span>
-</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> c21cfe1152e3d7e5f759186b68453f62 <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKMJ3/md06ho+1RKACqh2T8urLkt1ST6yJ9EXEkuJh0UI/zFcIffzUOeiD2ZHphWyvRDIqm7ikVvNFmigSBUpXI<span style="color:#f92672">=</span>
-</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> 5f6e12670a66e8e2b761bec4143ad38e <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VZrZbtNuK2LKeBBzfz0gywG4oYxgPl+s5QENjani1
-</span></span><span style="display:flex;"><span>80/tcp open  http    syn-ack Apache httpd 2.4.41 <span style="color:#f92672">((</span>Ubuntu<span style="color:#f92672">))</span>
-</span></span><span style="display:flex;"><span>| http-methods:
-</span></span><span style="display:flex;"><span>|_  Supported Methods: GET HEAD POST OPTIONS
-</span></span><span style="display:flex;"><span>|_http-server-header: Apache/2.4.41 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>|_http-title: Is my Website up ?
-</span></span><span style="display:flex;"><span>Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-</span></span></code></pre></div><p>Two ports are open.</p>
+<pre tabindex="0"><code>22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   3072 9e1f98d7c8ba61dbf149669d701702e7 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDl7j17X/EWcm1MwzD7sKOFZyTUggWH1RRgwFbAK+B6R28x47OJjQW8VO4tCjTyvqKBzpgg7r98xNEykmvnMr0V9eUhg6zf04GfS/gudDF3Fbr3XnZOsrMmryChQdkMyZQK1HULbqRij1tdHaxbIGbG5CmIxbh69mMwBOlinQINCStytTvZq4btP5xSMd8pyzuZdqw3Z58ORSnJAorhBXAmVa9126OoLx7AzL0aO3lqgWjo/wwd3FmcYxAdOjKFbIRiZK/f7RJHty9P2WhhmZ6mZBSTAvIJ36Kb4Z0NuZ+ztfZCCDEw3z3bVXSVR/cp0Z0186gkZv8w8cp/ZHbtJB/nofzEBEeIK8gZqeFc/hwrySA6yBbSg0FYmXSvUuKgtjTgbZvgog66h+98XUgXheX1YPDcnUU66zcZbGsSM1aw1sMqB1vHhd2LGeY8UeQ1pr+lppDwMgce8DO141tj+ozjJouy19Tkc9BB46FNJ43Jl58CbLPdHUcWeMbjwauMrw0=
+|   256 c21cfe1152e3d7e5f759186b68453f62 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKMJ3/md06ho+1RKACqh2T8urLkt1ST6yJ9EXEkuJh0UI/zFcIffzUOeiD2ZHphWyvRDIqm7ikVvNFmigSBUpXI=
+|   256 5f6e12670a66e8e2b761bec4143ad38e (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VZrZbtNuK2LKeBBzfz0gywG4oYxgPl+s5QENjani1
+80/tcp open  http    syn-ack Apache httpd 2.4.41 ((Ubuntu))
+| http-methods:
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Is my Website up ?
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</code></pre><p>Two ports are open.</p>
 <ul>
 <li><strong>22/TCP SSH</strong>
 <ul>
