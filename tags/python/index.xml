@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on 0x53CTF</title>
+    <link>https://53ctf.github.io/tags/python/</link>
+    <description>Recent content in Python on 0x53CTF</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 07 Jan 2023 18:04:11 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>https://53ctf.github.io/posts/notes/python/python/</link>
+      <pubDate>Sat, 07 Jan 2023 18:04:11 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/posts/notes/python/python/</guid>
+      <description>Take Advantage Of input() Function And Run System Commands Within It
+__import__(&amp;#39;os&amp;#39;).system(&amp;#39;cat /etc/passwd&amp;#39;) Easy SSTI Payloads Generator
+GitHub Source
+#!/usr/bin/python3 from cmd import Cmd import urllib.parse, argparse parser = argparse.ArgumentParser(description=&amp;#34;Generate SSTI payloads.</description>
+    </item>
+    
+  </channel>
+</rss>
