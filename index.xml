@@ -14,7 +14,7 @@
       
       <guid>https://53ctf.github.io/posts/htb/updown/</guid>
       <description>Name: UpDown IP: 10.10.11.177 Defficulty: Medium OS: Linux Author: AB2 Nmap&gt; Nmap # 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 9e1f98d7c8ba61dbf149669d701702e7 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDl7j17X/EWcm1MwzD7sKOFZyTUggWH1RRgwFbAK+B6R28x47OJjQW8VO4tCjTyvqKBzpgg7r98xNEykmvnMr0V9eUhg6zf04GfS/gudDF3Fbr3XnZOsrMmryChQdkMyZQK1HULbqRij1tdHaxbIGbG5CmIxbh69mMwBOlinQINCStytTvZq4btP5xSMd8pyzuZdqw3Z58ORSnJAorhBXAmVa9126OoLx7AzL0aO3lqgWjo/wwd3FmcYxAdOjKFbIRiZK/f7RJHty9P2WhhmZ6mZBSTAvIJ36Kb4Z0NuZ+ztfZCCDEw3z3bVXSVR/cp0Z0186gkZv8w8cp/ZHbtJB/nofzEBEeIK8gZqeFc/hwrySA6yBbSg0FYmXSvUuKgtjTgbZvgog66h+98XUgXheX1YPDcnUU66zcZbGsSM1aw1sMqB1vHhd2LGeY8UeQ1pr+lppDwMgce8DO141tj+ozjJouy19Tkc9BB46FNJ43Jl58CbLPdHUcWeMbjwauMrw0= | 256 c21cfe1152e3d7e5f759186b68453f62 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKMJ3/md06ho+1RKACqh2T8urLkt1ST6yJ9EXEkuJh0UI/zFcIffzUOeiD2ZHphWyvRDIqm7ikVvNFmigSBUpXI= | 256 5f6e12670a66e8e2b761bec4143ad38e (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VZrZbtNuK2LKeBBzfz0gywG4oYxgPl+s5QENjani1 80/tcp open http syn-ack Apache httpd 2.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://53ctf.github.io/posts/htb/updown/featured.png" />
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       
       <guid>https://53ctf.github.io/posts/notes/windows/</guid>
       <description>enum4linux&gt; enum4linux # &amp;gt; enum4linux [options] ip Usage: /usr/bin/enum4linux [options] ip Options are (like &amp;#34;enum&amp;#34;): -U get userlist -M get machine list* -S get sharelist -P get password policy information -G get group and member list -d be detailed, applies to -U and -S -u user specify username to use (default &amp;#34;&amp;#34;) -p pass specify password to use (default &amp;#34;&amp;#34;) The following options from enum.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://53ctf.github.io/posts/notes/windows/featured.png" />
     </item>
     
     <item>
@@ -34,7 +34,7 @@
       
       <guid>https://53ctf.github.io/posts/htb/shoppy/</guid>
       <description>Name: Shoppy IP: 10.10.11.180 Defficulty: Easy OS: Linux Author: lockscan Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 9e5e8351d99f89ea471a12eb81f922c0 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDApZi3Kltv1yDHTatw6pKZfuIcoHfTnVe0W1yc9Uw7NMUinxjjQaQ731J+eCTwd8hBcZT6HQwcchDNR50Lwyp2a/KpXuH2my+2/tDvISTRTgwfMy1sDrG3+KPEzBag07m7ycshp8KhrRq0faHPrEgcagkb5T8mnT6zr3YonzoMyIpT+Q1O0JAre6GPgJc9im/tjaqhwUxCH5MxJCKQxaUf2SlGjRCH5/xEkNO20BEUYokjoAWwHUWjK2mlIrBQfd4/lcUzMnc5WT9pVBqQBw+/7LbFRyH4TLmGT9PPEr8D8iygWYpuG7WFOZlU8oOhO0+uBqZFgJFFOevq+42q42BvYYR/z+mFox+Q2lz7viSCV7nBMdcWto6USWLrx1AkVXNGeuRjr3l0r/698sQjDy5v0GnU9cMHeYkMc+TuiIaJJ5oRrSg/x53Xin1UogTnTaKLNdGkgynMqyVFklvdnUngRSLsXnwYNgcDrUhXxsfpDu8HVnzerT3q27679+n5ZFM= | 256 5857eeeb0650037c8463d7a3415b1ad5 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHiKrH/B/4murRCo5ju2KuPgkMjQN3Foh7EifMHEOwmoDNjLYBfoAFKgBnrMA9GzA+NGhHVa6L8CAxN3eaGXXMo= | 256 3e9d0a4290443860b3b62ce9bd9a6754 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBRsWhJQCRHjDkHy3HkFLMZoGqCmM3/VfMHMm56u0Ivk 80/tcp open http syn-ack nginx 1.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://53ctf.github.io/posts/htb/shoppy/featured.png" />
     </item>
     
     <item>

@@ -66,11 +66,12 @@
   <meta property="og:title" content="HackTheBox UpDown" />
 <meta property="og:description" content="Name: UpDown IP: 10.10.11.177 Defficulty: Medium OS: Linux Author: AB2 Nmap&gt; Nmap # 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 9e1f98d7c8ba61dbf149669d701702e7 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDl7j17X/EWcm1MwzD7sKOFZyTUggWH1RRgwFbAK&#43;B6R28x47OJjQW8VO4tCjTyvqKBzpgg7r98xNEykmvnMr0V9eUhg6zf04GfS/gudDF3Fbr3XnZOsrMmryChQdkMyZQK1HULbqRij1tdHaxbIGbG5CmIxbh69mMwBOlinQINCStytTvZq4btP5xSMd8pyzuZdqw3Z58ORSnJAorhBXAmVa9126OoLx7AzL0aO3lqgWjo/wwd3FmcYxAdOjKFbIRiZK/f7RJHty9P2WhhmZ6mZBSTAvIJ36Kb4Z0NuZ&#43;ztfZCCDEw3z3bVXSVR/cp0Z0186gkZv8w8cp/ZHbtJB/nofzEBEeIK8gZqeFc/hwrySA6yBbSg0FYmXSvUuKgtjTgbZvgog66h&#43;98XUgXheX1YPDcnUU66zcZbGsSM1aw1sMqB1vHhd2LGeY8UeQ1pr&#43;lppDwMgce8DO141tj&#43;ozjJouy19Tkc9BB46FNJ43Jl58CbLPdHUcWeMbjwauMrw0= | 256 c21cfe1152e3d7e5f759186b68453f62 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKMJ3/md06ho&#43;1RKACqh2T8urLkt1ST6yJ9EXEkuJh0UI/zFcIffzUOeiD2ZHphWyvRDIqm7ikVvNFmigSBUpXI= | 256 5f6e12670a66e8e2b761bec4143ad38e (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VZrZbtNuK2LKeBBzfz0gywG4oYxgPl&#43;s5QENjani1 80/tcp open http syn-ack Apache httpd 2." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://53ctf.github.io/posts/htb/updown/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://53ctf.github.io/posts/htb/updown/" /><meta property="og:image" content="https://53ctf.github.io/posts/htb/updown/featured.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-01-21T00:00:00+00:00" />
 <meta property="article:modified_time" content="2023-01-21T00:00:00+00:00" /><meta property="og:site_name" content="0x53CTF" />
 
-  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://53ctf.github.io/posts/htb/updown/featured.png"/>
 <meta name="twitter:title" content="HackTheBox UpDown"/>
 <meta name="twitter:description" content="Name: UpDown IP: 10.10.11.177 Defficulty: Medium OS: Linux Author: AB2 Nmap&gt; Nmap # 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 9e1f98d7c8ba61dbf149669d701702e7 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDl7j17X/EWcm1MwzD7sKOFZyTUggWH1RRgwFbAK&#43;B6R28x47OJjQW8VO4tCjTyvqKBzpgg7r98xNEykmvnMr0V9eUhg6zf04GfS/gudDF3Fbr3XnZOsrMmryChQdkMyZQK1HULbqRij1tdHaxbIGbG5CmIxbh69mMwBOlinQINCStytTvZq4btP5xSMd8pyzuZdqw3Z58ORSnJAorhBXAmVa9126OoLx7AzL0aO3lqgWjo/wwd3FmcYxAdOjKFbIRiZK/f7RJHty9P2WhhmZ6mZBSTAvIJ36Kb4Z0NuZ&#43;ztfZCCDEw3z3bVXSVR/cp0Z0186gkZv8w8cp/ZHbtJB/nofzEBEeIK8gZqeFc/hwrySA6yBbSg0FYmXSvUuKgtjTgbZvgog66h&#43;98XUgXheX1YPDcnUU66zcZbGsSM1aw1sMqB1vHhd2LGeY8UeQ1pr&#43;lppDwMgce8DO141tj&#43;ozjJouy19Tkc9BB46FNJ43Jl58CbLPdHUcWeMbjwauMrw0= | 256 c21cfe1152e3d7e5f759186b68453f62 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKMJ3/md06ho&#43;1RKACqh2T8urLkt1ST6yJ9EXEkuJh0UI/zFcIffzUOeiD2ZHphWyvRDIqm7ikVvNFmigSBUpXI= | 256 5f6e12670a66e8e2b761bec4143ad38e (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VZrZbtNuK2LKeBBzfz0gywG4oYxgPl&#43;s5QENjani1 80/tcp open http syn-ack Apache httpd 2."/>
 
@@ -460,7 +461,7 @@
       
 
 
-<div class="w-full rounded-md h-36 md:h-56 lg:h-72 single_hero_basic nozoom" style="background-image:url(/img/background.png);"></div>
+<div class="w-full rounded-md h-36 md:h-56 lg:h-72 single_hero_basic nozoom" style="background-image:url(/posts/htb/updown/featured.png);"></div>
 
 
 

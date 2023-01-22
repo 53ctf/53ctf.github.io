@@ -66,11 +66,12 @@
   <meta property="og:title" content="HackTheBox Shoppy" />
 <meta property="og:description" content="Name: Shoppy IP: 10.10.11.180 Defficulty: Easy OS: Linux Author: lockscan Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.4p1 Debian 5&#43;deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 9e5e8351d99f89ea471a12eb81f922c0 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDApZi3Kltv1yDHTatw6pKZfuIcoHfTnVe0W1yc9Uw7NMUinxjjQaQ731J&#43;eCTwd8hBcZT6HQwcchDNR50Lwyp2a/KpXuH2my&#43;2/tDvISTRTgwfMy1sDrG3&#43;KPEzBag07m7ycshp8KhrRq0faHPrEgcagkb5T8mnT6zr3YonzoMyIpT&#43;Q1O0JAre6GPgJc9im/tjaqhwUxCH5MxJCKQxaUf2SlGjRCH5/xEkNO20BEUYokjoAWwHUWjK2mlIrBQfd4/lcUzMnc5WT9pVBqQBw&#43;/7LbFRyH4TLmGT9PPEr8D8iygWYpuG7WFOZlU8oOhO0&#43;uBqZFgJFFOevq&#43;42q42BvYYR/z&#43;mFox&#43;Q2lz7viSCV7nBMdcWto6USWLrx1AkVXNGeuRjr3l0r/698sQjDy5v0GnU9cMHeYkMc&#43;TuiIaJJ5oRrSg/x53Xin1UogTnTaKLNdGkgynMqyVFklvdnUngRSLsXnwYNgcDrUhXxsfpDu8HVnzerT3q27679&#43;n5ZFM= | 256 5857eeeb0650037c8463d7a3415b1ad5 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHiKrH/B/4murRCo5ju2KuPgkMjQN3Foh7EifMHEOwmoDNjLYBfoAFKgBnrMA9GzA&#43;NGhHVa6L8CAxN3eaGXXMo= | 256 3e9d0a4290443860b3b62ce9bd9a6754 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBRsWhJQCRHjDkHy3HkFLMZoGqCmM3/VfMHMm56u0Ivk 80/tcp open http syn-ack nginx 1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://53ctf.github.io/posts/htb/shoppy/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://53ctf.github.io/posts/htb/shoppy/" /><meta property="og:image" content="https://53ctf.github.io/posts/htb/shoppy/featured.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-01-14T00:00:00+00:00" />
 <meta property="article:modified_time" content="2023-01-14T00:00:00+00:00" /><meta property="og:site_name" content="0x53CTF" />
 
-  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://53ctf.github.io/posts/htb/shoppy/featured.png"/>
 <meta name="twitter:title" content="HackTheBox Shoppy"/>
 <meta name="twitter:description" content="Name: Shoppy IP: 10.10.11.180 Defficulty: Easy OS: Linux Author: lockscan Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.4p1 Debian 5&#43;deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 9e5e8351d99f89ea471a12eb81f922c0 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDApZi3Kltv1yDHTatw6pKZfuIcoHfTnVe0W1yc9Uw7NMUinxjjQaQ731J&#43;eCTwd8hBcZT6HQwcchDNR50Lwyp2a/KpXuH2my&#43;2/tDvISTRTgwfMy1sDrG3&#43;KPEzBag07m7ycshp8KhrRq0faHPrEgcagkb5T8mnT6zr3YonzoMyIpT&#43;Q1O0JAre6GPgJc9im/tjaqhwUxCH5MxJCKQxaUf2SlGjRCH5/xEkNO20BEUYokjoAWwHUWjK2mlIrBQfd4/lcUzMnc5WT9pVBqQBw&#43;/7LbFRyH4TLmGT9PPEr8D8iygWYpuG7WFOZlU8oOhO0&#43;uBqZFgJFFOevq&#43;42q42BvYYR/z&#43;mFox&#43;Q2lz7viSCV7nBMdcWto6USWLrx1AkVXNGeuRjr3l0r/698sQjDy5v0GnU9cMHeYkMc&#43;TuiIaJJ5oRrSg/x53Xin1UogTnTaKLNdGkgynMqyVFklvdnUngRSLsXnwYNgcDrUhXxsfpDu8HVnzerT3q27679&#43;n5ZFM= | 256 5857eeeb0650037c8463d7a3415b1ad5 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHiKrH/B/4murRCo5ju2KuPgkMjQN3Foh7EifMHEOwmoDNjLYBfoAFKgBnrMA9GzA&#43;NGhHVa6L8CAxN3eaGXXMo= | 256 3e9d0a4290443860b3b62ce9bd9a6754 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBRsWhJQCRHjDkHy3HkFLMZoGqCmM3/VfMHMm56u0Ivk 80/tcp open http syn-ack nginx 1."/>
 
@@ -460,7 +461,7 @@
       
 
 
-<div class="w-full rounded-md h-36 md:h-56 lg:h-72 single_hero_basic nozoom" style="background-image:url(/img/background.png);"></div>
+<div class="w-full rounded-md h-36 md:h-56 lg:h-72 single_hero_basic nozoom" style="background-image:url(/posts/htb/shoppy/featured.png);"></div>
 
 
 
