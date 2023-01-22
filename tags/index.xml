@@ -79,5 +79,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Python</title>
+      <link>https://53ctf.github.io/tags/python/</link>
+      <pubDate>Sat, 07 Jan 2023 18:04:11 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://53ctf.github.io/tags/linux/</link>
+      <pubDate>Sat, 07 Jan 2023 09:33:57 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -130,6 +130,42 @@
   
     
       <url>
+            <loc>https://53ctf.github.io/tags/python/</loc>
+            <lastmod>2023-01-07T18:04:11+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/posts/notes/python/python/</loc>
+            <lastmod>2023-01-07T18:04:11+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/linux/</loc>
+            <lastmod>2023-01-07T09:33:57+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/posts/notes/linux/linux-notes/</loc>
+            <lastmod>2023-01-07T09:33:57+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
             <loc>https://53ctf.github.io/authors/</loc>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
