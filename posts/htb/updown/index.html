@@ -446,6 +446,16 @@
 
 
 
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
   
   <div class="relative flex flex-col grow">
     <main id="main-content" class="grow">
@@ -461,16 +471,19 @@
       
 
 
-<div class="w-full rounded-md h-36 md:h-56 lg:h-72 single_hero_basic nozoom" style="background-image:url(/posts/htb/updown/featured.png);"></div>
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
 
 
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/posts/htb/updown/featured_hu9b9f416bc5c1bc746a7863329ce851ab_105832_1200x0_resize_box_3.png);">
+    
 
-<div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/img/background.png);">
+
     <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
     </div>
     <div
-        class="absolute inset-0 opacity-30 dark:opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral dark:to-neutral-800 mix-blend-normal">
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
     </div>
 </div>
 
@@ -482,8 +495,6 @@
         background_blur.style.opacity = (scroll / 300)
     });
 </script>
-
-
 
     
   
@@ -651,6 +662,45 @@
   </div>
 </details>
 
+ 
+<script>
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = e.attr('id');
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+</script>
 
       </div>
       </div>
@@ -752,7 +802,12 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
       
       <img
         class="my-0 rounded-md"
-        src="/posts/htb/updown/images/1.png"
+        srcset="
+        /posts/htb/updown/images/1_hu1c043694869d7789a67d43356d8b21b5_13867_330x0_resize_box_3.png 330w,
+        /posts/htb/updown/images/1_hu1c043694869d7789a67d43356d8b21b5_13867_660x0_resize_box_3.png 660w,
+        /posts/htb/updown/images/1_hu1c043694869d7789a67d43356d8b21b5_13867_1024x0_resize_box_3.png 1024w,
+        /posts/htb/updown/images/1_hu1c043694869d7789a67d43356d8b21b5_13867_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/updown/images/1_hu1c043694869d7789a67d43356d8b21b5_13867_660x0_resize_box_3.png"
         alt="Site Test"
       />
       
@@ -822,7 +877,12 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
       
       <img
         class="my-0 rounded-md"
-        src="/posts/htb/updown/images/2.png"
+        srcset="
+        /posts/htb/updown/images/2_hub068b00aae17f8c4ed6a9566b29abc31_22281_330x0_resize_box_3.png 330w,
+        /posts/htb/updown/images/2_hub068b00aae17f8c4ed6a9566b29abc31_22281_660x0_resize_box_3.png 660w,
+        /posts/htb/updown/images/2_hub068b00aae17f8c4ed6a9566b29abc31_22281_1024x0_resize_box_3.png 1024w,
+        /posts/htb/updown/images/2_hub068b00aae17f8c4ed6a9566b29abc31_22281_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/updown/images/2_hub068b00aae17f8c4ed6a9566b29abc31_22281_660x0_resize_box_3.png"
         alt="Burp Test"
       />
       
@@ -847,7 +907,12 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
       
       <img
         class="my-0 rounded-md"
-        src="/posts/htb/updown/images/4.png"
+        srcset="
+        /posts/htb/updown/images/4_huddd1287e4f11e40b074ffd885ec0f58a_13174_330x0_resize_box_3.png 330w,
+        /posts/htb/updown/images/4_huddd1287e4f11e40b074ffd885ec0f58a_13174_660x0_resize_box_3.png 660w,
+        /posts/htb/updown/images/4_huddd1287e4f11e40b074ffd885ec0f58a_13174_1024x0_resize_box_3.png 1024w,
+        /posts/htb/updown/images/4_huddd1287e4f11e40b074ffd885ec0f58a_13174_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/updown/images/4_huddd1287e4f11e40b074ffd885ec0f58a_13174_660x0_resize_box_3.png"
         alt="Header"
       />
       
@@ -872,7 +937,12 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
       
       <img
         class="my-0 rounded-md"
-        src="/posts/htb/updown/images/5.png"
+        srcset="
+        /posts/htb/updown/images/5_hu1d942944f79c951ade7d20ebc3412db4_5940_330x0_resize_box_3.png 330w,
+        /posts/htb/updown/images/5_hu1d942944f79c951ade7d20ebc3412db4_5940_660x0_resize_box_3.png 660w,
+        /posts/htb/updown/images/5_hu1d942944f79c951ade7d20ebc3412db4_5940_1024x0_resize_box_3.png 1024w,
+        /posts/htb/updown/images/5_hu1d942944f79c951ade7d20ebc3412db4_5940_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/updown/images/5_hu1d942944f79c951ade7d20ebc3412db4_5940_660x0_resize_box_3.png"
         alt="Dev Site"
       />
       
@@ -935,7 +1005,12 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
       
       <img
         class="my-0 rounded-md"
-        src="/posts/htb/updown/images/6.png"
+        srcset="
+        /posts/htb/updown/images/6_hu6be47119f492a22bbf0da15903f0e11d_122115_330x0_resize_box_3.png 330w,
+        /posts/htb/updown/images/6_hu6be47119f492a22bbf0da15903f0e11d_122115_660x0_resize_box_3.png 660w,
+        /posts/htb/updown/images/6_hu6be47119f492a22bbf0da15903f0e11d_122115_1024x0_resize_box_3.png 1024w,
+        /posts/htb/updown/images/6_hu6be47119f492a22bbf0da15903f0e11d_122115_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/updown/images/6_hu6be47119f492a22bbf0da15903f0e11d_122115_660x0_resize_box_3.png"
         alt="Functions"
       />
       

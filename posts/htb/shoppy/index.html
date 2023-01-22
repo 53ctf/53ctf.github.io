@@ -446,6 +446,16 @@
 
 
 
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
   
   <div class="relative flex flex-col grow">
     <main id="main-content" class="grow">
@@ -461,16 +471,19 @@
       
 
 
-<div class="w-full rounded-md h-36 md:h-56 lg:h-72 single_hero_basic nozoom" style="background-image:url(/posts/htb/shoppy/featured.png);"></div>
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
 
 
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/posts/htb/shoppy/featured_hu9b9f416bc5c1bc746a7863329ce851ab_105832_1200x0_resize_box_3.png);">
+    
 
-<div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/img/background.png);">
+
     <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
     </div>
     <div
-        class="absolute inset-0 opacity-30 dark:opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral dark:to-neutral-800 mix-blend-normal">
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
     </div>
 </div>
 
@@ -482,8 +495,6 @@
         background_blur.style.opacity = (scroll / 300)
     });
 </script>
-
-
 
     
   
@@ -653,6 +664,45 @@
   </div>
 </details>
 
+ 
+<script>
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = e.attr('id');
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+</script>
 
       </div>
       </div>
@@ -786,7 +836,12 @@ If we head over to <code>mattermost.shoppy.htb</code>, we can see a login form.
       
       <img
         class="my-0 rounded-md"
-        src="/posts/htb/shoppy/images/mattermost_login.png"
+        srcset="
+        /posts/htb/shoppy/images/mattermost_login_huebae72a6458267ec5799d2969144af12_202916_330x0_resize_box_3.png 330w,
+        /posts/htb/shoppy/images/mattermost_login_huebae72a6458267ec5799d2969144af12_202916_660x0_resize_box_3.png 660w,
+        /posts/htb/shoppy/images/mattermost_login_huebae72a6458267ec5799d2969144af12_202916_1024x0_resize_box_3.png 1024w,
+        /posts/htb/shoppy/images/mattermost_login_huebae72a6458267ec5799d2969144af12_202916_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/shoppy/images/mattermost_login_huebae72a6458267ec5799d2969144af12_202916_660x0_resize_box_3.png"
         alt="Mattermost Login"
       />
       
@@ -828,7 +883,12 @@ Since we don&rsquo;t have any credentials yet, we can skip this for now.</p>
       
       <img
         class="my-0 rounded-md"
-        src="/posts/htb/shoppy/images/login_form.png"
+        srcset="
+        /posts/htb/shoppy/images/login_form_hud3066bbe8234df730329604dcf7473b0_626881_330x0_resize_box_3.png 330w,
+        /posts/htb/shoppy/images/login_form_hud3066bbe8234df730329604dcf7473b0_626881_660x0_resize_box_3.png 660w,
+        /posts/htb/shoppy/images/login_form_hud3066bbe8234df730329604dcf7473b0_626881_1024x0_resize_box_3.png 1024w,
+        /posts/htb/shoppy/images/login_form_hud3066bbe8234df730329604dcf7473b0_626881_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/shoppy/images/login_form_hud3066bbe8234df730329604dcf7473b0_626881_660x0_resize_box_3.png"
         alt="Login Form"
       />
       
@@ -855,7 +915,12 @@ It&rsquo;s a login form for admin. So we can asume <code>admin</code> as an poss
       
       <img
         class="my-0 rounded-md"
-        src="/posts/htb/shoppy/images/working_sqli_payload.png"
+        srcset="
+        /posts/htb/shoppy/images/working_sqli_payload_huc9b0f7cc119d87276a80b9b3af9cd15c_48291_330x0_resize_box_3.png 330w,
+        /posts/htb/shoppy/images/working_sqli_payload_huc9b0f7cc119d87276a80b9b3af9cd15c_48291_660x0_resize_box_3.png 660w,
+        /posts/htb/shoppy/images/working_sqli_payload_huc9b0f7cc119d87276a80b9b3af9cd15c_48291_1024x0_resize_box_3.png 1024w,
+        /posts/htb/shoppy/images/working_sqli_payload_huc9b0f7cc119d87276a80b9b3af9cd15c_48291_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/shoppy/images/working_sqli_payload_huc9b0f7cc119d87276a80b9b3af9cd15c_48291_660x0_resize_box_3.png"
         alt="Working NoSQL Payload"
       />
       
@@ -879,7 +944,12 @@ It&rsquo;s a login form for admin. So we can asume <code>admin</code> as an poss
       
       <img
         class="my-0 rounded-md"
-        src="/posts/htb/shoppy/images/login_to_shoppy.png"
+        srcset="
+        /posts/htb/shoppy/images/login_to_shoppy_hu9abc7f0b63e6af08bd2d52585f66d703_15649_330x0_resize_box_3.png 330w,
+        /posts/htb/shoppy/images/login_to_shoppy_hu9abc7f0b63e6af08bd2d52585f66d703_15649_660x0_resize_box_3.png 660w,
+        /posts/htb/shoppy/images/login_to_shoppy_hu9abc7f0b63e6af08bd2d52585f66d703_15649_1024x0_resize_box_3.png 1024w,
+        /posts/htb/shoppy/images/login_to_shoppy_hu9abc7f0b63e6af08bd2d52585f66d703_15649_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/shoppy/images/login_to_shoppy_hu9abc7f0b63e6af08bd2d52585f66d703_15649_660x0_resize_box_3.png"
         alt="NoSQLi Exploit"
       />
       

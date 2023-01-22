@@ -418,6 +418,16 @@
 
 
 
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
   
   <div class="relative flex flex-col grow">
     <main id="main-content" class="grow">
@@ -513,7 +523,7 @@
   <a class="flex flex-wrap article " href="/posts/htb/shoppy/">
     
         
-        <div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/posts/htb/shoppy/featured.png);"></div>
+        <div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/posts/htb/shoppy/featured_hu9b9f416bc5c1bc746a7863329ce851ab_105832_600x0_resize_box_3.png);"></div>
         
       <div class=" mt-3 md:mt-0">
       <div class="items-center text-xl font-semibold">

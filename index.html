@@ -437,6 +437,16 @@
 
 
 
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
   
   <div class="relative flex flex-col grow">
     <main id="main-content" class="grow">
@@ -599,7 +609,7 @@
     
     <div class="border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
         
-        <div class="w-full thumbnail_card nozoom" style="background-image:url(/posts/htb/updown/featured.png);"></div>
+        <div class="w-full thumbnail_card nozoom" style="background-image:url(/posts/htb/updown/featured_hu9b9f416bc5c1bc746a7863329ce851ab_105832_600x0_resize_box_3.png);"></div>
         
       
 
@@ -691,7 +701,7 @@
     
     <div class="border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
         
-        <div class="w-full thumbnail_card nozoom" style="background-image:url(/posts/notes/windows/featured.png);"></div>
+        <div class="w-full thumbnail_card nozoom" style="background-image:url(/posts/notes/windows/featured_hu3c46592c5511ce3ff1bdc045d1ec1b8b_157516_600x0_resize_box_3.png);"></div>
         
       
 
@@ -783,7 +793,7 @@
     
     <div class="border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
         
-        <div class="w-full thumbnail_card nozoom" style="background-image:url(/posts/htb/shoppy/featured.png);"></div>
+        <div class="w-full thumbnail_card nozoom" style="background-image:url(/posts/htb/shoppy/featured_hu9b9f416bc5c1bc746a7863329ce851ab_105832_600x0_resize_box_3.png);"></div>
         
       
 
