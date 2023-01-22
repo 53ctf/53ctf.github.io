@@ -4,6 +4,7 @@
     <title>Categories on 0x53CTF</title>
     <link>https://53ctf.github.io/categories/</link>
     <description>Recent content in Categories on 0x53CTF</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://53ctf.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://53ctf.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
