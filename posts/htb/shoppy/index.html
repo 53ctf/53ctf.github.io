@@ -798,36 +798,9 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 </h3><p>Found one subdomain</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mattermost              <span class="o">[</span>Status: 200, Size: 3122, Words: 141, Lines: 1, Duration: 86ms<span class="o">]</span>
 </span></span></code></pre></div><p>Add <code>mattermost.shoppy.htb</code> into <code>/etc/hosts</code><br>
-If we head over to <code>mattermost.shoppy.htb</code>, we can see a login form.
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        srcset="
-        /posts/htb/shoppy/images/mattermost_login_huebae72a6458267ec5799d2969144af12_202916_330x0_resize_box_3.png 330w,
-        /posts/htb/shoppy/images/mattermost_login_huebae72a6458267ec5799d2969144af12_202916_660x0_resize_box_3.png 660w,
-        /posts/htb/shoppy/images/mattermost_login_huebae72a6458267ec5799d2969144af12_202916_1024x0_resize_box_3.png 1024w,
-        /posts/htb/shoppy/images/mattermost_login_huebae72a6458267ec5799d2969144af12_202916_1320x0_resize_box_3.png 2x"
-        src="/posts/htb/shoppy/images/mattermost_login_huebae72a6458267ec5799d2969144af12_202916_660x0_resize_box_3.png"
-        alt="Mattermost Login"
-      />
-      
-      
-    </figure>
-  
-
-
-Since we don&rsquo;t have any credentials yet, we can skip this for now.</p>
+If we head over to <code>mattermost.shoppy.htb</code>, we can see a login form.</p>
+<!-- ![Mattermost Login](images/mattermost_login.png) -->
+<p>Since we don&rsquo;t have any credentials yet, we can skip this for now.</p>
 <div id="directory-fuzzing" class="anchor">Directory Fuzzing></div>
 <h3 class="relative group">Directory Fuzzing 
     <span
@@ -846,95 +819,14 @@ Since we don&rsquo;t have any credentials yet, we can skip this for now.</p>
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#shoppyhtblogin" aria-label="Anchor">#</a></span>        
     
-</h3><p>
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        srcset="
-        /posts/htb/shoppy/images/login_form_hud3066bbe8234df730329604dcf7473b0_626881_330x0_resize_box_3.png 330w,
-        /posts/htb/shoppy/images/login_form_hud3066bbe8234df730329604dcf7473b0_626881_660x0_resize_box_3.png 660w,
-        /posts/htb/shoppy/images/login_form_hud3066bbe8234df730329604dcf7473b0_626881_1024x0_resize_box_3.png 1024w,
-        /posts/htb/shoppy/images/login_form_hud3066bbe8234df730329604dcf7473b0_626881_1320x0_resize_box_3.png 2x"
-        src="/posts/htb/shoppy/images/login_form_hud3066bbe8234df730329604dcf7473b0_626881_660x0_resize_box_3.png"
-        alt="Login Form"
-      />
-      
-      
-    </figure>
-  
-
-
-It&rsquo;s a login form for admin. So we can asume <code>admin</code> as an possible username.</p>
+</h3><!-- ![Login Form](images/login_form.png) -->
+<p>It&rsquo;s a login form for admin. So we can asume <code>admin</code> as an possible username.</p>
 <p>After a while I tried to fuzz the username parameter with some <a href="https://github.com/danielmiessler/SecLists/blob/master/Fuzzing/Databases/NoSQL.txt"   target="_blank">
     NoSQL Payloads</a> and found a working payload.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffuf -request login.req -request-proto http -w /usr/share/seclists/Fuzzing/Databases/NoSQL.txt -c -r -mc all
-</span></span></code></pre></div><p>
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        srcset="
-        /posts/htb/shoppy/images/working_sqli_payload_huc9b0f7cc119d87276a80b9b3af9cd15c_48291_330x0_resize_box_3.png 330w,
-        /posts/htb/shoppy/images/working_sqli_payload_huc9b0f7cc119d87276a80b9b3af9cd15c_48291_660x0_resize_box_3.png 660w,
-        /posts/htb/shoppy/images/working_sqli_payload_huc9b0f7cc119d87276a80b9b3af9cd15c_48291_1024x0_resize_box_3.png 1024w,
-        /posts/htb/shoppy/images/working_sqli_payload_huc9b0f7cc119d87276a80b9b3af9cd15c_48291_1320x0_resize_box_3.png 2x"
-        src="/posts/htb/shoppy/images/working_sqli_payload_huc9b0f7cc119d87276a80b9b3af9cd15c_48291_660x0_resize_box_3.png"
-        alt="Working NoSQL Payload"
-      />
-      
-      
-    </figure>
-  
-
-</p>
-<p>Exploit the NoSQLi and login to <code>shoppy.htb</code><br>
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        srcset="
-        /posts/htb/shoppy/images/login_to_shoppy_hu9abc7f0b63e6af08bd2d52585f66d703_15649_330x0_resize_box_3.png 330w,
-        /posts/htb/shoppy/images/login_to_shoppy_hu9abc7f0b63e6af08bd2d52585f66d703_15649_660x0_resize_box_3.png 660w,
-        /posts/htb/shoppy/images/login_to_shoppy_hu9abc7f0b63e6af08bd2d52585f66d703_15649_1024x0_resize_box_3.png 1024w,
-        /posts/htb/shoppy/images/login_to_shoppy_hu9abc7f0b63e6af08bd2d52585f66d703_15649_1320x0_resize_box_3.png 2x"
-        src="/posts/htb/shoppy/images/login_to_shoppy_hu9abc7f0b63e6af08bd2d52585f66d703_15649_660x0_resize_box_3.png"
-        alt="NoSQLi Exploit"
-      />
-      
-      
-    </figure>
-  
-
-</p>
+</span></span></code></pre></div><!-- ![Working NoSQL Payload](images/working_sqli_payload.png) -->
+<p>Exploit the NoSQLi and login to <code>shoppy.htb</code></p>
+<!-- ![NoSQLi Exploit](images/login_to_shoppy.png) -->
 <p>In <code>http://shoppy.htb/admin/search-users</code> we can search for users. And if we search for admin, it gives us a <code>export-report.json</code> which contains <code>id</code>, <code>username</code> and <code>MD5 password hash</code> of the <code>admin</code> user. But we don&rsquo;t need admin credentials anymore thus we need to find if is there are any other existing users are in this site or not.</p>
 <p>So to do that, instead of searching for <code>admin</code>, we can search for <strong><code>admin' || 'a'=='a</code></strong> <em>(the payload we used to login to the site)</em> and leak the database. With that we can find a username <code>josh</code> and his <code>MD5 password hash</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">[</span>
@@ -1410,7 +1302,7 @@ In the main function I saw it is forming a word <code>Sample</code> letter by le
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/notes/python/python/">
+            <a class="flex group mr-3" href="/posts/notes/python/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
