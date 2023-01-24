@@ -102,7 +102,7 @@
     "keywords": ["VulnHub","FTP","John","MD5","MySQL","CronJob"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "760"
+    "wordCount": "762"
   }]
   </script>
 
@@ -607,7 +607,7 @@ if (!doNotTrack) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-01-24 12:14:15 &#43;0530 &#43;0530">24 January 2023</time><span class="px-2 text-primary-500">&middot;</span><span>760 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+  <time datetime="2023-01-24 12:14:15 &#43;0530 &#43;0530">24 January 2023</time><span class="px-2 text-primary-500">&middot;</span><span>762 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
   
 
   
@@ -994,8 +994,8 @@ This is a MD5 hash. So let&rsquo;s crack it and get the actual password.</p>
 </span></span></code></pre></div><p>After a little while, you can see that <code>/bin/bash</code> now has SUID bit bind to it.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	ls -la /bin/bash
 </span></span><span class="line"><span class="cl">-rwsr-xr-x <span class="m">1</span> root root <span class="m">1168776</span> Apr <span class="m">18</span>  <span class="m">2019</span> /bin/bash
-</span></span></code></pre></div><p>Which means game is over. Now you are the <code>root</code> user.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/bin/bash -p
+</span></span></code></pre></div><p>Which means the game is over. Now you are the <code>root</code> user.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	/bin/bash -p
 </span></span><span class="line"><span class="cl">&gt;	whoami
 </span></span><span class="line"><span class="cl">root
 </span></span></code></pre></div>
