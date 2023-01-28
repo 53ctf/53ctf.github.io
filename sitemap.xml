@@ -256,42 +256,6 @@
   
     
       <url>
-            <loc>https://53ctf.github.io/tags/epoch/</loc>
-            <lastmod>2023-01-08T06:58:31+05:30</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://53ctf.github.io/posts/htb/broscience/</loc>
-            <lastmod>2023-01-08T06:58:31+05:30</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://53ctf.github.io/tags/lfi/</loc>
-            <lastmod>2023-01-08T06:58:31+05:30</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://53ctf.github.io/tags/waf/</loc>
-            <lastmod>2023-01-08T06:58:31+05:30</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
             <loc>https://53ctf.github.io/tags/python/</loc>
             <lastmod>2023-01-07T18:04:11+05:30</lastmod>
             <changefreq>daily</changefreq>
