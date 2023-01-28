@@ -125,6 +125,33 @@
     </item>
     
     <item>
+      <title>Consul</title>
+      <link>https://53ctf.github.io/tags/consul/</link>
+      <pubDate>Mon, 16 Jan 2023 16:15:16 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/tags/consul/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CVE-2021-43798</title>
+      <link>https://53ctf.github.io/tags/cve-2021-43798/</link>
+      <pubDate>Mon, 16 Jan 2023 16:15:16 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/tags/cve-2021-43798/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grafana</title>
+      <link>https://53ctf.github.io/tags/grafana/</link>
+      <pubDate>Mon, 16 Jan 2023 16:15:16 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/tags/grafana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>https://53ctf.github.io/tags/docker/</link>
       <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
@@ -148,6 +175,33 @@
       <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://53ctf.github.io/tags/nosql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Epoch</title>
+      <link>https://53ctf.github.io/tags/epoch/</link>
+      <pubDate>Sun, 08 Jan 2023 06:58:31 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/tags/epoch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LFI</title>
+      <link>https://53ctf.github.io/tags/lfi/</link>
+      <pubDate>Sun, 08 Jan 2023 06:58:31 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/tags/lfi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WAF</title>
+      <link>https://53ctf.github.io/tags/waf/</link>
+      <pubDate>Sun, 08 Jan 2023 06:58:31 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/tags/waf/</guid>
       <description></description>
     </item>
     

@@ -184,6 +184,42 @@
   
     
       <url>
+            <loc>https://53ctf.github.io/tags/consul/</loc>
+            <lastmod>2023-01-16T16:15:16+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/cve-2021-43798/</loc>
+            <lastmod>2023-01-16T16:15:16+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/grafana/</loc>
+            <lastmod>2023-01-16T16:15:16+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/posts/htb/ambassador/</loc>
+            <lastmod>2023-01-16T16:15:16+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
             <loc>https://53ctf.github.io/tags/docker/</loc>
             <lastmod>2023-01-14T00:00:00+00:00</lastmod>
             <changefreq>daily</changefreq>
@@ -213,6 +249,42 @@
       <url>
             <loc>https://53ctf.github.io/tags/nosql/</loc>
             <lastmod>2023-01-14T00:00:00+00:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/epoch/</loc>
+            <lastmod>2023-01-08T06:58:31+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/posts/htb/broscience/</loc>
+            <lastmod>2023-01-08T06:58:31+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/lfi/</loc>
+            <lastmod>2023-01-08T06:58:31+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/waf/</loc>
+            <lastmod>2023-01-08T06:58:31+05:30</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
