@@ -6,11 +6,11 @@
     <description>Recent content in Grafana on 0x53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Jan 2023 16:15:16 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://53ctf.github.io/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HackTheBox Ambassador</title>
       <link>https://53ctf.github.io/posts/htb/ambassador/</link>
-      <pubDate>Mon, 16 Jan 2023 16:15:16 +0530</pubDate>
+      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://53ctf.github.io/posts/htb/ambassador/</guid>
       <description>Name: Ambassador IP: 10.10.11.183 Defficulty: Medium OS: Linux Author: DirectRoot Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.</description>

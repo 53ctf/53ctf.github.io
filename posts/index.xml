@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 0x53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Jan 2023 12:14:15 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://53ctf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HackTheBox Ambassador</title>
+      <link>https://53ctf.github.io/posts/htb/ambassador/</link>
+      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://53ctf.github.io/posts/htb/ambassador/</guid>
+      <description>Name: Ambassador IP: 10.10.11.183 Defficulty: Medium OS: Linux Author: DirectRoot Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.</description>
+    </item>
+    
     <item>
       <title>TCM Academy</title>
       <link>https://53ctf.github.io/posts/vulnhub/academy/</link>
@@ -32,15 +41,6 @@
       
       <guid>https://53ctf.github.io/posts/notes/windows/</guid>
       <description>enum4linux&gt; enum4linux # &amp;gt; enum4linux [options] ip Usage: /usr/bin/enum4linux [options] ip Options are (like &amp;#34;enum&amp;#34;): -U get userlist -M get machine list* -S get sharelist -P get password policy information -G get group and member list -d be detailed, applies to -U and -S -u user specify username to use (default &amp;#34;&amp;#34;) -p pass specify password to use (default &amp;#34;&amp;#34;) The following options from enum.</description>
-    </item>
-    
-    <item>
-      <title>HackTheBox Ambassador</title>
-      <link>https://53ctf.github.io/posts/htb/ambassador/</link>
-      <pubDate>Mon, 16 Jan 2023 16:15:16 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/posts/htb/ambassador/</guid>
-      <description>Name: Ambassador IP: 10.10.11.183 Defficulty: Medium OS: Linux Author: DirectRoot Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.</description>
     </item>
     
     <item>
