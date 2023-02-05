@@ -6,11 +6,11 @@
     <description>Recent content in FTP on 0x53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Jan 2023 12:14:15 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/ftp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Feb 2023 12:53:48 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/ftp/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>TCM Academy</title>
+      <title>Academy</title>
       <link>https://53ctf.github.io/posts/vulnhub/academy/</link>
-      <pubDate>Tue, 24 Jan 2023 12:14:15 +0530</pubDate>
+      <pubDate>Sun, 05 Feb 2023 12:53:48 +0530</pubDate>
       
       <guid>https://53ctf.github.io/posts/vulnhub/academy/</guid>
       <description>Nmap&gt; Nmap # 21/tcp open ftp syn-ack vsftpd 3.0.3 | ftp-syst: | STAT: | FTP server status: | Connected to ::ffff:192.168.1.142 | Logged in as ftp | TYPE: ASCII | No session bandwidth limit | Session timeout in seconds is 300 | Control connection is plain text | Data connections will be plain text | At session startup, client count was 3 | vsFTPd 3.</description>

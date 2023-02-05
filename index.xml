@@ -6,7 +6,27 @@
     <description>Recent content on 0x53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://53ctf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Feb 2023 12:53:48 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Academy</title>
+      <link>https://53ctf.github.io/posts/vulnhub/academy/</link>
+      <pubDate>Sun, 05 Feb 2023 12:53:48 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/posts/vulnhub/academy/</guid>
+      <description>Nmap&gt; Nmap # 21/tcp open ftp syn-ack vsftpd 3.0.3 | ftp-syst: | STAT: | FTP server status: | Connected to ::ffff:192.168.1.142 | Logged in as ftp | TYPE: ASCII | No session bandwidth limit | Session timeout in seconds is 300 | Control connection is plain text | Data connections will be plain text | At session startup, client count was 3 | vsFTPd 3.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://53ctf.github.io/posts/vulnhub/academy/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://53ctf.github.io/about/</link>
+      <pubDate>Sun, 05 Feb 2023 12:51:38 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/about/</guid>
+      <description>As a cyber security professional and hacker, my name is 5YC10P5 and I am dedicated to staying at the forefront of the industry. I am from Sri Lanka and have a deep passion for all aspects of cyber security, with a particular focus on penetration testing and vulnerability assessment.</description>
+      
+    </item>
+    
     <item>
       <title>HackTheBox Ambassador</title>
       <link>https://53ctf.github.io/posts/htb/ambassador/</link>
@@ -15,26 +35,6 @@
       <guid>https://53ctf.github.io/posts/htb/ambassador/</guid>
       <description>Name: Ambassador IP: 10.10.11.183 Defficulty: Medium OS: Linux Author: DirectRoot Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://53ctf.github.io/posts/htb/ambassador/featured.png" />
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://53ctf.github.io/about/</link>
-      <pubDate>Tue, 24 Jan 2023 15:45:37 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/about/</guid>
-      <description>As a cyber security professional and hacker, my name is 5YC10P5 and I am dedicated to staying at the forefront of the industry. I am from Sri Lanka and have a deep passion for all aspects of cyber security, with a particular focus on penetration testing and vulnerability assessment.</description>
-      
-    </item>
-    
-    <item>
-      <title>TCM Academy</title>
-      <link>https://53ctf.github.io/posts/vulnhub/academy/</link>
-      <pubDate>Tue, 24 Jan 2023 12:14:15 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/posts/vulnhub/academy/</guid>
-      <description>Nmap&gt; Nmap # 21/tcp open ftp syn-ack vsftpd 3.0.3 | ftp-syst: | STAT: | FTP server status: | Connected to ::ffff:192.168.1.142 | Logged in as ftp | TYPE: ASCII | No session bandwidth limit | Session timeout in seconds is 300 | Control connection is plain text | Data connections will be plain text | At session startup, client count was 3 | vsFTPd 3.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://53ctf.github.io/posts/vulnhub/academy/featured.png" />
     </item>
     
     <item>
