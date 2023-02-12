@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gitea on 0x53CTF</title>
+    <link>https://53ctf.github.io/tags/gitea/</link>
+    <description>Recent content in Gitea on 0x53CTF</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Feb 2023 13:25:12 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/gitea/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HackTheBox Extension</title>
+      <link>https://53ctf.github.io/posts/htb/extension/</link>
+      <pubDate>Sun, 05 Feb 2023 13:25:12 +0530</pubDate>
+      
+      <guid>https://53ctf.github.io/posts/htb/extension/</guid>
+      <description>Name: Extension IP: 10.10.11.171 Defficulty: Hard OS: Linux Author: irogir Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.</description>
+    </item>
+    
+  </channel>
+</rss>

