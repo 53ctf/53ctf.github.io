@@ -6,31 +6,31 @@
     <description>Recent content in Tags on 0x53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Feb 2023 13:25:12 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://53ctf.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Gitea</title>
-      <link>https://53ctf.github.io/tags/gitea/</link>
-      <pubDate>Sun, 05 Feb 2023 13:25:12 +0530</pubDate>
+      <title>CommandInjection</title>
+      <link>https://53ctf.github.io/tags/commandinjection/</link>
+      <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://53ctf.github.io/tags/gitea/</guid>
+      <guid>https://53ctf.github.io/tags/commandinjection/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HackTheBox</title>
       <link>https://53ctf.github.io/tags/hackthebox/</link>
-      <pubDate>Sun, 05 Feb 2023 13:25:12 +0530</pubDate>
+      <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://53ctf.github.io/tags/hackthebox/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Webmail</title>
-      <link>https://53ctf.github.io/tags/webmail/</link>
-      <pubDate>Sun, 05 Feb 2023 13:25:12 +0530</pubDate>
+      <title>PathInjection</title>
+      <link>https://53ctf.github.io/tags/pathinjection/</link>
+      <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://53ctf.github.io/tags/webmail/</guid>
+      <guid>https://53ctf.github.io/tags/pathinjection/</guid>
       <description></description>
     </item>
     
@@ -148,24 +148,6 @@
       <pubDate>Wed, 18 Jan 2023 12:36:43 +0530</pubDate>
       
       <guid>https://53ctf.github.io/tags/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CommandInjection</title>
-      <link>https://53ctf.github.io/tags/commandinjection/</link>
-      <pubDate>Sun, 15 Jan 2023 14:06:58 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/tags/commandinjection/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PathInjection</title>
-      <link>https://53ctf.github.io/tags/pathinjection/</link>
-      <pubDate>Sun, 15 Jan 2023 14:06:58 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/tags/pathinjection/</guid>
       <description></description>
     </item>
     

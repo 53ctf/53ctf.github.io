@@ -6,14 +6,14 @@
     <description>Recent content in Posts on 0x53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Feb 2023 13:25:12 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://53ctf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>HackTheBox Extension</title>
-      <link>https://53ctf.github.io/posts/htb/extension/</link>
-      <pubDate>Sun, 05 Feb 2023 13:25:12 +0530</pubDate>
+      <title>HackTheBox Photobomb</title>
+      <link>https://53ctf.github.io/posts/htb/photobomb/</link>
+      <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://53ctf.github.io/posts/htb/extension/</guid>
-      <description>Name: Extension IP: 10.10.11.171 Defficulty: Hard OS: Linux Author: irogir Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.</description>
+      <guid>https://53ctf.github.io/posts/htb/photobomb/</guid>
+      <description>Name: Photobomb IP: 10.10.11.182 Defficulty: Easy OS: Linux Author: slartibartfast Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.</description>
     </item>
     
     <item>
@@ -50,15 +50,6 @@
       
       <guid>https://53ctf.github.io/posts/notes/windows/</guid>
       <description>enum4linux&gt; enum4linux # &amp;gt; enum4linux [options] ip Usage: /usr/bin/enum4linux [options] ip Options are (like &amp;#34;enum&amp;#34;): -U get userlist -M get machine list* -S get sharelist -P get password policy information -G get group and member list -d be detailed, applies to -U and -S -u user specify username to use (default &amp;#34;&amp;#34;) -p pass specify password to use (default &amp;#34;&amp;#34;) The following options from enum.</description>
-    </item>
-    
-    <item>
-      <title>HackTheBox Photobomb</title>
-      <link>https://53ctf.github.io/posts/htb/photobomb/</link>
-      <pubDate>Sun, 15 Jan 2023 14:06:58 +0530</pubDate>
-      
-      <guid>https://53ctf.github.io/posts/htb/photobomb/</guid>
-      <description>Name: Photobomb IP: 10.10.11.182 Defficulty: Easy OS: Linux Author: slartibartfast Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.</description>
     </item>
     
     <item>

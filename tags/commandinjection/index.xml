@@ -6,11 +6,11 @@
     <description>Recent content in CommandInjection on 0x53CTF</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Jan 2023 14:06:58 +0530</lastBuildDate><atom:link href="https://53ctf.github.io/tags/commandinjection/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://53ctf.github.io/tags/commandinjection/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HackTheBox Photobomb</title>
       <link>https://53ctf.github.io/posts/htb/photobomb/</link>
-      <pubDate>Sun, 15 Jan 2023 14:06:58 +0530</pubDate>
+      <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://53ctf.github.io/posts/htb/photobomb/</guid>
       <description>Name: Photobomb IP: 10.10.11.182 Defficulty: Easy OS: Linux Author: slartibartfast Nmap&gt; Nmap # PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.</description>
